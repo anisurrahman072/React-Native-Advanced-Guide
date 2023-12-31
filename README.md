@@ -1,6 +1,6 @@
 # React Native Advanced Guide Book
 
-![Alt text](<Screenshot 2024-01-01 at 1.32.08 AM.png>)
+![Alt text](<images/Screenshot 2024-01-01 at 1.32.08 AM.png>)
 
 - This **Guide Book** is originally from **12 Articles** on Medium that took 5 months to complete in 2023 (ARTICLES written by *https://twitter.com/anis_RNCore*).
 - All the Articles were originally based on **RN v0.71**.

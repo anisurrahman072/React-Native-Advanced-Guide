@@ -12,37 +12,37 @@ _I have found tons of articles on the internet about the **new architecture** of
 
 - [Terms of React Native (Get some basic)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#terms-of-react-native-get-some-basic)
 
-- [OLD architecture (Quick overview)](#58a0)
+- [OLD architecture (Quick overview)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#old-architecture-quick-overview)
 
-- [OLD Architecture drawbacks](#784b)
+- [OLD Architecture drawbacks](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#old-architecture-drawbacks)
 
-- [New Architecture of React Native (Quick overview)](#dc93)
+- [New Architecture of React Native (Quick overview)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#new-architecture-of-react-native-quick-overview)
 
-- [New Architecture two Phases](#aba0)
+- [New Architecture two Phases](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#new-architecture-two-phases)
 
-- [Codegen (Native Code Generator)](#15e4)
+- [Codegen (Native Code Generator)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#codegen-native-code-generator)
 
-- [JSI (JavaScript Interface)](#7f38)
+- [JSI (JavaScript Interface)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#jsi-javascript-interface)
 
-- [How can JavaScript call native methods with JSI?](#e056)
+- [How can JavaScript call native methods with JSI?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#how-can-javascript-call-native-methods-with-jsi)
 
-- [How JSI synchronous made it great!](#64f4)
+- [How JSI synchronous made it great!](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#how-jsi-synchronous-made-it-great)
 
-- [Hermes Engine](#2aea)
+- [Hermes Engine](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#hermes-engine)
 
-- [Is Hermes a good choice?](#5f26)
+- [Is Hermes a good choice?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#is-hermes-a-good-choice)
 
-- [Does Hermes make React Native faster?](#f270)
+- [Does Hermes make React Native faster?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#does-hermes-make-react-native-faster)
 
-- [How Hermes improves React Native performance?](#cb60)
+- [How Hermes improves React Native performance?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#how-hermes-improves-react-native-performance)
 
-- [Turbo Modules](#2d7d)
+- [Turbo Modules](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#turbo-modules)
 
-- [Fabric (New Rendering Engine)](#1f8e)
+- [Fabric (New Rendering Engine)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#fabric-new-rendering-engine)
 
-- [The Fabric render pipeline (three phases)](#8340)
+- [The Fabric render pipeline (three phases)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#the-fabric-render-pipeline-three-phases)
 
-- [Flow of New Architecture](#9095)
+- [Flow of New Architecture](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#flow-of-new-architecture)
 
 ## Terms of React Native (Get some basic)
 

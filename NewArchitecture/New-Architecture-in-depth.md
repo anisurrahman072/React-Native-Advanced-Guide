@@ -4,13 +4,13 @@
 
 ![](https://cdn-images-1.medium.com/max/5760/1*udRjfqFoyN7zSXdnI9uZvg.png)
 
-_I have found tons of articles on the internet about the **new architecture **of React Native, but the problem is they were too brief and **lacked sufficient information**. This made it hard to understand it clearly. Finally, I have gathered all the info **from the official documentation **of React Native and other sources. **I can assure you that you will get the best overview of the new architecture **of React Native and also learn about the **relations between each of the new terms **that the React Native team introduced in the documentation._
+_I have found tons of articles on the internet about the **new architecture** of React Native, but the problem is they were too brief and **lacked sufficient information**. This made it hard to understand it clearly. Finally, I have gathered all the info **from the official documentation** of React Native and other sources. **I can assure you that you will get the best overview of the new architecture** of React Native and also learn about the **relations between each of the new terms** that the React Native team introduced in the documentation._
 
 **_Take a deep breath and grab a cup of coffee for a long article, so that you won’t feel sleepy 😃._**
 
-## 🚩 What we will learn
+## What we will learn
 
-- [Terms of React Native (Get some basic)](#23dd)
+- [Terms of React Native (Get some basic)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#-terms-of-react-native-get-some-basic)
 
 - [OLD architecture (Quick overview)](#58a0)
 
@@ -44,7 +44,7 @@ _I have found tons of articles on the internet about the **new architecture **of
 
 - [Flow of New Architecture](#9095)
 
-## 🚩 Terms of React Native (Get some basic)
+## Terms of React Native (Get some basic)
 
 To understand the **New Architecture,** we need to first understand some terms of React Native. Also, we need to understand some terms from the OLD architecture. Let’s understand those first.
 

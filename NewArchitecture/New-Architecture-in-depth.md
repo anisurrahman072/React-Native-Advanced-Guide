@@ -10,7 +10,7 @@ _I have found tons of articles on the internet about the **new architecture** of
 
 ## What we will learn
 
-- [Terms of React Native (Get some basic)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#-terms-of-react-native-get-some-basic)
+- [Terms of React Native (Get some basic)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#terms-of-react-native-get-some-basic)
 
 - [OLD architecture (Quick overview)](#58a0)
 

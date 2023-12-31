@@ -8,7 +8,7 @@
 
 # Table of Contents
 
-### [✅ 001 - Ultimate Guide on New Architecture in depth](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#react-native--ultimate-guide-on-new-architecture-in-depth)
+### [✅ 001 - Ultimate Guide on New Architecture in depth](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md)
 
         - Codegen (Native Code Generator)
         - JSI (JavaScript Interface)

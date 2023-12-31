@@ -37,3 +37,7 @@
 15. RN Threads (JS & Main Threads)
 
 16. Hermes Byte Code
+
+### Contribution
+
+- If you find any issues in the guidebook, please create a pull request (PR). Your PR will help the community 🚀.

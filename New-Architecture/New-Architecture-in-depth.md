@@ -10,39 +10,39 @@ _I have found tons of articles on the internet about the **new architecture** of
 
 ## What we will learn
 
-- [Terms of React Native (Get some basic)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#terms-of-react-native-get-some-basic)
+- [Terms of React Native (Get some basic)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#terms-of-react-native-get-some-basic)
 
-- [OLD architecture (Quick overview)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#old-architecture-quick-overview)
+- [OLD architecture (Quick overview)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#old-architecture-quick-overview)
 
-- [OLD Architecture drawbacks](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#old-architecture-drawbacks)
+- [OLD Architecture drawbacks](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#old-architecture-drawbacks)
 
-- [New Architecture of React Native (Quick overview)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#new-architecture-of-react-native-quick-overview)
+- [New Architecture of React Native (Quick overview)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#new-architecture-of-react-native-quick-overview)
 
-- [New Architecture two Phases](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#new-architecture-two-phases)
+- [New Architecture two Phases](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#new-architecture-two-phases)
 
-- [Codegen (Native Code Generator)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#codegen-native-code-generator)
+- [Codegen (Native Code Generator)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#codegen-native-code-generator)
 
-- [JSI (JavaScript Interface)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#jsi-javascript-interface)
+- [JSI (JavaScript Interface)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#jsi-javascript-interface)
 
-- [How can JavaScript call native methods with JSI?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#how-can-javascript-call-native-methods-with-jsi)
+- [How can JavaScript call native methods with JSI?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#how-can-javascript-call-native-methods-with-jsi)
 
-- [How JSI synchronous made it great!](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#how-jsi-synchronous-made-it-great)
+- [How JSI synchronous made it great!](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#how-jsi-synchronous-made-it-great)
 
-- [Hermes Engine](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#hermes-engine)
+- [Hermes Engine](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#hermes-engine)
 
-- [Is Hermes a good choice?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#is-hermes-a-good-choice)
+- [Is Hermes a good choice?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#is-hermes-a-good-choice)
 
-- [Does Hermes make React Native faster?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#does-hermes-make-react-native-faster)
+- [Does Hermes make React Native faster?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#does-hermes-make-react-native-faster)
 
-- [How Hermes improves React Native performance?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#how-hermes-improves-react-native-performance)
+- [How Hermes improves React Native performance?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#how-hermes-improves-react-native-performance)
 
-- [Turbo Modules](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#turbo-modules)
+- [Turbo Modules](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#turbo-modules)
 
-- [Fabric (New Rendering Engine)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#fabric-new-rendering-engine)
+- [Fabric (New Rendering Engine)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#fabric-new-rendering-engine)
 
-- [The Fabric render pipeline (three phases)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#the-fabric-render-pipeline-three-phases)
+- [The Fabric render pipeline (three phases)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#the-fabric-render-pipeline-three-phases)
 
-- [Flow of New Architecture](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/NewArchitecture/New-Architecture-in-depth.md#flow-of-new-architecture)
+- [Flow of New Architecture](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md#flow-of-new-architecture)
 
 ## Terms of React Native (Get some basic)
 

@@ -1,6 +1,6 @@
 ### React Native Advanced Guide Book
 
-- This guidebook is originally from my 12 articles on Medium that took me 5 months to complete in 2023.
+- This guidebook is originally from **12 articles** on Medium that took 5 months to complete in 2023 (ARTICLES written by https://twitter.com/anis_RNCore).
 - All the articles were originally based on RN v0.71.
 - The original link to the articles can be found on Medium: https://medium.com/@anisurrahmanbup/list/react-native-advanced-architecture-be-an-expert-d7481c91d0de
 

@@ -79,7 +79,18 @@
         - <SectionList /> optimization
         - <ScrollView /> with Virtualization props
 
-### [✅ 008 - More 5 coming soon .......]()
+### [✅ 008 - Ultimate Guide on FlashList (Cell Re-Cycling) Optimization](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/FlashList-Cell-Recycling-details.md)
+
+        - Details about “RecyclerListView”
+        - Why Cell Re-Cycling ?
+        - Difference between "Blank Cell" & "Cell Re-cycling"
+        - FlashList Implementation
+        - All important props of FlashList
+        - Check Performance of your FlashList
+        - Reduce "Blank Space" techniques
+        - How to Migrate from "FlatList" to "FlashList" ?
+
+### [✅ 009 - More 4 coming soon .......]()
 
 # Contribution
 

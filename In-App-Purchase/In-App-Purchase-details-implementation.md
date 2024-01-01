@@ -18,35 +18,35 @@ But the good news is that each page of RevenueCat clearly describes a particular
 
 Certainly, **we will learn these stuffs** from this article in details.
 
-1.  [Basics of Payment Gateway](#ba62)
+1.  [Basics of Payment Gateway](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#basics-of-payment-gateway)
 
-2.  [Flow of a payment gateway](#68f4)
+2.  [Flow of a payment gateway](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#flow-of-a-payment-gateway)
 
-3.  [What is Sandbox Testing?](#85b9)
+3.  [What is Sandbox Testing?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#what-is-sandbox-testing)
 
-4.  [How Google or Apple In App Purchase (IAP) works?](#3b3e)
+4.  [How Google or Apple In App Purchase (IAP) works?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#how-google-or-apple-in-app-purchase-iap-works)
 
-5.  [IOS In App Purchase flow](#7fdd)
+5.  [IOS In App Purchase flow](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#ios-in-app-purchase-flow)
 
-6.  [Android In App Purchase Flow](#bd3f)
+6.  [Android In App Purchase Flow](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#android-in-app-purchase-flow)
 
-7.  [Basics of In App Purchase — IOS](#5355)
+7.  [Basics of In App Purchase — IOS](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#basics-of-in-app-purchase--ios)
 
-8.  [Basics of In App Purchase — Android](#9e77)
+8.  [Basics of In App Purchase — Android](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#basics-of-in-app-purchase--android)
 
-9.  [Why RevenueCat SDK?](#c1e4)
+9.  [Why RevenueCat SDK?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#why-revenuecat-sdk)
 
-10. [Basics of In App Purchase — RevenueCat](#1774)
+10. [Basics of In App Purchase — RevenueCat](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#basics-of-in-app-purchase--revenuecat)
 
-11. [Start Implementation (Documentation links in sequence)](#b9f3)
+11. [Start Implementation (Documentation links in sequence)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#start-implementation-documentation-links-in-sequence)
 
-12. [IOS — Documentation links (In Sequence)](#bd4a)
+12. [IOS — Documentation links (In Sequence)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#ios--documentation-links-in-sequence)
 
-13. [ANDROID — Documentation links (In Sequence)](#daf7)
+13. [ANDROID — Documentation links (In Sequence)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#android--documentation-links-in-sequence)
 
-14. [Perquisites before Test & Debugging (Very Important)](#3126)
+14. [Perquisites before Test & Debugging (Very Important)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#perquisites-before-test--debugging-very-important)
 
-15. [Some ISSUE/ ERROR I faced deeply 🙇‍♂️️️🙇‍♂️️️](#ddef)
+15. [Some ISSUE/ ERROR I faced deeply 🙇‍♂️️️🙇‍♂️️️](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md#some-issue-error-i-faced-deeply-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F)
 
 ## Basics of Payment Gateway
 

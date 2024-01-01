@@ -1,4 +1,4 @@
-## React Native — Nested Virtualization Anti-pattern (Performance Optimization)
+# React Native — Nested Virtualization Anti-pattern (Performance Optimization)
 
 ### ERROR “ VirtualizedLists should never be nested inside plain ScrollViews”.
 

@@ -16,6 +16,17 @@
         - Turbo Modules (New Native Modules)
         - Fabric (New Rendering Engine)
 
+### [✅ 002 - Ultimate Guide on Debugging, Profiling & Advanced Optimization](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md)
+
+        - iOS & Android Dev Menu
+        - Chrome Dev Tools
+        - Performance Monitor
+        - FPS (Frame Per Second)
+        - React Native four Threads
+        - Flipper for JS Context tracking
+        - Profiling iOS by Xcode Instruments
+        - Android Profiler in Android Studio
+
 2.  Debugging, Profiler & FPS (Frame Per Second)
 
 3.  React Native Testing Library (Component Testing)

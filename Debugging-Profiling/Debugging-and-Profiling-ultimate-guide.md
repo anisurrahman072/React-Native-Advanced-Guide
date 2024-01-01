@@ -12,41 +12,41 @@ _This article took me **16 days** to complete, with each day 5–6 hours of work
 
 > **Let’s see in a summary what this article will teach us.**
 
-1.  [Accessing the Dev Menu](#9cb7)
+1.  [Accessing the Dev Menu](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#accessing-the-dev-menu)
 
-2.  [Fast Refresh](#b023)
+2.  [Fast Refresh](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#fast-refresh)
 
-3.  [LogBox](#1e19)
+3.  [LogBox](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#logbox)
 
-4.  [Chrome Developer Tools](#9519)
+4.  [Chrome Developer Tools](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#chrome-developer-tools)
 
-5.  [Performance Monitor](#d4d9)
+5.  [Performance Monitor](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#performance-monitor)
 
-6.  [Details about FPS (Frame Per Second)](#d425)
+6.  [Details about FPS (Frame Per Second)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#details-about-fps-frame-per-second)
 
-7.  [Common reasons of performance problems (Getting low FPS)](#0749)
+7.  [Common reasons of performance problems (Getting low FPS)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#common-reasons-of-performance-problems-getting-low-fps)
 
-8.  [React Native four Threads](#f1fc)
+8.  [React Native four Threads](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#react-native-four-threads)
 
-9.  [Profiling Introduction](#a30a)
+9.  [Profiling Introduction](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#profiling-introduction)
 
-10. [Profiling iOS](#1b12)
+10. [Profiling iOS](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#profiling-ios)
 
-11. [Profiling iOS by Xcode Instruments](#fc85)
+11. [Profiling iOS by Xcode Instruments](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#profiling-ios-by-xcode-instruments)
 
-12. [Flipper for JS Context tracking](#2df2)
+12. [Flipper for JS Context tracking](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#flipper-for-js-context-tracking)
 
-13. [Profiling iOS by Flipper with “Hermes Debugger (RN)”](#4aee)
+13. [Profiling iOS by Flipper with “Hermes Debugger (RN)”](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#profiling-ios-by-flipper-with-hermes-debugger-rn)
 
-14. [Profiling Android](#a193)
+14. [Profiling Android](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#profiling-android)
 
-15. [Android Profiler in Android Studio](#5c1e)
+15. [Android Profiler in Android Studio](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#android-profiler-in-android-studio)
 
-16. [System Tracing with Android Studio CPU Profiler](#0ff2)
+16. [System Tracing with Android Studio CPU Profiler](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#system-tracing-with-android-studio-cpu-profiler)
 
-17. [Flipper performance plugin for Android](#7ada)
+17. [Flipper performance plugin for Android](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#flipper-performance-plugin-for-android)
 
-18. [Replacing Flipper in 0.73+ ?](#290b)
+18. [Replacing Flipper in 0.73+ ?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#replacing-flipper-in-073-)
 
 > Let’s start React Native Debugging 🙇‍♂️
 

@@ -122,7 +122,7 @@
         - When custom Hooks are better than HOC?
         - Custom Hooks replaced "Render props pattern"
 
-### [🔥 C++ & JSI Module Guides coming soon.......Stay Tuned 🚀]()
+### [🔥 C++ & JSI Module Guides coming soon.......Stay Tune 🚀]()
 
 # Contribution
 

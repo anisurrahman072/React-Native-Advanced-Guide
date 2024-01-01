@@ -135,7 +135,7 @@ Besides regular JSX components, we can pass functions as children to React compo
 
 In the above code **_props.children(stateValue)_** created props rendering.
 
-> # Let’s start with complex & details analysis now.
+### Let’s start with complex & details analysis now 👇
 
 ## Higher Order Component
 
@@ -574,7 +574,7 @@ In this case, the withStyles HOC adds a prop called style to the element that we
 
 When using multiple composed HOCs that all pass props to the element that’s wrapped within them, it can be difficult to figure out which HOC is responsible for which prop. **This can hinder debugging and scaling an application easily**.
 
-> # Now it is time for Render Props Pattern
+### Now it is time for Render Props Pattern 👇
 
 ## Render Props Pattern
 

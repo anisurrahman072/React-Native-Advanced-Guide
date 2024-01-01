@@ -113,7 +113,16 @@
         - RevenueCat SDK
         - Implementation instruction (iOS & Android)
 
-### [✅ 012 - More 1 coming soon .......]()
+### [✅ 012 - Ultimate Guide on Higher Order Component, PROPS & Custom Hooks](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Components-and-Hooks/HOC-Props-and-Custom-Hooks.md)
+
+        - Higher Order Component (HOC) pattern
+        - Render Props pattern
+        - Custom Hooks
+        - Lifting state to Parent Component
+        - When custom Hooks are better than HOC?
+        - Custom Hooks replaced "Render props pattern"
+
+### 🍁 [C++ & JSI guides are coming soon....... Stay Tuned 🚀]()
 
 # Contribution
 

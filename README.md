@@ -57,7 +57,21 @@
         - Npx Commands for iOS
         - Confirm New Architecture in action
 
-### [✅ 006 - More 7 coming soon .......]()
+### [✅ 006 - Ultimate Guide on Performance Optimization](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md)
+
+        - Use New Architecture
+        - FlatList/ SectionList for List Performance
+        - Unnecessary Console
+        - Cache mechanism
+        - Image resize, Cache Image & Fast loading Image
+        - Schedule Animation & Native driver
+        - Coding standard
+        - Hermes Engine
+        - Reselect with Redux
+        - Monitor Memory usage
+        - Fast Navigation
+
+### [✅ 007 - More 6 coming soon .......]()
 
 # Contribution
 

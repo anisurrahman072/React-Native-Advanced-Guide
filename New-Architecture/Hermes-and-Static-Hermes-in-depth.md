@@ -90,7 +90,7 @@ Output 👇
 
 If you are using a non-standard way of loading the JS bundle, it is possible that the **HermesInternal** variable is available but you aren't using the highly optimised pre-compiled bytecode. Confirm that you are using the **.hbc** file and also benchmark the before/after as detailed below.
 
-### Let me know you details about **.hbc** file now 👇
+### Details about **.hbc** file now 👇
 
 At the beginning of this article, we saw how to create a bundle release for both Android & iOS. For Android, when you apply that release command then immediately after successfully completion of release build you will find an **_.apk_** file created under this bellow **file path** location.
 

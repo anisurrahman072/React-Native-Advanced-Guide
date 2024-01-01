@@ -2,7 +2,7 @@
 
 ### Componentization from React Standard — Analysis with code 🔥
 
-![](https://cdn-images-1.medium.com/max/5760/1*yX_QZVyp0_-U94GicK0lYw.png)
+![Alt text](/images/hoc.png)
 
 I have shared my **5 years** of experience in **componentization** of **React** and **React Native** in this article. If you read this article carefully and understand each example, you will become an **expert in React + Native Component**, children rendering, and Custom Hooks. You will also learn how **Custom Hooks** can help you write **clean and efficient code**.
 

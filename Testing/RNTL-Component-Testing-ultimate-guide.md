@@ -10,59 +10,59 @@ This article serves as an all-encompassing resource on **TESTING**, covering a w
 
 Let’s look at the topics that we will learn from this article.
 
-1.  [Types of React Native Testing](#9363)
+1.  [Types of React Native Testing](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#types-of-react-native-testing)
 
-2.  [Types of JavaScript Testing](#85a6)
+2.  [Types of JavaScript Testing](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#types-of-javascript-testing)
 
-3.  [Tools for React Native Testing](#195c)
+3.  [Tools for React Native Testing](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#tools-for-react-native-testing)
 
-4.  [Some Testing Libraries (Confusing names)](#b8de)
+4.  [Some Testing Libraries (Confusing names)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#some-testing-libraries-confusing-names)
 
-5.  [When to apply Component Testing ?](#b3ad)
+5.  [When to apply Component Testing ?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#when-to-apply-component-testing-)
 
-6.  [React Native Testing Library (RNTL)](#6f89)
+6.  [React Native Testing Library (RNTL)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#react-native-testing-library-rntl)
 
-7.  [Setup JEST config (for RNTL)](#4512)
+7.  [Setup JEST config (for RNTL)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#setup-jest-config-for-rntl)
 
-8.  [Common Error in JEST config — ES6/Ts/cjs/mts](#79fa)
+8.  [Common Error in JEST config — ES6/Ts/cjs/mts](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#common-error-in-jest-config--es6tscjsmts)
 
-9.  [Command to run a test file](#9c92)
+9.  [Command to run a test file](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#command-to-run-test-file)
 
-10. [React Native Testing Library (RNTL) APIs](#6955)
+10. [React Native Testing Library (RNTL) APIs](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#react-native-testing-library-rntl-apis)
 
-11. [🪵 RNTL API — render()](#cb64)
+11. [🪵 RNTL API — render()](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-rntl-api--render)
 
-12. [🐠 TEST Component with Provider — by render() API](#5016)
+12. [🐠 TEST Component with Provider — by render() API](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-test-component-with-provider--by-render-api)
 
-13. [🐠 “queries” option — render() API](#b59b)
+13. [🐠 “queries” option — render() API](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-queries-option--render-api)
 
-14. [🐠 “update" option — render() API](#c21d)
+14. [🐠 “update" option — render() API](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-update-option--render-api)
 
-15. [🐠 “debug" option — render() API](#40ef)
+15. [🐠 “debug" option — render() API](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-debug-option--render-api)
 
-16. [🪵 RNTL API — userEvent()](#4a07)
+16. [🪵 RNTL API — userEvent()](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-rntl-api--userevent)
 
-17. [🐠 Example of FireEvent() API](#9891)
+17. [🐠 Example of FireEvent() API](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-example-of-fireevent-api)
 
-18. [🪵 RNTL API — waitFor()](#d375)
+18. [🪵 RNTL API — waitFor()](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-rntl-api--waitfor)
 
-19. [What is Mocking ?](#0879)
+19. [What is Mocking ?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#what-is-mocking-)
 
-20. [🍁 Difference between jest.fn() & jest.mock()](#810e)
+20. [🍁 Difference between jest.fn() & jest.mock()](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-difference-between-jestfn--jestmock)
 
-21. [🍁 How to Mock a Real Function (by jest.fn()) ?](#aaf8)
+21. [🍁 How to Mock a Real Function (by jest.fn()) ?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-how-to-mock-a-real-function-by-jestfn-)
 
-22. [🍁 How to Mock a Native Module (by jest.mock())?](#22c1)
+22. [🍁 How to Mock a Native Module (by jest.mock())?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-how-to-mock-a-native-module-by-jestmock)
 
-23. [🍁 Another example of Native Module Mocking ( jest.mock() )](#f62f)
+23. [🍁 Another example of Native Module Mocking ( jest.mock() )](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-another-example-of-native-module-mocking--jestmock--)
 
-24. [Some Advanced Share about RNTL](#47a6)
+24. [Some Advanced Share about RNTL](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#some-advanced-share-about-rntl)
 
-25. [Differentiating between host and composite elements](#dd6e)
+25. [Differentiating between host and composite elements](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#differentiating-between-host-and-composite-elements)
 
-26. [🚀 Intro to E2E Testing](#a69e)
+26. [🚀 Intro to E2E Testing](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md#-intro-to-e2e-testing)
 
-> Let’s get started with RN — TESTING 🚀
+# Let’s get started with RN — TESTING 🚀
 
 ## Introduction to Testing in React Native
 

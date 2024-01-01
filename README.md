@@ -27,9 +27,17 @@
         - Profiling iOS by Xcode Instruments
         - Android Profiler in Android Studio
 
-2.  Debugging, Profiler & FPS (Frame Per Second)
+### [✅ 003 - Ultimate Guide on Component (JS) Testing by RNTL with Jest setup](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md)
 
-3.  React Native Testing Library (Component Testing)
+        - Brief intro with all types of RN testing
+        - React Native Testing Library (RNTL) details
+        - JEST setup & all it's config
+        - API => Render(): “queries”, “update", “debug"
+        - API => UserEvent()
+        - API => FireEvent()
+        - API => WaitFor()
+        - API => Mocking(): "jest.fn()" & "jest.mock()"
+        - Host & Composite components in RN
 
 4.  Performance Optimization
 

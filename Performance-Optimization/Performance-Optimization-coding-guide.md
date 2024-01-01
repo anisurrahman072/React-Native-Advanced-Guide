@@ -14,33 +14,33 @@ To keep your app running smoothly and responsively, you need to [display a frame
 
 This article will show you how to improve the performance of your React Native app by following these steps
 
-- [What is the **mechanism of React Native**?](#50e3)
+- [What is the **mechanism of React Native**?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#what-is-the-mechanism-of-react-native)
 
-- [Use **FlatList** or **SectionList** to display large lists in React Native](#9f56)
+- [Use **FlatList** or **SectionList** to display large lists in React Native](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#use-flatlist-or-sectionlist-to-display-large-lists-in-react-native)
 
-- [Delete all **console** statements](#1766)
+- [Delete all **console** statements](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#delete-all-console-statements)
 
-- [**Cache expensive** computations](#4f65)
+- [**Cache expensive** computations](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#cache-expensive-computations)
 
-- [Adjust (**resize** and scale down) **image** sizes](#e9e9)
+- [Adjust (**resize** and scale down) **image** sizes](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#adjust-resize-and-scale-down-image-sizes)
 
-- [**Cache images** locally](#4695)
+- [**Cache images** locally](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#cache-images-locally)
 
-- [Use **fast loading image** formats in React Native](#12b4)
+- [Use **fast loading image** formats in React Native](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#use-fast-loading-image-formats-in-react-native)
 
-- [Schedule animations with **InteractionManager** and LayoutAnimation](#0547)
+- [Schedule animations with **InteractionManager** and LayoutAnimation](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#schedule-animations-with-interactionmanager-and-layoutanimation)
 
-- [Use **native driver** with the Animated API](#ff77)
+- [Use **native driver** with the Animated API](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#use-native-driver-with-the-animated-api)
 
-- [Remove unnecessary libraries](#4ba5)
+- [Remove unnecessary libraries](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#remove-unnecessary-libraries-and-features)
 
-- [Use Hermes Engine](#ae62)
+- [Use Hermes Engine](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#use-hermes-engine)
 
-- [Use **Reselect** with **Redux** (for Cache)](#f5aa)
+- [Use **Reselect** with **Redux** (for Cache)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#use-reselect-with-redux)
 
-- [**Monitor memory usage** in React Native](#1de9)
+- [**Monitor memory usage** in React Native](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#monitor-memory-usage-in-react-native)
 
-- [**Navigation** in React Native](#62f6)
+- [**Navigation** in React Native](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md#navigation-in-react-native)
 
 ## What is the mechanism of React Native?
 

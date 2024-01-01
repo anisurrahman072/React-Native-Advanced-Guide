@@ -105,7 +105,15 @@
         - Rules of React Hooks (Violation)
         - Error Solution
 
-### [✅ 011 - More 2 coming soon .......]()
+### [✅ 011 - Ultimate Guide on `In App Purchase` Implementation (iOS & Android)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/In-App-Purchase/In-App-Purchase-details-implementation.md)
+
+        - Basic Flow of Payment Gateway
+        - Sandbox Testing
+        - How GOOGLE IAP & iOS IAP works ?
+        - RevenueCat SDK
+        - Implementation instruction (iOS & Android)
+
+### [✅ 012 - More 1 coming soon .......]()
 
 # Contribution
 

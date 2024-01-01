@@ -90,7 +90,13 @@
         - Reduce "Blank Space" techniques
         - How to Migrate from "FlatList" to "FlashList" ?
 
-### [✅ 009 - More 4 coming soon .......]()
+### [✅ 009 - Ultimate Guide on Nested Virtualization (Anti Pattern)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Anti-Patterns/Nested-Virtualization-anti-pattern.md)
+
+        - Nested VirtualizedLists Error
+        - Anti Pattern Reason
+        - SOLUTION code
+
+### [✅ 010 - More 3 coming soon .......]()
 
 # Contribution
 

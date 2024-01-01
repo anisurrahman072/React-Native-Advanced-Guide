@@ -49,7 +49,9 @@
         - Enabling Hermes in Old RN Versions
         - Static Hermes
 
-### [✅ 005 - More 8 coming soon .......]()
+### [✅ 005 - Ultimate Guide on How to Enable New Architecture]()
+
+### [✅ 006 - More 7 coming soon .......]()
 
 # Contribution
 

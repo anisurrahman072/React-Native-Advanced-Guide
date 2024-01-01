@@ -614,10 +614,6 @@ In iOS Profiling part of above we saw how to install Flipper & use it in debuggi
 
 Don’t worry for upcoming versions of React Native. **you can still use Flipper with 0.73+**; you will just have to **install it yourself because it won’t come preinstalled**.
 
-See my tweet on it below 👇
-
- <iframe src="https://medium.com/media/1670b203106770bfab168e8cd79aeac7" frameborder=0></iframe>
-
 ## Next Read
 
 🔥 🔥 Read my in Details articles about New Architecture of React Native. Article link: [React Native — New Architecture in depth (Hermes, JSI, Fabric, Yoga, Turbo Module, Codegen)](https://medium.com/@anisurrahmanbup/react-native-new-architecture-in-depth-hermes-jsi-fabric-fabric-renderer-yoga-turbo-module-1284a192a82b).

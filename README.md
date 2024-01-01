@@ -41,4 +41,5 @@
 
 ### Contribution
 
-- If you find any issues in the guidebook, please create a pull request (PR). Your PR will help the community 🚀.
+- If you find any issues in the guidebook, please create a pull request (PR). Your PR will help the community 🚀
+- Also, if you want to add more advanced guides to this repository, I will add you as a core contributor here 🔥

@@ -39,32 +39,6 @@
         - API => Mocking(): "jest.fn()" & "jest.mock()"
         - Host & Composite components in RN
 
-4.  Performance Optimization
-
-5.  XCode Instruments
-
-6.  Android Studio Profiler
-
-7.  Sharp on REACT Hooks
-
-8.  Virtualization & Blank Cell concept
-
-9.  FlashList & Cell Recycling concept
-
-10. In App Purchase (IOS + Android)
-
-11. Flipper & Chrome debugger tools
-
-12. Jest config setup
-
-13. Anti Patterns in RN
-
-14. Performance Monitor
-
-15. RN Threads (JS & Main Threads)
-
-16. Hermes Byte Code
-
 ### Contribution
 
 - If you find any issues in the guidebook, please create a pull request (PR). Your PR will help the community 🚀.

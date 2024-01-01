@@ -96,7 +96,16 @@
         - Anti Pattern Reason
         - SOLUTION code
 
-### [✅ 010 - More 3 coming soon .......]()
+### [✅ 010 - Ultimate Guide on Component Call (Anti Pattern)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Anti-Patterns/Component-Call-anti-pattern.md)
+
+        - Component Call => Functional way
+        - Component Call => React way
+        - Functional way creates silent ERROR!
+        - Error analysis
+        - Rules of React Hooks (Violation)
+        - Error Solution
+
+### [✅ 011 - More 2 coming soon .......]()
 
 # Contribution
 

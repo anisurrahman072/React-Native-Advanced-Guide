@@ -51,10 +51,10 @@
 
 ### [✅ 005 - Ultimate Guide on How to Enable New Architecture](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/How-to-Enable-New-Architecture.md)
 
-        - Development Environment to Enable New Architecture
+        - Development ENV to Enable New Architecture
         - Enable Hermes Instruction
-        - Npx Commands to enable New Architecture in Android
-        - Npx Commands to enable New Architecture in iOS
+        - Npx Commands for Android
+        - Npx Commands for iOS
         - Confirm New Architecture in action
 
 ### [✅ 006 - More 7 coming soon .......]()

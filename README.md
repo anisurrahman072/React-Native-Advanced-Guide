@@ -72,7 +72,14 @@
         - Monitor Memory usage
         - Fast Navigation
 
-### [✅ 007 - More 6 coming soon .......]()
+### [✅ 007 - Ultimate Guide on Virtualization (List of Items) Optimization](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md)
+
+        - <VirtualizedList/>
+        - <FlatList/>
+        - <SectionList/>
+        - <ScrollView/> with Virtualization props
+
+### [✅ 008 - More 5 coming soon .......]()
 
 # Contribution
 

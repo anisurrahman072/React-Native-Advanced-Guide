@@ -14,13 +14,13 @@ In this guide, we will discuss list **virtualization** (also known as **windowin
 
 Mainly, these are **virtualization components** provided by the React Native team.
 
-1.  [VirtualizedList](#d6a3)
+1.  [VirtualizedList](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md#virtualizedlist)
 
-2.  [FlatList](#07d8)
+2.  [FlatList](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md#flatlist)
 
-3.  [SectionList](#b438)
+3.  [SectionList](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md#sectionlist)
 
-4.  [**ScrollView** with Virtualization (**Experimental** & not suggested)](#7d17)
+4.  [**ScrollView** with Virtualization (**Experimental** & not suggested)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md#scrollview)
 
 We will see each of these **implementations in code** and then do **performance optimization** on each of them so that they can all load **more than 10,000 items**.
 

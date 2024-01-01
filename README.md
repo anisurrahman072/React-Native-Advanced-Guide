@@ -39,7 +39,17 @@
         - API => Mocking(): "jest.fn()" & "jest.mock()"
         - Host & Composite components in RN
 
-### [✅ 004 - More 9 coming soon .......]()
+### [✅ 004 - Ultimate Guide on Hermes & Static Hermes](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md)
+
+        - Bundle Release
+        - Relation between Bundle & Hermes
+        - Hermes Bytecode (.hbc)
+        - How to enable Hermes ?
+        - Oversure is Hermes working or not ?
+        - Enabling Hermes in Old RN Versions
+        - Static Hermes
+
+### [✅ 005 - More 8 coming soon .......]()
 
 # Contribution
 

@@ -8,27 +8,25 @@ _I found that the React Native official documentation missed some details about 
 
 Let’s take a look at what we will learn in this article in a nutshell 👇
 
-- [What is **Bundle Release**?]()
+- [What is **Bundle Release**?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md#what-is-bundle-release)
 
-- [**Android** Bundle Release command]()
+- [**Android** Bundle Release command](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md#android-bundle-release)
 
-- [**IOS** Bundle Release command]()
+- [**IOS** Bundle Release command](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md#ios-bundle-release)
 
-- [What is **Hermes Bytecode**?]()
+- [What is **Hermes Bytecode**?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md#what-is-hermes-bytecode-hbc)
 
-- [What is **.hbc file**?]()
+- [What is **.hbc file**?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md#what-is-hermes-bytecode-hbc)
 
-- [How to **enable Hermes**?]()
+- [How to **enable Hermes**?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md#enable-hermes)
 
-- [**Is Hermes enabled correctly** or not?]()
+- [**Is Hermes enabled correctly** or not?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md#is-hermes-enabled-correctly-or-not-%EF%B8%8F%EF%B8%8F)
 
-- [**Over sure Hermes is working perfectly**!]()
+- [**Over sure Hermes is working perfectly**!](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md#over-sure-that-hermes-is-working-perfectly)
 
-- [**Enabling Hermes on Older Versions** of React Native (Both IOS & Android)]()
+- [**Enabling Hermes on Older Versions** of React Native (Both IOS & Android)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md#enabling-hermes-on-older-versions-of-react-native)
 
-- [**Static Hermes**]()
-
-- [A **link to an article** on the **new architecture in relation to Hermes** 💯]()
+- [**Static Hermes**](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md#static-hermes)
 
 # Let’s start 🚀
 
@@ -126,7 +124,7 @@ If you have an existing app based on an earlier version of React Native, you wil
 
 > **Each Hermes release is aimed at a specific RN version.** The rule of thumb is to always follow Hermes releases strictly. Version mismatch can result in instant crash of your apps in the worst case scenario.
 
-## Enable in Android
+### Enable in Android
 
 Edit your **android/gradle.properties** file and make sure **hermesEnabled** is true:
 

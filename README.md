@@ -5,8 +5,7 @@
 - This **Guide Book** is originally from **12 Articles** on Medium that took 5 months to complete in 2023 (ARTICLES written by *https://twitter.com/anis_RNCore*).
 - All the Articles were originally based on **RN v0.71**.
 - The original link to the Articles can be found on Medium **(Link 👉)**: *https://medium.com/@anisurrahmanbup/list/react-native-advanced-architecture-be-an-expert-d7481c91d0de*
-
-### 🙏 If you find it helpful, please give a STAR ⭐️
+- ### 🙏 If you find this BOOK helpful, please give a STAR ⭐️
 
 # Table of Contents
 

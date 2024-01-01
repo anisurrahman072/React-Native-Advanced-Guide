@@ -242,7 +242,7 @@ Similarly, you can happily scroll up and down through a **ScrollView** when the 
 
 - Using **console.log** statements **lowers the FPS.**
 
-- **ListView lowers the FPS:** ListView initial rendering is too slow or scroll performance is bad for large lists. I would like to suggest, if you are facing low FPS then just use [FlashList](https://medium.com/@anisurrahmanbup/react-native-flashlist-performant-list-view-implementation-analysis-8b29df8f2560). **[See my in depth article on FlashList](https://medium.com/@anisurrahmanbup/react-native-flashlist-performant-list-view-implementation-analysis-8b29df8f2560)**_. If you are still using _**FlatList** then be sure that you’ve implemented [getItemLayout](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3) to optimize rendering speed by skipping measurement of the rendered items. See my article on how to set [getItemLayout](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3) properly.
+- **ListView lowers the FPS:** ListView initial rendering is too slow or scroll performance is bad for large lists. I would like to suggest, if you are facing low FPS then just use [FlashList](https://medium.com/@anisurrahmanbup/react-native-flashlist-performant-list-view-implementation-analysis-8b29df8f2560). **[See my in depth article on FlashList](https://medium.com/@anisurrahmanbup/react-native-flashlist-performant-list-view-implementation-analysis-8b29df8f2560)**. If you are still using **FlatList** then be sure that you’ve implemented [getItemLayout](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3) to optimize rendering speed by skipping measurement of the rendered items. See my article on how to set [getItemLayout](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3) properly.
 
 - **Re-rendering a view that barely changes lowers the FPS:** If you are using a ListView, you must provide a rowHasChanged function that can reduce a lot of work by quickly determining whether or not a row needs to be re-rendered. If you are using immutable data structures, this would only need to be a reference equality check. Similarly, you can implement **shouldComponentUpdate** and indicate the exact conditions under which you would like the component to re-render.
 
@@ -370,7 +370,7 @@ Let’s click on **Network Monitor** now & It will show you something like below
 
 ![Xcode: **Network Monitor**](https://cdn-images-1.medium.com/max/5760/1*Is-dnQb77Xb1bDzgZgsV-w.png)
 
-Xcode provides an extra monitor that isn’t shown by default but can help you inspect your UI — it’s the **View Hierarchy**. When the app is running, and you are on the screen you want to inspect, click on Debug **_View UI Hierarchy _** button like below. This will show your current UI in a 2D/3D model and the view tree.
+Xcode provides an extra monitor that isn’t shown by default but can help you inspect your UI — it’s the **View Hierarchy**. When the app is running, and you are on the screen you want to inspect, click on Debug **View UI Hierarchy** button like below. This will show your current UI in a 2D/3D model and the view tree.
 
 ![Xcode: ***View UI Hierarchy***](https://cdn-images-1.medium.com/max/5760/1*xx0PG-YA8YnR-AIs8iljDA.png)
 
@@ -424,7 +424,7 @@ Let’s first install flipper in MacOS. After successfully installing, we will s
 
 To install Flipper use either **_Homebrew_** command or download .**_dmg_** file of Flipper from official flipper download link.
 
-- **_Homebrew_** command to install Flipper: **_brew install — cask flipper _**(I used homebrew & it gave me **_Flipper_** stable version **_v0.225.0_**).
+- **_Homebrew_** command to install Flipper: **brew install — cask flipper** (I used homebrew & it gave me **_Flipper_** stable version **_v0.225.0_**).
 
 - **Flipper download** official link: [https://www.facebook.com/fbflipper/public/mac](https://www.facebook.com/fbflipper/public/mac)
 
@@ -434,7 +434,7 @@ After installing flipper, if you find this below error while opening **Flipper**
 
 ![Flipper opening Error](https://cdn-images-1.medium.com/max/2000/0*yWswhTS0wOTTywZT.png)
 
-**Solution:** Just run this command **_xattr -d com.apple.quarantine /Applications/Flipper.app _** in the root directory of your MacBook terminal (For my case it was **iTerm**). Now again open the Flipper app.
+**Solution:** Just run this command **xattr -d com.apple.quarantine /Applications/Flipper.app** in the root directory of your MacBook terminal (For my case it was **iTerm**). Now again open the Flipper app.
 
 After opening Flipper now you may see something like below. An another error 🤜🙇‍♂️.
 
@@ -568,7 +568,7 @@ Let’s see what about our **_mqt_js thread_** from the profiling chart. See bel
 
 ![***mqt_js thread **seems like smooth (not too much active)*](https://cdn-images-1.medium.com/max/3656/1*f3PrVMKLaNR8feL5y6aL3Q.png)
 
-If you see somehow **_mqt_js thread _** shows toom much green field, then **_mqt_js thread_** used almost all the time and does some heavy computation because your computations are done on the **JS side**. You can start thinking about how to improve it. There are multiple options to check.
+If you see somehow **_mqt_js thread_** shows toom much green field, then **_mqt_js thread_** used almost all the time and does some heavy computation because your computations are done on the **JS side**. You can start thinking about how to improve it. There are multiple options to check.
 
 - **Replace the bridge with JSI** in terms of communication — do tests if JSI is faster than the bridge. [See details how JSI works with New Architecture.](https://medium.com/@anisurrahmanbup/react-native-new-architecture-in-depth-hermes-jsi-fabric-fabric-renderer-yoga-turbo-module-1284a192a82b)
 
@@ -600,7 +600,7 @@ You can also **save your data** by clicking the Save Button.
 
 In iOS Profiling part of above we saw how to install Flipper & use it in debugging. In Flipper you can use this as a Flipper Plugin [Flashlight](https://docs.flashlight.dev/flipper). But it will be better if you use Flashlight from your CLI. Follow below steps to install Flashlight & start it into web.
 
-1.  Install in MacOS/ Linux by this command from terminal **_curl [https://get.flashlight.dev](https://get.flashlight.dev) | bash _** or in windows run this command in terminal "**_iwr [https://get.flashlight.dev/windows](https://get.flashlight.dev/windows) -useb | iex_**"
+1.  Install in MacOS/ Linux by this command from terminal **_curl [https://get.flashlight.dev](https://get.flashlight.dev) | bash_** or in windows run this command in terminal "**_iwr [https://get.flashlight.dev/windows](https://get.flashlight.dev/windows) -useb | iex_**"
 
 2.  After install open a new terminal & run this command: **_flashlight measure_**
 

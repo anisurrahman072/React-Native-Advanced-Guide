@@ -1,4 +1,4 @@
-## React Native — Ultimate Guide on “In App Purchase”
+# React Native — Ultimate Guide on “In App Purchase”
 
 ### iOS + Android — RevenueCat made it really simple 🔥
 

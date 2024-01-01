@@ -7,7 +7,7 @@
 - The original link to the Articles can be found on Medium **(Link 👉)**: *https://medium.com/@anisurrahmanbup/list/react-native-advanced-architecture-be-an-expert-d7481c91d0de*
 - ### 🙏 If you find this BOOK helpful, please give a STAR ⭐️
 
-# Table of Contents
+# Table of Contents (70+ TOPICS)
 
 ### [✅ 001 - Ultimate Guide on New Architecture in depth](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md)
 

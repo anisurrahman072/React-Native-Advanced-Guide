@@ -1,4 +1,4 @@
-## React Native — Ultimate Guide on New Architecture in depth
+# React Native — Ultimate Guide on New Architecture in depth
 
 ### Hermes, JSI, Fabric, Yoga, Turbo Module, Codegen — All in one 🔥
 

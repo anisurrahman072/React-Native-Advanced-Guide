@@ -451,7 +451,7 @@ If you see this **error** anytime in your **metro** 👇
 
 ### Error: ❝ VirtualizedLists should never be nested inside plain ScrollViews ❞
 
-**Then here is the solution article with error reason & analysis:** [React Native — Nested Virtualization Anti-pattern (Performance Optimization)](https://medium.com/@anisurrahmanbup/react-native-nested-virtualization-anti-pattern-performance-optimization-958e98d4ea79)
+**Then here is the solution article with error reason & analysis:** [React Native — Nested Virtualization Anti-pattern (Performance Optimization)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Anti-Patterns/Nested-Virtualization-anti-pattern.md)
 
 ## What Next ?
 

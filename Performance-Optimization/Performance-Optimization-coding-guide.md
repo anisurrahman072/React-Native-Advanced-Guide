@@ -50,7 +50,7 @@ The new architecture also introduces a new way of managing components called **m
 
 The new architecture is composed of **two main parts**: the new native module system **(Turbo Modules)** and the new renderer **(Fabric)**. Turbo Modules are a more efficient way to create native modules that leverage platform-specific APIs, while Fabric is a reimplementation of the React Native UI layer that supports concurrent rendering, asynchronous layout and smooth animations.
 
-> 🙋‍♂️ Know **more about in details of New Architecture**: [React Native New Architecture details (Hermes, JSI, Turbo Module, Fabric, Codegen, Yoga)](https://medium.com/@anisurrahmanbup/react-native-new-architecture-in-depth-hermes-jsi-fabric-fabric-renderer-yoga-turbo-module-1284a192a82b)
+> 🙋‍♂️ Know **more about in details of New Architecture**: [React Native New Architecture details (Hermes, JSI, Turbo Module, Fabric, Codegen, Yoga)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md)
 
 Let’s look at some of the **best practices** for **improving the performance** of a React Native application with several code examples.
 

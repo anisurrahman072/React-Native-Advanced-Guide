@@ -34,7 +34,7 @@ Let’s take a look at what we will learn in this article in a nutshell 👇
 
 Since you are going to work with **new architecture**, you should understand the **full flow** of it. Therefore, I strongly recommend that you read this article first and then come back here.
 
-**_Article link:_** [React Native New Architecture in depth (Hermes relation in New Architecture)](https://medium.com/@anisurrahmanbup/react-native-new-architecture-in-depth-hermes-jsi-fabric-fabric-renderer-yoga-turbo-module-1284a192a82b)
+**_Article link:_** [React Native New Architecture in depth (Hermes relation in New Architecture)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md)
 
 _If you already have enough knowledge about the new architecture of React Native and how its components (Hermes, JSI, Turbo, Fabric, etc) are interconnected, you can skip the article above. You can proceed to the next section._
 

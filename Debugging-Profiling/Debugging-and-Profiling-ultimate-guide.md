@@ -571,7 +571,7 @@ Let’s see what about our **_mqt_js thread_** from the profiling chart. See bel
 
 If you see somehow **_mqt_js thread_** shows toom much green field, then **_mqt_js thread_** used almost all the time and does some heavy computation because your computations are done on the **JS side**. You can start thinking about how to improve it. There are multiple options to check.
 
-- **Replace the bridge with JSI** in terms of communication — do tests if JSI is faster than the bridge. [See details how JSI works with New Architecture.](https://medium.com/@anisurrahmanbup/react-native-new-architecture-in-depth-hermes-jsi-fabric-fabric-renderer-yoga-turbo-module-1284a192a82b)
+- **Replace the bridge with JSI** in terms of communication — do tests if JSI is faster than the bridge. [See details how JSI works with New Architecture.](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md)
 
 - **Move some part of the code to the native side** — on the native side you have more control over threads execution and can schedule some work to not block the JS or UI thread.
 
@@ -617,9 +617,9 @@ Don’t worry for upcoming versions of React Native. **you can still use Flipper
 
 ## Next Read
 
-🔥 🔥 Read my in Details articles about New Architecture of React Native. Article link: [React Native — New Architecture in depth (Hermes, JSI, Fabric, Yoga, Turbo Module, Codegen)](https://medium.com/@anisurrahmanbup/react-native-new-architecture-in-depth-hermes-jsi-fabric-fabric-renderer-yoga-turbo-module-1284a192a82b).
+🔥 🔥 Read my in Details articles about New Architecture of React Native. Article link: [React Native — New Architecture in depth (Hermes, JSI, Fabric, Yoga, Turbo Module, Codegen)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md).
 
-![[**React Native — New Architecture in depth (Hermes, JSI, Fabric, Yoga, Turbo Module, Codegen)](https://medium.com/@anisurrahmanbup/react-native-new-architecture-in-depth-hermes-jsi-fabric-fabric-renderer-yoga-turbo-module-1284a192a82b)**](https://cdn-images-1.medium.com/max/2800/0*3XFYGhhw4I2bTzs-.png)
+![[**React Native — New Architecture in depth (Hermes, JSI, Fabric, Yoga, Turbo Module, Codegen)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md)**](https://cdn-images-1.medium.com/max/2800/0*3XFYGhhw4I2bTzs-.png)
 
 Thank you for reading this article. I enjoy sharing my **5 years** of experience in **JavaScript**, **React**, **React-native** & **Node.js** with you every day.
 

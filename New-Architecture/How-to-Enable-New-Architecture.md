@@ -8,7 +8,7 @@
 
 Since you are going to create an app with **new architecture**, you should understand the **full flow** of it. Therefore, I strongly recommend that you read this article first and then come back here.
 
-**_Article link:_** [React Native New Architecture in depth](https://medium.com/@anisurrahmanbup/react-native-new-architecture-in-depth-hermes-jsi-fabric-fabric-renderer-yoga-turbo-module-1284a192a82b)
+**_Article link:_** [React Native New Architecture in depth](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md)
 
 _If you already have enough knowledge about the new architecture of React Native and how its components are interconnected, you can skip the article above. You can proceed to the next section._
 

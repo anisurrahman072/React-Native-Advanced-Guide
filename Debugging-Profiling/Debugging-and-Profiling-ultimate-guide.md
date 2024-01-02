@@ -68,7 +68,7 @@ Dev menu is looking like below (IOS & Android)
 
 ![Dev Menu (From my IOS & Android App)](https://cdn-images-1.medium.com/max/5356/1*u4SQqT9GOEfIIq47jNd11A.png)
 
-> Let’s Understand options of Dev Menu (Bridge) 👇
+### Let’s Understand options of Dev Menu (Bridge) 👇
 
 ## Fast Refresh
 

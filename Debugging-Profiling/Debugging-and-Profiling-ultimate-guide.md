@@ -458,7 +458,7 @@ When i clicked on **“Hermes Debugger (RN)”** button it shows me a text like 
 
 As my React native app was in **v0.71** so by default **Hermes** was true but still **Flipper** says that it didn’t find any **Hermes** **App**. So, I just reloaded my app in my simulator. Now it connected successfully & when i again click on **“Hermes Debugger (RN)”** button then it shows something like below.
 
-> _If you you didn’t enable Hermes in your React native app or you want to check **“Is Hermes already enabled in your app ?”** then see my_ short Article on it. **Article link:** [Hermes Details 🔥](https://medium.com/@anisurrahmanbup/react-native-performance-optimization-by-enabling-hermes-bundle-release-hermes-bytecode-2d3c2be52672)
+> _If you you didn’t enable Hermes in your React native app or you want to check **“Is Hermes already enabled in your app ?”** then see my_ short Article on it. **Article link:** [**Hermes Details 🔥**](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md)
 
 ![Flipper connected successfully with my app 🔥](https://cdn-images-1.medium.com/max/4036/1*h0sAbgAKupIQVAq0I23btw.png)
 

@@ -268,6 +268,8 @@ It is **very important to read carefully each step in the sequence I gave you ab
 
 If you follow my sequence and the knowledge I shared with you carefully, then it is possible that you will be able to implement a basic In App Purchase in both Android and iOS React native app **within 2–4 days**.
 
-Thank you for reading this article. I enjoy sharing my **5 years** of experience in **JavaScript**, **React**, **React-native** & **Node.js** with you every day.
+### [🙏 If you find it helpful, please give a STAR (click here) ️⭐️ ⭐️](https://github.com/anisurrahman072/React-Native-Advanced-Guide)
 
-If you enjoyed reading this article, I would appreciate it if you could follow me on [Twitter](https://twitter.com/anis_RNCore) & [Medium](https://medium.com/@anisurrahmanbup). You can also leave your feedback and comments there. Thank you for your support and interest.
+Thank you for reading this article. I enjoy sharing my **5 years** of experience in **React-native**, **JavaScript**, **React** & **Node.js** with you every day. If you enjoyed reading this article, I would appreciate it if you could follow me on [**Twitter**](https://twitter.com/anis_RNCore) & [**Medium**](https://medium.com/@anisurrahmanbup).
+
+If you find any **ISSUE** in this Guide BOOK, please create a **PR** to help the community 🔥

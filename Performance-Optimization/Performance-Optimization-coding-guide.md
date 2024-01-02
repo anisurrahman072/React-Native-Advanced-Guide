@@ -663,6 +663,8 @@ If you want to **become an expert in performance optimization**, you need to lea
 
 - **Article Link:** [How to enable **New Architecture** in your React native App](https://medium.com/@anisurrahmanbup/react-native-new-architecture-how-to-enable-in-new-android-and-ios-app-8e8d37995b62)
 
-Thank you for reading this article. I enjoy sharing my **5 years** of experience in **JavaScript**, **React**, **React-native** & **Node.js** with you every day.
+### [🙏 If you find it helpful, please give a STAR (click here) ️⭐️ ⭐️](https://github.com/anisurrahman072/React-Native-Advanced-Guide)
 
-If you enjoyed reading this article, I would appreciate it if you could follow me on [Twitter](https://twitter.com/anis_RNCore) & [Medium](https://medium.com/@anisurrahmanbup). You can also leave your feedback and comments there. Thank you for your support and interest.
+Thank you for reading this article. I enjoy sharing my **5 years** of experience in **React-native**, **JavaScript**, **React** & **Node.js** with you every day. If you enjoyed reading this article, I would appreciate it if you could follow me on [**Twitter**](https://twitter.com/anis_RNCore) & [**Medium**](https://medium.com/@anisurrahmanbup).
+
+If you find any **ISSUE** in this Guide BOOK, please create a **PR** to help the community 🔥

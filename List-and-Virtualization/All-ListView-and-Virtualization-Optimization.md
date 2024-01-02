@@ -457,7 +457,7 @@ If you see this **error** anytime in your **metro** 👇
 
 Since you have mastered **React Native Virtualization**, you are ready to explore **_FlashList_**, which is a new approach that uses **_‘Cell Recycling’_** instead of **_Virtualization_**. I will guide you through the steps and explain the terms related to **FlashList** and **Cell Recycling**. I also describe my journey on how **I loaded 64,000 image** Items in FlashList without any lac.
 
-**FlashList article link:** [React Native — FlashList: Performant List view (Implementation + Analysis)](https://medium.com/@anisurrahmanbup/react-native-flashlist-performant-list-view-implementation-analysis-8b29df8f2560)
+**FlashList article link:** [React Native — FlashList: Performant List view (Implementation + Analysis)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/FlashList-Cell-Recycling-details.md)
 
 ### [🙏 If you find it helpful, please give a STAR (click here) ️⭐️ ⭐️](https://github.com/anisurrahman072/React-Native-Advanced-Guide)
 

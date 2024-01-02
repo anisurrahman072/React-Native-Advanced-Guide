@@ -417,7 +417,7 @@ Each library in a React or React Native application leaves some footprint on the
 
 Before the release of React Native v0.64, Hermes was available only for Android platforms, **but it is now available for iOS as well**.
 
-**🚀 Article Link:** [Know more about Hermes in details here ✈️](https://medium.com/@anisurrahmanbup/react-native-performance-optimization-by-enabling-hermes-bundle-release-hermes-bytecode-2d3c2be52672)
+**🚀 Article Link:** [Know more about Hermes in details here ✈️](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md)
 
 If you are using an earlier version of React Native, you need to first upgrade it to the acceptable version before enabling Hermes.
 
@@ -659,7 +659,7 @@ These are the latest innovations in the React Native world that can make your ap
 
 If you want to **become an expert in performance optimization**, you need to learn how to use these two features in your app. Don’t worry, I have got you covered. I have written two **detailed articles that will teach you everything** you need to know about them. You can find them below:
 
-- **Article Link:** [How to enable **Hermes** in your Old React native app](https://medium.com/@anisurrahmanbup/react-native-performance-optimization-by-enabling-hermes-bundle-release-hermes-bytecode-2d3c2be52672)
+- **Article Link:** [How to enable **Hermes** in your Old React native app](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md)
 
 - **Article Link:** [How to enable **New Architecture** in your React native App](https://medium.com/@anisurrahmanbup/react-native-new-architecture-how-to-enable-in-new-android-and-ios-app-8e8d37995b62)
 

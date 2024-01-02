@@ -50,7 +50,7 @@ Follow the steps below to **enable the New Architecture** and build the app.
 
 Read this article to learn more about **how to enable Hermes** in both **iOS & Android** 👇
 
-**Article Link:** [React Native Performance optimization by enabling Hermes](https://medium.com/@anisurrahmanbup/react-native-performance-optimization-by-enabling-hermes-bundle-release-hermes-bytecode-2d3c2be52672)
+**Article Link:** [React Native Performance optimization by enabling Hermes](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md)
 
 ## Enable the New Architecture
 

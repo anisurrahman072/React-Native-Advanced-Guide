@@ -10,7 +10,7 @@ _This article took me **16 days** to complete, with each day 5–6 hours of work
 
 **_Take a deep breath and grab a cup of coffee for a long article, so that you won’t feel sleepy 😃._**
 
-> **Let’s see in a summary what this article will teach us.**
+### **Let’s see in a summary what this article will teach us.**
 
 1.  [Accessing the Dev Menu](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#accessing-the-dev-menu)
 
@@ -48,7 +48,7 @@ _This article took me **16 days** to complete, with each day 5–6 hours of work
 
 18. [Replacing Flipper in 0.73+ ?](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md#replacing-flipper-in-073-)
 
-> Let’s start React Native Debugging 🙇‍♂️
+### Let’s start React Native Debugging 🙇‍♂️
 
 ## Accessing the Dev Menu
 

@@ -507,7 +507,8 @@ Or you can click on **Profile** button in the toolbar.
 - **Run the app on an actual Android device** that is affected, preferably a lower-end phone or emulator if you don’t have one. If your app has runtime monitoring set up, use a model that is either the most used by users or the one that’s affected by a particular issue.
 
 - Turn off development mode. **You must be sure that the app uses a JS bundle instead of the metro server**, which provides that bundle. Follow the below steps to make **“JS DEV MODE”** off.
-  > Steps to make **_“JS DEV MODE”_** off 👇
+
+### Steps to make **_“JS DEV MODE”_** off 👇
 
 1.  First run your app by using this **npx** command: **_npx react-native run-android_**
 

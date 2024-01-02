@@ -4,7 +4,7 @@
 
 ![Anti Pattern — Nested Virtualization](https://cdn-images-1.medium.com/max/5760/1*ut1Fr0oJhGpHGaC2wTXd_Q.png)
 
-React Native provides some components for rendering large lists of data efficiently: [<FlatList>](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3) and [<SectionList>](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3). These components are based on the **VirtualizedList** component, which implements a virtualization technique to improve **memory consumption** and **performance**.
+React Native provides some components for rendering large lists of data efficiently: [<FlatList>](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md) and [<SectionList>](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md). These components are based on the **VirtualizedList** component, which implements a virtualization technique to improve **memory consumption** and **performance**.
 
 **Virtualization** means that only the items that are **currently visible** on the screen (or within a certain window size) are rendered, while the rest are replaced by **blank spaces** of the **same size**. This way, the list can handle thousands of items without affecting the app’s responsiveness or memory usage.
 
@@ -34,9 +34,9 @@ The are several reasons why nested VirtualizedList is an **Anti-pattern**. Such 
 
 To avoid these problems, React Native warns you when you nest a **VirtualizedList** inside a plain **ScrollView** with the **same orientation**, and suggests you to **_use another VirtualizedList-backed container_** instead. This means that you should either:
 
-- Use a **_different orientation_** for the **nested list** (for example, a **horizontal** [FlatList](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3) inside a **vertical** **ScrollView**).
+- Use a **_different orientation_** for the **nested list** (for example, a **horizontal** [FlatList](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md) inside a **vertical** **ScrollView**).
 
-- Use another **_component that supports virtualization and scrolling_**, such as [`<SectionList>`](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3) or `<FlatGrid>`.
+- Use another **_component that supports virtualization and scrolling_**, such as [`<SectionList>`](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md) or `<FlatGrid>`.
 
 - Use a **custom component** that implements its own logic for **rendering** and **scrolling**, such as <RecyclerListView> or <LargeList>.
 
@@ -46,11 +46,11 @@ By following these suggestions, you can ensure that your **lists** are **rendere
 
 ## Error Code
 
-So, in my case I had a code a where I needed to show a **_list of Images_** in [FlatList](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3) and at the top of the list there was a Title & a camera button to take more photos. The total view was wrapped by a **ScrollView**. Let’s see this anti-pattern view 👇
+So, in my case I had a code a where I needed to show a **_list of Images_** in [FlatList](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md) and at the top of the list there was a Title & a camera button to take more photos. The total view was wrapped by a **ScrollView**. Let’s see this anti-pattern view 👇
 
 ![Error view (**FlatList** inside **ScrollView**)](https://cdn-images-1.medium.com/max/4292/1*9ybNu8s4QjkYJolAMSbYyw.png)
 
-So, from the above picture we see that [FlatList](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3) (red box) was wrapped by a [ScrollView](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3) (green box). This is **Anti-Pattern**.
+So, from the above picture we see that [FlatList](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md) (red box) was wrapped by a [ScrollView](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md) (green box). This is **Anti-Pattern**.
 
 Now let’s see this **anti-pattern** code 👇
 
@@ -116,7 +116,7 @@ Here is the final code with **ListHeaderComponent** props function
 
 Now that you have successfully solved the **virtualization anti-pattern** by using the power of **FlatList**, you might want to learn more about **React Native virtualization** and **FlatList** **performance optimization** to load **1000+ items**. Don’t worry, I have prepared another detailed article for you on this topic.
 
-**Article Link:** [React Native — Virtualization Performance Optimization (FlatList, SectionList, VirtualizedList, ScrollView)](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3)
+**Article Link:** [React Native — Virtualization Performance Optimization (FlatList, SectionList, VirtualizedList, ScrollView)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md)
 
 ### [🙏 If you find it helpful, please give a STAR (click here) ️⭐️ ⭐️](https://github.com/anisurrahman072/React-Native-Advanced-Guide)
 

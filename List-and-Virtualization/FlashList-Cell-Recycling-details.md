@@ -80,7 +80,7 @@ Apart from all performance benefits **_RecyclerListView_** comes with great feat
 
 React Native Virtualization is a technique that **renders only the items** that are **visible in the viewport**, and replaces the rest with **blank space**. This reduces the number of DOM elements that need to be created and updated, and improves memory consumption and scrolling speed. However, this also means that the items that are outside of the viewport are unmounted and lose their internal state and **creates a memory overhead** for **Blank Spaces**.
 
-> **Read my in details article on** [React native virtualization components (VirtualizedList, FlatList, SectionList & ScrollView) with performance optimization props.](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3)
+> **Read my in details article on** [React native virtualization components (VirtualizedList, FlatList, SectionList & ScrollView) with performance optimization props.](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md)
 
 ### **Cell Recycling**
 
@@ -389,7 +389,7 @@ Please note that **you cannot apply style directly to FlashList** so you may nee
 
 If you are interested in learning about the previous version of **_React Native virtualization_**, which used a different approach than the current **FlashList** component, you can read this article that provides a detailed and easy-to-understand explanation.
 
-**Article link:** [React Native — Virtualization Performance Optimization (FlatList, SectionList, VirtualizedList, ScrollView)](https://medium.com/@anisurrahmanbup/react-native-virtualization-performance-optimization-flatlist-sectionlist-virtualizedlist-8430da4c68b3)
+**Article link:** [React Native — Virtualization Performance Optimization (FlatList, SectionList, VirtualizedList, ScrollView)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/List-and-Virtualization/All-ListView-and-Virtualization-Optimization.md)
 
 ### [🙏 If you find it helpful, please give a STAR (click here) ️⭐️ ⭐️](https://github.com/anisurrahman072/React-Native-Advanced-Guide)
 

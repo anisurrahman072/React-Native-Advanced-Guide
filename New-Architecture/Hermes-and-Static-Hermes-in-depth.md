@@ -185,7 +185,7 @@ Now that you have successfully learned **how to enable Hermes** for both iOS and
 
 Also, if you want to improve the code quality and optimize your React Native code, read this 👇
 
-**_Article link:_** [React Native app Performance Optimization: IOS & Android](https://medium.com/@anisurrahmanbup/react-native-app-performance-optimization-ios-android-be-a-sr-react-native-engineer-today-767cfcb0ed70)
+**_Article link:_** [React Native app Performance Optimization: IOS & Android](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md)
 
 ### [🙏 If you find it helpful, please give a STAR (click here) ️⭐️ ⭐️](https://github.com/anisurrahman072/React-Native-Advanced-Guide)
 

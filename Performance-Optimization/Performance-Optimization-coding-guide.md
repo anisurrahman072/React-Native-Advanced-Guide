@@ -4,13 +4,13 @@
 
 ![](https://cdn-images-1.medium.com/max/5760/1*uWXsg7dBqEGXP6YtRAAN8w.png)
 
-This guide covers all the **basics** of React Native **code optimization**. This guide is suitable for React Native developers of every level: **beginner**, **intermediate**, and **senior**. However, if you already know **how to optimize your code** at the code level, you can read my **advanced optimization article** on React Native to be a **Debugging Expert**. Here is the article link: [Ultimate Guide on Debugging , Profiling & Advanced Optimization.](https://medium.com/@anisurrahmanbup/react-native-ultimate-guide-on-debugging-profiling-performance-optimization-ios-android-7e44b8690cbe)
+This guide covers all the **basics** of React Native **code optimization**. This guide is suitable for React Native developers of every level: **beginner**, **intermediate**, and **senior**. However, if you already know **how to optimize your code** at the code level, you can read my **advanced optimization article** on React Native to be a **Debugging Expert**. Here is the article link: [Ultimate Guide on Debugging , Profiling & Advanced Optimization.](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md)
 
 ### ❝ React Native app performance is the difference between a good app and **a great app**, and it requires constant attention and optimization from the start ❞
 
 Creating an app that offers a great **user experience** should be the main goal of any app development. React Native provides you with the tools you need to build a **fast and smooth app**, but sometimes you need to optimize your app **manually**. To do this, you need to think about **performance optimization** from the beginning of your projects.
 
-To keep your app running smoothly and responsively, you need to [display a frame within 16.67 milliseconds](https://medium.com/@anisurrahmanbup/react-native-ultimate-guide-on-debugging-profiling-performance-optimization-ios-android-7e44b8690cbe) — that’s how long a modern mobile device takes to show **60 frames in one second**. If you fail to do this, your app will perform poorly and the UI may seem to freeze.
+To keep your app running smoothly and responsively, you need to [display a frame within 16.67 milliseconds](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md) — that’s how long a modern mobile device takes to show **60 frames in one second**. If you fail to do this, your app will perform poorly and the UI may seem to freeze.
 
 This article will show you how to improve the performance of your React Native app by following these steps
 

@@ -16,6 +16,7 @@
         - Hermes Engine (New JS compiler)
         - Turbo Modules (New Native Modules)
         - Fabric (New Rendering Engine)
+        - Yoga (Cross platform layout engine)
 
 ### [✅ 002 - Ultimate Guide on Debugging, Profiling & Advanced Optimization](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Debugging-Profiling/Debugging-and-Profiling-ultimate-guide.md)
 

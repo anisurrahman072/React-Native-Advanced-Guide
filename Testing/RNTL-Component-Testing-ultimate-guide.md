@@ -964,9 +964,9 @@ The interval option specifies the amount of time to wait between each check of t
 
 The value **_10,000_** at the end of the above code refers to the maximum time this test will run, and every asynchronous (await) operation must be finished within this time. By default, this time is set to 5000 ms.
 
-Again, the component is as same as before on which I applied the waitFor() test API. I’m providing the component again below.
+Again, the component is as same as before on which I applied the **waitFor()** test API. I’m providing the component again below.
 
-![The component on which I applied WaitFor()](https://cdn-images-1.medium.com/max/NaN/1*TPVFDVxLTK0K3j5LHErVvQ.png)
+![The component on which I applied WaitFor()](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*TPVFDVxLTK0K3j5LHErVvQ.png)
 
 Below is the final code of WaitFor() in editor.
 

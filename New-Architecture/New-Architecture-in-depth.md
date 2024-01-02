@@ -254,9 +254,7 @@ To Sum it up, **JSI** will allow using **other JavaScript engines** and will all
 
 > One of the **main advantages of the JSI** is that it’s written in **C++**. This means that **React Native can target a wide range of devices**, including smart TVs, watches and other devices.
 
-**JSI (JavaScript Interface)** opens the door for
-
-> Single Interface for All Platforms by C++
+### ❝ **JSI (JavaScript Interface)** opens the door for Single Interface for All Platforms by C++ ❞
 
 ## How JSI synchronous made it great!
 
@@ -342,9 +340,7 @@ The **New Native module system** is also known as “**Turbo Module”** which u
 
 - **As** in new architecture, **JavaScript** using **JSI** to communicate with **Native Modules**, so it will help you by **reducing the amount of work required for porting your app to multiple platforms**. This is because JSI was written in C++. **C++** is a language that **can run on multiple platforms**, such as Android, iOS, Windows, or macOS. It is also a language that can interact with other native languages, such as Java or Objective-C, through bindings. This means that **you can write your “Native module” logic in C++**, and then use bindings to expose it to the other native languages. This way, you can **share the same implementation across different platforms**, and only write the bindings for each platform.
 
-**JSI (JavaScript Interface)** opens the door for
-
-> Single Interface for All Platforms by C++
+### ❝ **JSI (JavaScript Interface)** opens the door for Single Interface for All Platforms by C++ ❞
 
 ## Fabric (New Rendering Engine)
 

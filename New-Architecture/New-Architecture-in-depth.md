@@ -464,10 +464,12 @@ Congratulations on mastering the **New Architecture of React Native**! However, 
 
 If you want to **become an expert in performance optimization**, you need to learn how to use these two features in your app. Don’t worry, I have got you covered. I have written two **detailed articles that will teach you everything** you need to know about them. You can find them below:
 
-- **Article Link:** [How to enable **Hermes** in your Old React native app](https://medium.com/@anisurrahmanbup/react-native-performance-optimization-by-enabling-hermes-bundle-release-hermes-bytecode-2d3c2be52672)
+- **Article Link:** [How to enable **Hermes** in your Old React native app](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md)
 
-- **Article Link:** [How to enable **New Architecture** in your React native App](https://medium.com/@anisurrahmanbup/react-native-new-architecture-how-to-enable-in-new-android-and-ios-app-8e8d37995b62)
+- **Article Link:** [How to enable **New Architecture** in your React native App](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/How-to-Enable-New-Architecture.md)
+
+### [🙏 If you find it helpful, please give a STAR ⭐️](https://github.com/anisurrahman072/React-Native-Advanced-Guide)
 
 Thank you for reading this article. I enjoy sharing my **5 years** of experience in **JavaScript**, **React**, **React-native** & **Node.js** with you every day.
 
-If you enjoyed reading this article, I would appreciate it if you could follow me on [Twitter](https://twitter.com/anis_RNCore) & [Medium](https://medium.com/@anisurrahmanbup). You can also leave your feedback and comments there. Thank you for your support and interest.
+If you enjoyed reading this article, I would appreciate it if you could follow me on [Twitter](https://twitter.com/anis_RNCore) & [Medium](https://medium.com/@anisurrahmanbup).

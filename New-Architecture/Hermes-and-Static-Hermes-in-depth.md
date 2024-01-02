@@ -181,7 +181,7 @@ The main difference between **Hermes** and **Static Hermes** is that **Hermes co
 
 Now that you have successfully learned **how to enable Hermes** for both iOS and Android, **you should know how to enable the New Architecture** in both iOS and Android. This is because Hermes is a part of the New Architecture provided by the React Native team and **Hermes cannot show its full power without enabling the New Architecture**. So read the article below to enable the full New Architecture of your React Native app.
 
-**Article Link:** [React Native New Architecture (How to enable in new Android and IOS app)](https://medium.com/@anisurrahmanbup/react-native-new-architecture-how-to-enable-in-new-android-and-ios-app-8e8d37995b62)
+**Article Link:** [React Native New Architecture (How to enable in new Android and IOS app)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/How-to-Enable-New-Architecture.md)
 
 Also, if you want to improve the code quality and optimize your React Native code, read this 👇
 

@@ -661,7 +661,7 @@ If you want to **become an expert in performance optimization**, you need to lea
 
 - **Article Link:** [How to enable **Hermes** in your Old React native app](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md)
 
-- **Article Link:** [How to enable **New Architecture** in your React native App](https://medium.com/@anisurrahmanbup/react-native-new-architecture-how-to-enable-in-new-android-and-ios-app-8e8d37995b62)
+- **Article Link:** [How to enable **New Architecture** in your React native App](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/How-to-Enable-New-Architecture.md)
 
 ### [🙏 If you find it helpful, please give a STAR (click here) ️⭐️ ⭐️](https://github.com/anisurrahman072/React-Native-Advanced-Guide)
 

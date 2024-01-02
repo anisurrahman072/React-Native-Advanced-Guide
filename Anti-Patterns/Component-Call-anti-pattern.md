@@ -118,15 +118,15 @@ The solution is just always following the **best practices** given by React & Re
 
 As you understood that when you are writing your **React** or **React Native** code, you must be aware of **React best practices** about Component. So, you must have to gain knowledge about these:
 
-- [Higher order Component (HOC)](https://medium.com/@anisurrahmanbup/react-higher-order-component-custom-hooks-details-analysis-6a471befd60b)
+- [Higher order Component (HOC)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Components-and-Hooks/HOC-Props-and-Custom-Hooks.md)
 
-- [Render Props pattern](https://medium.com/@anisurrahmanbup/react-higher-order-component-custom-hooks-details-analysis-6a471befd60b)
+- [Render Props pattern](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Components-and-Hooks/HOC-Props-and-Custom-Hooks.md)
 
-- [Custom hooks (Replaced HOC & Render Props pattern)](https://medium.com/@anisurrahmanbup/react-higher-order-component-custom-hooks-details-analysis-6a471befd60b)
+- [Custom hooks (Replaced HOC & Render Props pattern)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Components-and-Hooks/HOC-Props-and-Custom-Hooks.md)
 
-- [Composition of HOC](https://medium.com/@anisurrahmanbup/react-higher-order-component-custom-hooks-details-analysis-6a471befd60b)
+- [Composition of HOC](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Components-and-Hooks/HOC-Props-and-Custom-Hooks.md)
 
-**You will find in details analysis with case study example in this article about all the above:** [React — Higher Order Component, Render props & Custom Hooks (Details analysis)](https://medium.com/@anisurrahmanbup/react-higher-order-component-custom-hooks-details-analysis-6a471befd60b)
+**You will find in details analysis with case study example in this article about all the above:** [React — Higher Order Component, Render props & Custom Hooks (Details analysis)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Components-and-Hooks/HOC-Props-and-Custom-Hooks.md)
 
 ### [🙏 If you find it helpful, please give a STAR (click here) ️⭐️ ⭐️](https://github.com/anisurrahman072/React-Native-Advanced-Guide)
 

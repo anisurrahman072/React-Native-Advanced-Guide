@@ -617,7 +617,7 @@ Don’t worry for upcoming versions of React Native. **you can still use Flipper
 
 ## Next Read
 
-🔥 🔥 Read my in Details articles about New Architecture of React Native. Article link: [**React Native — New Architecture in depth (Hermes, JSI, Fabric, Yoga, Turbo Module, Codegen)**](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md).
+🔥 🔥 Read my in Details articles about New Architecture of React Native. Article link: [_React Native — New Architecture in depth (Hermes, JSI, Fabric, Yoga, Turbo Module, Codegen)_](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md).
 
 ### [🙏 If you find it helpful, please give a STAR (click here) ️⭐️ ⭐️](https://github.com/anisurrahman072/React-Native-Advanced-Guide)
 

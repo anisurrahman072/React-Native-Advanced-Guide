@@ -1,4 +1,4 @@
-## React Native — UI Testing (Ultimate Guide)
+# React Native — UI Testing (Ultimate Guide)
 
 ### A comprehensive guide to React Native Component Testing.
 

@@ -1,4 +1,4 @@
-## React Native — Ultimate Guide on Virtualization Performance Optimization
+# React Native — Ultimate Guide on Virtualization Performance Optimization
 
 ### Optimize list performance — FlatList, SectionList, VirtualizedList, ScrollView (All in one) 🔥
 
@@ -245,7 +245,7 @@ Now let’s see each function **props** of **SectionList**
 
 ![**Props functions of SectionList component**](https://cdn-images-1.medium.com/max/2628/1*Lix6BgBsKTFomJCVyoGH0Q.png)
 
-### View of SectioList
+### View of SectionList
 
 ![**SectionList output**](https://cdn-images-1.medium.com/max/5248/1*V0HmcuskxA5PrlmUzifKBg.png)
 
@@ -281,7 +281,7 @@ You just need to change the **_renderItem_** props function like below:
 
 This above function is for the **_renderItem_** **props functions**. Just replace your necessary code in the above function & send the function as **_renderItem_** props function of **SectionList**.
 
-> # ❝ If you like my Algorithmic way, please do a Follow 🙏
+> # ❝ If you like my Algorithmic way, please give a STAR 🙏
 
 ### Multi Column view of SectionList
 

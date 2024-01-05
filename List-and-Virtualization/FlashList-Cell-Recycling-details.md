@@ -294,13 +294,13 @@ Now create a **_ref_** by using **_useRef()_** and also define **_useBlankAreaTr
 
 Now implement a useEffect() hook to get the output like below
 
-![**useEffect()** hook to get **“Blank Space”** raised ouutput](https://cdn-images-1.medium.com/max/3372/1*u9sZ0MzTqY6Hn-j4JNZvbg.png)
+![**useEffect()** hook to get **“Blank Space”** raised output](https://cdn-images-1.medium.com/max/3372/1*u9sZ0MzTqY6Hn-j4JNZvbg.png)
 
 ### Output
 
 For, **150 (Image)** items it gave me — below output **(Pretty performant)** in my simulator (without release mode). I scrolled the images very fast & scrolled up-down very fast.
 
-![Outpuut from onBlankArea](https://cdn-images-1.medium.com/max/2988/1*7FH4UZbSKVIL_11zRQI7ew.png)
+![Output from onBlankArea](https://cdn-images-1.medium.com/max/2988/1*7FH4UZbSKVIL_11zRQI7ew.png)
 
 ### Output Analysis
 
@@ -320,11 +320,11 @@ Here is the full code that i implemented. So that you can just copy & test the j
     import { FlashList, useBlankAreaTracker } from '@shopify/flash-list'
 
     function MyListComponent(){
-       // For FlastList
+       // For FlashList
        const ref = useRef(null)
        const [blankAreaTrackerResult, onBlankArea] = useBlankAreaTracker(ref)
 
-        // Only when the component will unmount then you willl see the output
+        // Only when the component will unmount then you will see the output
         // As we set the console in cleanUp function 👇
         // It will show you then the latest output of Blank Area when unmount
         useEffect(() => {
@@ -373,7 +373,7 @@ Basically two error I faced. I will tell you the solution of them too.
 
 **Error:** Invariant Violation: requireNativeComponent: “AutoLayoutView” was not found in the UIManager.
 
-**Solution:** Just stop the Xcode & Metro. Clean buuild in XCode. **Re build your app from XCode.**
+**Solution:** Just stop the Xcode & Metro. Clean build in XCode. **Re build your app from XCode.**
 
 ### **#ERROR: 2**
 

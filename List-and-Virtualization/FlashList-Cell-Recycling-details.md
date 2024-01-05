@@ -103,31 +103,33 @@ Now implement **renderItem** props function **renderFlatlistItem()** like below.
 
 Here is the **full code** that I implemented.
 
-    function renderFlatlistItem({ item }) {
-      return (
-       <View>
-        <Image
-         style={styles.image}
-         resizeMethod="resize"
-         source={{
-          uri: item.url
-         }}
-        />
-        <Text>{item.nftName}</Text>
-       </View>
-      )
-     }
-
-    // JSX code
+```javascript
+function renderFlatlistItem({ item }) {
     return (
-      <FlashList
-       data={myNftsData.findMyNfts}
-       renderItem={renderFlatlistItem}
-       estimatedItemSize={20}
-       keyExtractor={(item) => item._id}
-       numColumns={2}
-      />
+        <View>
+            <Image
+                style={styles.image}
+                resizeMethod="resize"
+                source={{
+                    uri: item.url
+                }}
+            />
+            <Text>{item.nftName}</Text>
+        </View>
     )
+}
+
+// JSX code
+return (
+    <FlashList
+        data={myNftsData.findMyNfts}
+        renderItem={renderFlatlistItem}
+        estimatedItemSize={20}
+        keyExtractor={(item) => item._id}
+        numColumns={2}
+    />
+)
+```
 
 Output of the Basic **FlashList** implementation (**IOS** + **Android**) in my App.
 
@@ -265,14 +267,16 @@ For, **150 (Image) items** it gave me — **202 milliseconds** like below **(Pre
 
 Here is the final code
 
-    const MyComponent = () => {
-        const onLoadListener = useCallback(({ elapsedTimeInMs } ) => {
-            ingestData("Sample List load time", elapsedTimeInMs);
-        }, []);
+```javascript
+const MyComponent = () => {
+    const onLoadListener = useCallback(({ elapsedTimeInMs } ) => {
+        ingestData("Sample List load time", elapsedTimeInMs);
+    }, []);
 
-        // JSX code
-        return <FlashList {...props} onLoad={onLoadListener} />;
-    }
+    // JSX code
+    return <FlashList {...props} onLoad={onLoadListener} />;
+}
+```
 
 ## Check how much “Blank Space” raised
 
@@ -316,32 +320,34 @@ For a **150 items** rendering in an android simulator, these values seem to be q
 
 Here is the full code that i implemented. So that you can just copy & test the juice 💁‍♂️
 
-    import React, { useRef } from 'react'
-    import { FlashList, useBlankAreaTracker } from '@shopify/flash-list'
+```javascript
+import React, { useRef } from 'react'
+import { FlashList, useBlankAreaTracker } from '@shopify/flash-list'
 
-    function MyListComponent(){
-       // For FlashList
-       const ref = useRef(null)
-       const [blankAreaTrackerResult, onBlankArea] = useBlankAreaTracker(ref)
+function MyListComponent(){
+    // For FlashList
+    const ref = useRef(null)
+    const [blankAreaTrackerResult, onBlankArea] = useBlankAreaTracker(ref)
 
-        // Only when the component will unmount then you will see the output
-        // As we set the console in cleanUp function 👇
-        // It will show you then the latest output of Blank Area when unmount
-        useEffect(() => {
-            return () => {
-             console.log('On blank area: ', blankAreaTrackerResult)
-            }
-         }, [])
+    // Only when the component will unmount then you will see the output
+    // As we set the console in cleanUp function 👇
+    // It will show you then the latest output of Blank Area when unmount
+    useEffect(() => {
+        return () => {
+            console.log('On blank area: ', blankAreaTrackerResult)
+        }
+    }, [])
 
-        // JSX code
-        return (
-          <FlashList
-           {...props}
-           ref={ref}
-           onBlankArea={onBlankArea}
-          />
-        )
-    }
+    // JSX code
+    return (
+        <FlashList
+            {...props}
+            ref={ref}
+            onBlankArea={onBlankArea}
+        />
+    )
+}
+```
 
 ## How to reduce “Blank Space” in FlashList?
 

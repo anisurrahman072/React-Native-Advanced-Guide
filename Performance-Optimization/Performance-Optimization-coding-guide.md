@@ -48,7 +48,7 @@ The **new architecture** in React Native is an upgrade that aims to **improve th
 
 The new architecture also introduces a new way of managing components called **minimal persistence**, which **reduces** the **memory usage** and simplifies the code. Additionally, it adopts a new JavaScript engine called **Hermes**, which is optimized for React Native and offers **faster startup time**, **lower memory footprint** and **smaller app size**.
 
-The new architecture is composed of **two main parts**: the new native module system **(Turbo Modules)** and the new renderer **(Fabric)**. Turbo Modules are a more efficient way to create native modules that leverage platform-specific APIs, while Fabric is a reimplementation of the React Native UI layer that supports concurrent rendering, asynchronous layout and smooth animations.
+The new architecture is composed of **two main parts**: the new native module system **(Turbo Modules)** and the new renderer **(Fabric)**. Turbo Modules are a more efficient way to create native modules that leverage platform-specific APIs, while Fabric is a re-implementation of the React Native UI layer that supports concurrent rendering, asynchronous layout and smooth animations.
 
 > 🙋‍♂️ Know **more about in details of New Architecture**: [React Native New Architecture details (Hermes, JSI, Turbo Module, Fabric, Codegen, Yoga)](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md)
 
@@ -531,7 +531,7 @@ In the **App.js**, we wrap our components in a NavigationContainer. Secondly, we
         <View style={styles.container}>
           <Text>Home Screen</Text>
           <Button
-            title="Go to Profiule Page"
+            title="Go to Profile Page"
             onPress={() =>
               navigation.navigate("Profile", {
                 name: "John Doe",

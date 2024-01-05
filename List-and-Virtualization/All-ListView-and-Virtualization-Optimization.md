@@ -277,7 +277,7 @@ The **demerits** of this way are:
 
 You just need to change the **_renderItem_** props function like below:
 
-![**Algorthmic** way for showing Multi line column in SectionList](https://cdn-images-1.medium.com/max/3104/1*RSkKs7029TEaR-C-f-1-jg.png)
+![**Algorithmic** way for showing Multi line column in SectionList](https://cdn-images-1.medium.com/max/3104/1*RSkKs7029TEaR-C-f-1-jg.png)
 
 This above function is for the **_renderItem_** **props functions**. Just replace your necessary code in the above function & send the function as **_renderItem_** props function of **SectionList**.
 

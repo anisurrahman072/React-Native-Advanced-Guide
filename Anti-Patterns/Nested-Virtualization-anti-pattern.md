@@ -84,33 +84,36 @@ Here is the view of the solution
 
 Here is the final code with **ListHeaderComponent** props function
 
-    // Header function
-    function gearHeader() {
-      return (
-       <View style={styles.titleHolder}>
-        <Text style={styles.myGearText}>My Gear</Text>
+```javascript
+// Header function
+function gearHeader() {
+  return (
+    <View style={styles.titleHolder}>
+      <Text style={styles.myGearText}>My Gear</Text>
 
-        <View style={styles.iconRow}>
-         <TouchableOpacity
-          onPress={() => openCameraCameraRoll(IMAGE_FOR.FIELD_GEAR)}>
-          <Icon name={'camera'} type={'entypo'} size={25} color="grey" />
-         </TouchableOpacity>
-        </View>
-       </View>
-      )
-     }
+      <View style={styles.iconRow}>
+        <TouchableOpacity
+          onPress={() => openCameraCameraRoll(IMAGE_FOR.FIELD_GEAR)}
+        >
+          <Icon name={"camera"} type={"entypo"} size={25} color="grey" />
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
 
-    // FlatList "ListHeaderComponent" props
-    return (
-      <FlatList
-        data={gearPhotos}
-        keyExtractor={(item) => item._id}
-        numColumns={3}
-        ListHeaderComponent={gearHeader}
-        showsVerticalScrollIndicator={false}
-        renderItem={renderItem}
-       />
-    )
+// FlatList "ListHeaderComponent" props
+return (
+  <FlatList
+    data={gearPhotos}
+    keyExtractor={(item) => item._id}
+    numColumns={3}
+    ListHeaderComponent={gearHeader}
+    showsVerticalScrollIndicator={false}
+    renderItem={renderItem}
+  />
+);
+```
 
 ## What next?
 

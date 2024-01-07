@@ -32,32 +32,33 @@ The **HOC** pattern is a way of reusing component logic by wrapping a component 
 
 So here are some codes for basic understanding HOC.
 
-    function ParentElement(props) {
-      return (
-        <div>
-          <div>Hi</div>
-          <diuv>{props.children}</diuv>
-        </div>
-      );
-    }
+```javascript
+function ParentElement(props) {
+  return (
+    <div>
+      <div>Hi</div>
+      <diuv>{props.children}</diuv>
+    </div>
+  );
+}
 
-    function ChildComponentOne() {
-      return <div>Child</div>;
-    }
+function ChildComponentOne() {
+  return <div>Child</div>;
+}
 
-    function ChildComponentTwo() {
-      return <div>Child</div>;
-    }
+function ChildComponentTwo() {
+  return <div>Child</div>;
+}
 
-
-    export default function App(){
-      return (
-        <ParentElement>
-          <ChildComponentOne></ChildComponentOne>
-          <ChildComponentTwo></ChildComponentTwo>
-        </ParentElement>
-      )
-    }
+export default function App() {
+  return (
+    <ParentElement>
+      <ChildComponentOne></ChildComponentOne>
+      <ChildComponentTwo></ChildComponentTwo>
+    </ParentElement>
+  );
+}
+```
 
 In the above code **_ParentElement_** is the HOC component.
 
@@ -69,32 +70,34 @@ The **Render Props pattern** is another way of reusing component logic. It invol
 
 So here are some codes for basic understanding.
 
-    function ParentElement(props) {
-      return (
-        <div>
-          <div>Hi</div>
-          <diuv>{props.ChildComponentOne}</diuv>
-          <diuv>{props.ChildComponentTwo}</diuv>
-        </div>
-      );
-    }
+```javascript
+function ParentElement(props) {
+  return (
+    <div>
+      <div>Hi</div>
+      <diuv>{props.ChildComponentOne}</diuv>
+      <diuv>{props.ChildComponentTwo}</diuv>
+    </div>
+  );
+}
 
-    function ChildComponentOne() {
-      return <div>Child</div>;
-    }
+function ChildComponentOne() {
+  return <div>Child</div>;
+}
 
-    function ChildComponentTwo() {
-      return <div>Child</div>;
-    }
+function ChildComponentTwo() {
+  return <div>Child</div>;
+}
 
-    export default function App(){
-      return (
-        <ParentElement
-          ChildComponentOne={ChildComponentOne()}
-          ChildComponentTwo={ChildComponentTwo()}
-        />
-      )
-    }
+export default function App() {
+  return (
+    <ParentElement
+      ChildComponentOne={ChildComponentOne()}
+      ChildComponentTwo={ChildComponentTwo()}
+    />
+  );
+}
+```
 
 In the above code props rendering occurred by **_props.ChildComponentOne_** & **_props.ChildComponentTwo._**
 
@@ -102,6 +105,7 @@ In the above code props rendering occurred by **_props.ChildComponentOne_** & **
 
 Besides regular JSX components, we can pass functions as children to React components. This function is available to us through the children prop, which is technically also a render prop.
 
+```javascript
     function ParentElement(props) {
       const [stateValue, setStateValue] = useState(“Child”);
       return (
@@ -132,6 +136,7 @@ Besides regular JSX components, we can pass functions as children to React compo
         </ParentElement>
       )
     }
+```
 
 In the above code **_props.children(stateValue)_** created props rendering.
 
@@ -143,6 +148,7 @@ A **Higher Order Component (HOC)** is a component that receives another componen
 
 Say that we always wanted to add a certain styling to multiple components in our application. Instead of creating a style object locally each time, we can simply create a HOC that adds the style objects to the component that we pass to it.
 
+```javascript
     function withStyles(Component) {
       return props => {
         const style = { padding: '0.2rem', margin: '1rem' }
@@ -155,6 +161,7 @@ Say that we always wanted to add a certain styling to multiple components in our
 
     const StyledButton = withStyles(Button)
     const StyledText = withStyles(Text)
+```
 
 We just created a **StyledButton** and **StyledText** component, which are the modified versions of the Button and Text component. They now both contain the style that got added in the withStyles HOC!
 
@@ -168,20 +175,25 @@ Let’s create a HOC called **withLoader**. A HOC should receive an component, a
 
 Let’s create the bare minimum version of the **withLoader** HOC that we want to use!
 
-    function withLoader(Element) {
-      return (props) => <Element />;
-    }
+```javascript
+function withLoader(Element) {
+  return (props) => <Element />;
+}
+```
 
 However, we don’t just want to return the element it received. Instead, we want this element to contain logic that tells us whether the data is still loading or not.
 
 To make the **withLoader** HOC very reusable, we won't hardcode the Dog API url in that component. Instead, we can pass the URL as an argument to the **withLoader** HOC, so this loader can be used on any component that needs a loading indicator while fetching data from a different API endpoint.
 
-    function withLoader(Element, url) {
-      return (props) => {};
-    }
+```javascript
+function withLoader(Element, url) {
+  return (props) => {};
+}
+```
 
 A HOC returns an element, a functional component props => {} in this case, to which we want to add the logic that allows us to display a text with **_Loading…_** as the data is still being fetched. Once the data has been fetched, the component should pass the fetched data as a prop.
 
+```javascript
     // 💁‍♂️ 💁‍♂️ 💁‍♂️ DogImages.js
 
     import React from "react";
@@ -224,6 +236,7 @@ A HOC returns an element, a functional component props => {} in this case, to wh
         return <Element {...props} data={data} />;
       };
     }
+```
 
 _You can check the output from here: [hoc-pattern-2 — CodeSandbox](https://codesandbox.io/s/hoc-pattern-2-rslq4?from-embed)_
 
@@ -237,14 +250,18 @@ So, how can we add this behaviour to our application, so it’ll actually show t
 
 In **DogImages.js**, we no longer want to just export the plain DogImages component. Instead, we want to export the "wrapped" withLoading HOC around the DogImages component.
 
-    export default withLoading(DogImages);
+```javascript
+export default withLoading(DogImages);
+```
 
 The withLoader HOC also expects the URL to know which endpoint to fetch the data from. In this case, we want to add the Dog API endpoint.
 
-    export default withLoader(
-      DogImages,
-      "https://dog.ceo/api/breed/labrador/images/random/6"
-    );
+```javascript
+export default withLoader(
+  DogImages,
+  "https://dog.ceo/api/breed/labrador/images/random/6"
+);
+```
 
 Since the withLoader HOC returned the element with an extra data prop, DogImages in this case, we can access the data prop in the DogImages component.
 
@@ -258,6 +275,7 @@ We can also compose multiple Higher Order Components. Let’s say that we also w
 
 We need to create a HOC that provides a hovering prop to the element that we pass. Based on that prop, we can conditionally render the text box based on whether the user is hovering over the DogImages list.
 
+```javascript
     // 💁‍♂️ 💁‍♂️ 💁‍♂️ DogImages.js
     import React from "react";
     import withLoader from "./withLoader";
@@ -319,6 +337,7 @@ We need to create a HOC that provides a hovering prop to the element that we pas
         return <Element {...props} data={data} />;
       };
     }
+```
 
 _You can check the output from here: [hoc-pattern-3 — CodeSandbox](https://codesandbox.io/s/hoc-pattern-3-whhh0?from-embed)_
 
@@ -334,6 +353,7 @@ In some cases, we can replace the **HOC pattern** with **React Hooks**.
 
 Let’s replace the withHover HOC with a useHover hook. Instead of having a higher order component, we export a hook that adds a mouseOver and mouseLeave event listener to the element. We cannot pass the element anymore like we did with the HOC. Instead, we'll return a ref from the hook for that should get the mouseOver and mouseLeave events.
 
+```javascript
     // 💁‍♂️ 💁‍♂️ 💁‍♂️ DogImages.js
 
     import React from "react";
@@ -408,6 +428,7 @@ Let’s replace the withHover HOC with a useHover hook. Instead of having a high
         return <Element {...props} data={data} />;
       };
     }
+```
 
 _You can check the output from here: [hoc-pattern-4 — CodeSandbox](https://codesandbox.io/s/hoc-pattern-4-npo50?from-embed)_
 
@@ -425,13 +446,15 @@ Generally speaking, React Hooks don’t replace the HOC pattern.
 
 As the React docs tell us, using Hooks can reduce the depth of the component tree. Using the HOC pattern, it’s easy to end up with a deeply nested component tree.
 
-    <withAuth>
-      <withLayout>
-        <withLogging>
-          <Component />
-        </withLogging>
-      </withLayout>
-    </withAuth>
+```javascript
+<withAuth>
+  <withLayout>
+    <withLogging>
+      <Component />
+    </withLogging>
+  </withLayout>
+</withAuth>
+```
 
 By adding a Hook to the component directly, we no longer have to wrap components.
 
@@ -459,6 +482,7 @@ Some libraries that relied on the HOC pattern added Hooks support after the rele
 
 One way to use Apollo Client is through the graphql() higher order component.
 
+```javascript
     // 💁‍♂️ 💁‍♂️ 💁‍♂️ InputHOC.js (Apollo by using Higher Order Component)
 
     import React from "react";
@@ -522,6 +546,7 @@ One way to use Apollo Client is through the graphql() higher order component.
         </div>
       );
     }
+```
 
 _You can check output from here: [apollo-hoc-hooks — CodeSandbox](https://codesandbox.io/s/apollo-hoc-hooks-n3td8?from-embed)_
 
@@ -545,6 +570,7 @@ Using the **Higher Order Component** pattern allows us to keep logic that we wan
 
 The name of the prop that a HOC can pass to an element, can cause a **naming collision**.
 
+```javascript
     function withStyles(Component) {
       return props => {
         const style = { padding: '0.2rem', margin: '1rem' }
@@ -554,9 +580,11 @@ The name of the prop that a HOC can pass to an element, can cause a **naming col
 
     const Button = () = <button style={{ color: 'red' }}>Click me!</button>
     const StyledButton = withStyles(Button)
+```
 
 In this case, the withStyles HOC adds a prop called style to the element that we pass to it. However, the Button component already had a prop called style, which will be overwritten! Make sure that the HOC can handle accidental name collision, by either renaming the prop or merging the props.
 
+```javascript
     function withStyles(Component) {
       return props => {
         const style = {
@@ -571,6 +599,7 @@ In this case, the withStyles HOC adds a prop called style to the element that we
 
     const Button = () = <button style={{ color: 'red' }}>Click me!</button>
     const StyledButton = withStyles(Button)
+```
 
 When using multiple composed HOCs that all pass props to the element that’s wrapped within them, it can be difficult to figure out which HOC is responsible for which prop. **This can hinder debugging and scaling an application easily**.
 
@@ -584,60 +613,67 @@ Another way of making components very **reusable**, is by using the **render pro
 
 Imagine that we have a Title component. In this case, the Title component shouldn't do anything besides rendering the value that we pass. We can use a render prop for this! Let's pass the value that we want the Title component to render to the render prop.
 
-    <Title render={() => <h1>I am a render prop!</h1>} />
+```javascript
+<Title render={() => <h1>I am a render prop!</h1>} />
+```
 
 Within the Title component, we can render this data by returning the invoked render prop!
 
-    const Title = (props) => props.render();
+```javascript
+const Title = (props) => props.render();
+```
 
 To the Component element, we have to pass a prop called render, which is a function that returns a React element.
 
-    // 💁‍♂️ 💁‍♂️ 💁‍♂️ index.js
+```javascript
+// 💁‍♂️ 💁‍♂️ 💁‍♂️ index.js
 
-    import React from "react";
-    import { render } from "react-dom";
+import React from "react";
+import { render } from "react-dom";
 
-    import "./styles.css";
+import "./styles.css";
 
-    const Title = (props) => props.render();
+const Title = (props) => props.render();
 
-    render(
-      <div className="App">
-        <Title
-          render={() => (
-            <h1>
-              <span role="img" aria-label="emoji">
-                ✨
-              </span>
-              I am a render prop!{" "}
-              <span role="img" aria-label="emoji">
-                ✨
-              </span>
-            </h1>
-          )}
-        />
-      </div>,
-      document.getElementById("root")
-    );
+render(
+  <div className="App">
+    <Title
+      render={() => (
+        <h1>
+          <span role="img" aria-label="emoji">
+            ✨
+          </span>
+          I am a render prop! <span role="img" aria-label="emoji">
+            ✨
+          </span>
+        </h1>
+      )}
+    />
+  </div>,
+  document.getElementById("root")
+);
+```
 
 Perfect, works smoothly! The **cool thing about render props**, is that **the component that receives the prop is very reusable**. We can use it multiple times, **passing different values** to the render prop each time.
 
-    // index.js
+```javascript
+// index.js
 
-    import React from "react";
-    import { render } from "react-dom";
-    import "./styles.css";
+import React from "react";
+import { render } from "react-dom";
+import "./styles.css";
 
-    const Title = (props) => props.render();
+const Title = (props) => props.render();
 
-    render(
-      <div className="App">
-        <Title render={() => <h1>✨ First render prop! ✨</h1>} />
-        <Title render={() => <h2>🔥 Second render prop! 🔥</h2>} />
-        <Title render={() => <h3>🚀 Third render prop! 🚀</h3>} />
-      </div>,
-      document.getElementById("root")
-    );
+render(
+  <div className="App">
+    <Title render={() => <h1>✨ First render prop! ✨</h1>} />
+    <Title render={() => <h2>🔥 Second render prop! 🔥</h2>} />
+    <Title render={() => <h3>🚀 Third render prop! 🚀</h3>} />
+  </div>,
+  document.getElementById("root")
+);
+```
 
 Although they’re called **_render_ props**, **a render prop doesn’t have to be called render**.
 
@@ -645,85 +681,93 @@ Although they’re called **_render_ props**, **a render prop doesn’t have to 
 
 Let's rename the render props that were used in the previous example and give them specific names instead!
 
-    // 💁‍♂️ 💁‍♂️ 💁‍♂️ index.js
+```javascript
+// 💁‍♂️ 💁‍♂️ 💁‍♂️ index.js
 
-    import React from "react";
-    import { render } from "react-dom";
-    import "./styles.css";
+import React from "react";
+import { render } from "react-dom";
+import "./styles.css";
 
-    const Title = (props) => (
-      <>
-        {props.renderFirstComponent()}
-        {props.renderSecondComponent()}
-        {props.renderThirdComponent()}
-      </>
-    );
+const Title = (props) => (
+  <>
+    {props.renderFirstComponent()}
+    {props.renderSecondComponent()}
+    {props.renderThirdComponent()}
+  </>
+);
 
-    render(
-      <div className="App">
-        <Title
-          renderFirstComponent={() => <h1>✨ First render prop! ✨</h1>}
-          renderSecondComponent={() => <h2>🔥 Second render prop! 🔥</h2>}
-          renderThirdComponent={() => <h3>🚀 Third render prop! 🚀</h3>}
-        />
-      </div>,
-      document.getElementById("root")
-    );
+render(
+  <div className="App">
+    <Title
+      renderFirstComponent={() => <h1>✨ First render prop! ✨</h1>}
+      renderSecondComponent={() => <h2>🔥 Second render prop! 🔥</h2>}
+      renderThirdComponent={() => <h3>🚀 Third render prop! 🚀</h3>}
+    />
+  </div>,
+  document.getElementById("root")
+);
+```
 
 Great! We’ve just seen that we can use **render props in order to make a component reusable**, as we can **pass different data** to the render prop each time. But, why would you want to use this?
 
 A component that takes a render prop usually does a lot more than simply invoking the render prop. Instead, we usually want to pass data from the component that takes the render prop, to the element that we pass as a render prop!
 
+```javascript
     function Component(props) {
       const data = { ... }
 
       return props.render(data)
     }
+```
 
 The render prop can now receive this value that we passed as its argument.
 
+```javascript
     <Component render={data => <ChildComponent data={data} />}
+```
 
 ### Complex example
 
 Let’s look at an example! We have a simple app, where a user can type a **temperature** in **Celsius**. The app shows the value of this temperature in **Fahrenheit** and **Kelvin**.
 
-    // App.js
+```javascript
+// App.js
 
-    import React, { useState } from "react";
-    import "./styles.css";
+import React, { useState } from "react";
+import "./styles.css";
 
-    function Input() {
-      const [value, setValue] = useState("");
+function Input() {
+  const [value, setValue] = useState("");
 
-      return (
-        <input
-          type="text"
-          value={value}
-          onChange={e => setValue(e.target.value)}
-          placeholder="Temp in °C"
-        />
-      );
-    }
+  return (
+    <input
+      type="text"
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+      placeholder="Temp in °C"
+    />
+  );
+}
 
-    export default function App() {
-      return (
-        <div className="App">
-          <h1>☃️ Temperature Converter 🌞</h1>
-          <Input />
-          <Kelvin />
-          <Fahrenheit />
-        </div>
-      );
-    }
+export default function App() {
+  return (
+    <div className="App">
+      <h1>☃️ Temperature Converter 🌞</h1>
+      <Input />
+      <Kelvin />
+      <Fahrenheit />
+    </div>
+  );
+}
 
-    function Kelvin({ value = 0 }) {
-      return <div className="temp">{value + 273.15}K</div>;
-    }
+function Kelvin({ value = 0 }) {
+  return <div className="temp">{value + 273.15}K</div>;
+}
 
-    function Fahrenheit({ value = 0 }) {
-      return <div className="temp">{(value * 9) / 5 + 32}°F</div>;
-    }
+function Fahrenheit({ value = 0 }) {
+  return <div className="temp">{(value * 9) / 5 + 32}°F</div>;
+}
+```
 
 _You can check the output here: [https://codesandbox.io/s/renderprops-4-wk0uy?from-embed](https://codesandbox.io/s/renderprops-4-wk0uy?from-embed)_
 
@@ -735,25 +779,25 @@ One way to make the users input available to both the Fahrenheit and Kelvin comp
 
 In this case, we have a stateful Input component. However, the sibling components Fahrenheit and Kelvin also need access to this data. Instead of having a stateful Input component, **we can lift the state up to the first common ancestor component that has a connection to Input**, Fahrenheit and Kelvin: the App component in this case!
 
-    function Input({ value, handleChange }) {
-        return
-          <input value={value}
-              onChange={(e) => handleChange(e.target.value)}
-          />;
-    }
+```javascript
+function Input({ value, handleChange }) {
+  return;
+  <input value={value} onChange={(e) => handleChange(e.target.value)} />;
+}
 
-    export default function App() {
-      const [value, setValue] = useState("");
+export default function App() {
+  const [value, setValue] = useState("");
 
-      return (
-        <div className="App">
-          <h1>☃️ Temperature Converter 🌞</h1>
-          <Input value={value} handleChange={setValue} />
-          <Kelvin value={value} />
-          <Fahrenheit value={value} />
-        </div>
-      );
-    }
+  return (
+    <div className="App">
+      <h1>☃️ Temperature Converter 🌞</h1>
+      <Input value={value} handleChange={setValue} />
+      <Kelvin value={value} />
+      <Fahrenheit value={value} />
+    </div>
+  );
+}
+```
 
 Although this is a valid solution, it **can be tricky to lift state in larger applications** with components that handle many children. Each state change could cause a re-render of all the children, even the ones that don’t handle the data, **which could negatively affect the performance** of your app.
 
@@ -761,86 +805,88 @@ Although this is a valid solution, it **can be tricky to lift state in larger ap
 
 Instead, we can use **render props**! Let’s change the Input component in a way that it can receive render props.
 
-    function Input(props) {
-      const [value, setValue] = useState("");
+```javascript
+function Input(props) {
+  const [value, setValue] = useState("");
 
-      return (
-        <>
-          <input
-            type="text"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            placeholder="Temp in °C"
-          />
-          {props.render(value)}
-        </>
-      );
-    }
+  return (
+    <>
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Temp in °C"
+      />
+      {props.render(value)}
+    </>
+  );
+}
 
-    export default function App() {
-      return (
-        <div className="App">
-          <h1>☃️ Temperature Converter 🌞</h1>
-          <Input
-            render={(value) => (
-              <>
-                <Kelvin value={value} />
-                <Fahrenheit value={value} />
-              </>
-            )}
-          />
-        </div>
-      );
-    }
+export default function App() {
+  return (
+    <div className="App">
+      <h1>☃️ Temperature Converter 🌞</h1>
+      <Input
+        render={(value) => (
+          <>
+            <Kelvin value={value} />
+            <Fahrenheit value={value} />
+          </>
+        )}
+      />
+    </div>
+  );
+}
+```
 
 Perfect, the **Kelvin** and **Fahrenheit** components now have access to the value of the user's input!
 
-    // 💁‍♂️ 💁‍♂️ 💁‍♂️ App.js
+```javascript
+// 💁‍♂️ 💁‍♂️ 💁‍♂️ App.js
 
-    import React, { useState } from "react";
-    import "./styles.css";
+import React, { useState } from "react";
+import "./styles.css";
 
-    function Input(props) {
-      const [value, setValue] = useState("");
+function Input(props) {
+  const [value, setValue] = useState("");
 
-      return (
-        <>
-          <input
-            type="text"
-            value={value}
-            onChange={e => setValue(e.target.value)}
-            placeholder="Temp in °C"
-          />
-          {props.render(value)}
-        </>
-      );
-    }
+  return (
+    <>
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Temp in °C"
+      />
+      {props.render(value)}
+    </>
+  );
+}
 
-    export default function App() {
-      return (
-        <div className="App">
-          <h1>☃️ Temperature Converter 🌞</h1>
-          <Input
-            render={value => (
-              <>
-                <Kelvin value={value} />
-                <Fahrenheit value={value} />
-              </>
-            )}
-          />
-        </div>
-      );
-    }
+export default function App() {
+  return (
+    <div className="App">
+      <h1>☃️ Temperature Converter 🌞</h1>
+      <Input
+        render={(value) => (
+          <>
+            <Kelvin value={value} />
+            <Fahrenheit value={value} />
+          </>
+        )}
+      />
+    </div>
+  );
+}
 
-    function Kelvin({ value }) {
-      return <div className="temp">{parseInt(value || 0) + 273.15}K</div>;
-    }
+function Kelvin({ value }) {
+  return <div className="temp">{parseInt(value || 0) + 273.15}K</div>;
+}
 
-    function Fahrenheit({ value }) {
-      return <div className="temp">
-          {(parseInt(value || 0) * 9) / 5 + 32}°F
-      </div>;
-    }
+function Fahrenheit({ value }) {
+  return <div className="temp">{(parseInt(value || 0) * 9) / 5 + 32}°F</div>;
+}
+```
 
 _You can check output from here: [https://codesandbox.io/s/renderprops-5-couq1?from-embed](https://codesandbox.io/s/renderprops-5-couq1?from-embed)_
 
@@ -850,88 +896,92 @@ _You can check output from here: [https://codesandbox.io/s/renderprops-5-couq1?f
 
 Let’s change the **Input** component. Instead of explicitly passing the render prop, we'll just pass a function as a child for the Input component.
 
-    export default function App() {
-      return (
-        <div className="App">
-          <h1>☃️ Temperature Converter 🌞</h1>
-          <Input>
-            {(value) => (
-              <>
-                <Kelvin value={value} />
-                <Fahrenheit value={value} />
-              </>
-            )}
-          </Input>
-        </div>
-      );
-    }
+```javascript
+export default function App() {
+  return (
+    <div className="App">
+      <h1>☃️ Temperature Converter 🌞</h1>
+      <Input>
+        {(value) => (
+          <>
+            <Kelvin value={value} />
+            <Fahrenheit value={value} />
+          </>
+        )}
+      </Input>
+    </div>
+  );
+}
+```
 
 We have access to this function, through the **props.children** prop that's **available on the Input component**. Instead of calling props.render with the value of the user input, we'll call props.children with the value of the user input.
 
-    function Input(props) {
-      const [value, setValue] = useState("");
+```javascript
+function Input(props) {
+  const [value, setValue] = useState("");
 
-      return (
-        <>
-          <input
-            type="text"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            placeholder="Temp in °C"
-          />
-          {props.children(value)}
-        </>
-      );
-    }
+  return (
+    <>
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Temp in °C"
+      />
+      {props.children(value)}
+    </>
+  );
+}
+```
 
 Great, this way the **Kelvin** and **Fahrenheit** component have access to the value, without having to worry about the name of the renderprop.
 
-    // 💁‍♂️ 💁‍♂️ 💁‍♂️ App.js
+```javascript
+// 💁‍♂️ 💁‍♂️ 💁‍♂️ App.js
 
-    import React, { useState } from "react";
-    import "./styles.css";
+import React, { useState } from "react";
+import "./styles.css";
 
-    function Input(props) {
-      const [value, setValue] = useState(0);
+function Input(props) {
+  const [value, setValue] = useState(0);
 
-      return (
-        <>
-          <input
-            type="number"
-            value={value}
-            onChange={e => setValue(e.target.value)}
-            placeholder="Temp in °C"
-          />
-          {props.children(value)}
-        </>
-      );
-    }
+  return (
+    <>
+      <input
+        type="number"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Temp in °C"
+      />
+      {props.children(value)}
+    </>
+  );
+}
 
-    export default function App() {
-      return (
-        <div className="App">
-          <h1>☃️ Temperature Converter 🌞</h1>
-          <Input>
-            {value => (
-              <>
-                <Kelvin value={value} />
-                <Fahrenheit value={value} />
-              </>
-            )}
-          </Input>
-        </div>
-      );
-    }
+export default function App() {
+  return (
+    <div className="App">
+      <h1>☃️ Temperature Converter 🌞</h1>
+      <Input>
+        {(value) => (
+          <>
+            <Kelvin value={value} />
+            <Fahrenheit value={value} />
+          </>
+        )}
+      </Input>
+    </div>
+  );
+}
 
-    function Kelvin({ value }) {
-      return <div className="temp">{parseInt(value || 0) + 273.15}K</div>;
-    }
+function Kelvin({ value }) {
+  return <div className="temp">{parseInt(value || 0) + 273.15}K</div>;
+}
 
-    function Fahrenheit({ value }) {
-      return <div className="temp">
-        {(parseInt(value || 0) * 9) / 5 + 32}°F
-      </div>;
-    }
+function Fahrenheit({ value }) {
+  return <div className="temp">{(parseInt(value || 0) * 9) / 5 + 32}°F</div>;
+}
+```
 
 _You can check output from here: [https://codesandbox.io/s/renderprops-6-e23m4?from-embed](https://codesandbox.io/s/renderprops-6-e23m4?from-embed)_
 
@@ -943,82 +993,89 @@ In some cases, **we can replace render props with Hooks**. A good example of thi
 
 One way to use **Apollo Client** is through the **Mutation** and **Query** components. Let's look at the same Input example that was covered in the Higher Order Components section. Instead of using the graphql() higher order component, we'll now use the **Mutation** component that receives a render prop.
 
-    // 💁‍♂️ 💁‍♂️ 💁‍♂️ InputRenderProp.js
+```javascript
+// 💁‍♂️ 💁‍♂️ 💁‍♂️ InputRenderProp.js
 
-    import React from "react";
-    import "./styles.css";
+import React from "react";
+import "./styles.css";
 
-    import { Mutation } from "react-apollo";
-    import { ADD_MESSAGE } from "./resolvers";
+import { Mutation } from "react-apollo";
+import { ADD_MESSAGE } from "./resolvers";
 
-    export default class Input extends React.Component {
-      constructor() {
-        super();
-        this.state = { message: "" };
-      }
+export default class Input extends React.Component {
+  constructor() {
+    super();
+    this.state = { message: "" };
+  }
 
-      handleChange = (e) => {
-        this.setState({ message: e.target.value });
-      };
+  handleChange = (e) => {
+    this.setState({ message: e.target.value });
+  };
 
-      render() {
-        return (
-          <Mutation
-            mutation={ADD_MESSAGE}
-            variables={{ message: this.state.message }}
-            onCompleted={() =>
-              console.log(`Added with render prop: ${this.state.message} `)
-            }
-          >
-            {(addMessage) => (
-              <div className="input-row">
-                <input
-                  onChange={this.handleChange}
-                  type="text"
-                  placeholder="Type something..."
-                />
-                <button onClick={addMessage}>Add</button>
-              </div>
-            )}
-          </Mutation>
-        );
-      }
-    }
+  render() {
+    return (
+      <Mutation
+        mutation={ADD_MESSAGE}
+        variables={{ message: this.state.message }}
+        onCompleted={() =>
+          console.log(`Added with render prop: ${this.state.message} `)
+        }
+      >
+        {(addMessage) => (
+          <div className="input-row">
+            <input
+              onChange={this.handleChange}
+              type="text"
+              placeholder="Type something..."
+            />
+            <button onClick={addMessage}>Add</button>
+          </div>
+        )}
+      </Mutation>
+    );
+  }
+}
+```
 
 _You can check output from here: [https://codesandbox.io/s/renderprops-7-jfdxg?from-embed](https://codesandbox.io/s/renderprops-7-jfdxg?from-embed)_
 
 In order to **pass data down** from the **Mutation** component **to the elements that need the data**, we **pass a function as a child**. The function receives the value of the data through its arguments.
 
+```javascript
     <Mutation mutation={...} variables={...}>
       {addMessage => <div className="input-row">...</div>}
     </Mutation>
+```
 
 Although we can still use the **render prop pattern** and is often preferred compared to the higher order component pattern, it has its downsides.
 
 One of the **downsides** is **deep component nesting**. We can nest multiple **Mutation** or **Query** **components**, if a component needs access to multiple mutations or queries.
 
-    <Mutation mutation={FIRST_MUTATION}>
-      {(firstMutation) => (
-        <Mutation mutation={SECOND_MUTATION}>
-          {(secondMutation) => (
-            <Mutation mutation={THIRD_MUTATION}>
-              {(thirdMutation) => (
-                <Element
-                  firstMutation={firstMutation}
-                  secondMutation={secondMutation}
-                  thirdMutation={thirdMutation}
-                />
-              )}
-            </Mutation>
+```javascript
+<Mutation mutation={FIRST_MUTATION}>
+  {(firstMutation) => (
+    <Mutation mutation={SECOND_MUTATION}>
+      {(secondMutation) => (
+        <Mutation mutation={THIRD_MUTATION}>
+          {(thirdMutation) => (
+            <Element
+              firstMutation={firstMutation}
+              secondMutation={secondMutation}
+              thirdMutation={thirdMutation}
+            />
           )}
         </Mutation>
       )}
     </Mutation>
+  )}
+</Mutation>
+```
 
 **After the release of Hooks**, Apollo added Hooks support to the Apollo Client library. Instead of using the **Mutation** and **Query** **render props**, developers can now directly access the data through the hooks that the library provides.
 
 Let’s look at an example that uses the exact same data as we previously saw in the example with the Query render prop. This time, we'll provide the data to the component **by using the useQuery hook** that Apollo Client provided for us.
 
+```javascript
     // 💁‍♂️ 💁‍♂️ 💁‍♂️ InputHOC.js
 
     import React from "react";
@@ -1083,6 +1140,7 @@ Let’s look at an example that uses the exact same data as we previously saw in
         </div>
       );
     }
+```
 
 By using the **useQuery hook**, we reduced the amount of code that was needed in order to provide the data to the component.
 

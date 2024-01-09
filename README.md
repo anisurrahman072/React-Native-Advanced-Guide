@@ -2,9 +2,10 @@
 
 ![Alt text](<images/Screenshot 2024-01-01 at 1.32.08 AM.png>)
 
-- This **Guide Book** is originally from **12 Articles** on Medium that took **5 months** to complete in 2023 (ARTICLES written by *https://twitter.com/anis_RNCore*).
+- This **Guide Book** was written by **@anisurrahman072** ([**CONNECT me in X**](https://twitter.com/anis_RNCore))
+- The Guide consists of **12 Articles** on Medium that were written by @anisurrahman072 and took **5 months** to complete in 2023.
 - All the Articles were originally based on **RN v0.71**.
-- The original link to the Articles can be found on Medium (Link): *https://medium.com/@anisurrahmanbup*
+- The original link to the Articles can be found on Medium ([**Link**](https://medium.com/@anisurrahmanbup))
 - ### 🙏 If you find this BOOK helpful, please give a STAR ⭐️
 
 # Table of Contents (70+ TOPICS)

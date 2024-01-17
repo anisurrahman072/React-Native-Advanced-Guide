@@ -254,11 +254,15 @@ Similarly, you can happily scroll up and down through a **ScrollView** when the 
 
 - **My TouchableX view isn’t very responsive due to low FPS:** Sometimes, if you do an action in the same frame that you are adjusting the opacity or highlight of a component that is responding to a touch, **you won’t see that effect until after the onPress function has returned**. If onPress does a setState that results in a lot of work and a few frames dropped, this may occur. A solution to this is to wrap any action inside of your onPress handler in requestAnimationFrame:
 
-        handleOnPress() {
-            requestAnimationFrame(() => {
-            this.doExpensiveAction();
-            });
-        }
+```javascript
+
+  handleOnPress() {
+      requestAnimationFrame(() => {
+      this.doExpensiveAction();
+      });
+  }
+
+```
 
 - **Slow navigator transitions due to low FPS:** As mentioned above, Navigator animations are controlled by the JavaScript thread. Imagine the "push from right" scene transition: each frame, the new scene is moved from the right to left, starting offscreen (let's say at an x-offset of 320) and ultimately settling when the scene sits at an x-offset of 0. **Each frame during this transition**, the JavaScript thread needs to send a new **x-offset** to the main thread. **If the JavaScript thread is locked up**, it cannot do this and so **no update occurs** on that frame and the animation stutters. One solution to this is to allow for JavaScript-based animations to be offloaded to the main thread. Prop **_“useNativeDriver”_** as **_true_** will solve it.
   ### **🔥 **Know more about Performance Optimization from **code level**:** [React Native app Performance Optimization from code level👇](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Performance-Optimization/Performance-Optimization-coding-guide.md)**
@@ -624,3 +628,7 @@ Don’t worry for upcoming versions of React Native. **you can still use Flipper
 Thank you for reading this article. I enjoy sharing my **5 years** of experience in **React-native**, **JavaScript**, **React** & **Node.js** with you every day. If you enjoyed reading this article, I would appreciate it if you could follow me on [**Twitter**](https://twitter.com/anis_RNCore) & [**Medium**](https://medium.com/@anisurrahmanbup).
 
 If you find any **ISSUE** in this Guide BOOK, please create a **PR** to help the community 🔥
+
+```
+
+```

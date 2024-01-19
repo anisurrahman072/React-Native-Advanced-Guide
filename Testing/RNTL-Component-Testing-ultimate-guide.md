@@ -148,18 +148,24 @@ As from React native version 0.38, the project will have a default **Jest** setu
 
 To install **RNTL**, open a terminal in your project’s folder and run this below command.
 
+```bash
     yarn add - dev @testing-library/react-native
+```
 
 In order to use additional React Native-specific **Jest matchers** from @testing-library/jest-native package add it to your project by this below command.
 
+```bash
     yarn add - dev @testing-library/jest-native
+```
 
 Then add this additional **Jest matcher** to your jest tests by using setupFilesAfterEnv option in your Jest configuration. Jest configuration is usually located either in package.json under **"jest"** key like below or in a **jest.config.js** file in your project root directory.
 
-    {
-      "preset": "react-native",
-      "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"]
-    }
+```json
+{
+  "preset": "react-native",
+  "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"]
+}
+```
 
 My **package.json** looks like below with additional **Jest matcher** config.
 
@@ -173,27 +179,34 @@ We learned how to add **JEST** configuration for **React Native Testing Library 
 
 jest-expo preset is used for testing React Native projects created using Expo, otherwise it would be react-native. Example like below:
 
+```json
     "preset": "react-native"
+```
 
 ### **🧩** **“setupFiles”**
 
 This option is used to specify a module that should be executed **_before any tests_** run, such as **_setting up the test data_** or **_mocking_** external **_components_**, **_Native Modules_**, **_dependencies_**, **_services_** or **_APIs_**. Example like below:
 
+```json
     "setupFiles": [
          "./src/mock/api",
          "./src/mock/services",
       ]
+```
 
 ### **🧩** **“setupFilesAfterEnv”**
 
 This option is used to set up additional testing libraries such as @testing-library/jest-native. Example like below:
 
+```json
     "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"]
+```
 
 ### **🧩** “moduleFileExtensions”
 
 This option is used to specify the file extensions that should be looked for when running tests. For example, if you have test files with the extensions **“.ts”, “.tsx”, “.js”, “.jsx”, “.json”**, and **“.node”**, you can specify them in the “moduleFileExtensions” option like this:
 
+```json
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -202,6 +215,7 @@ This option is used to specify the file extensions that should be looked for whe
       "json",
       "node"
     ]
+```
 
 This option is useful for React Native projects that use **TypeScript** or other languages that **need to be transpiled before running**. It also helps Jest to recognize different file types and handle them accordingly. For example, Jest will use **_“ts-jest”_** to transform TypeScript **files** and **_“jest-environment-jsdom”_** to provide a browser-like environment for testing.
 
@@ -209,17 +223,23 @@ This option is useful for React Native projects that use **TypeScript** or other
 
 The option _“moduleNameMapper”_ is used to tell Jest **how to find the files that you import in your code**. Sometimes, you may use shortcuts or aliases to import files, for example, instead of writing:
 
-    import { Button } from "../../components/Button";
+```javascript
+import { Button } from "../../components/Button";
+```
 
 You may write:
 
-    import { Button } from "components/Button";
+```javascript
+import { Button } from "components/Button";
+```
 
 This makes your code shorter and cleaner, but Jest may not know where to find the file **“components/Button”**. To fix this, you can use the option **“moduleNameMapper”** to map the **shortcut** or **alias** to the **actual file path**. For example, you can write:
 
+```json
     "moduleNameMapper": {
       "^components/ (.*)$": "<rootDir>/src/components/$1"
     }
+```
 
 This means that **Jest will replace any import** that **starts with “components/”** with **“<rootDir>/src/components/”**. For example, **_“components/Button”_** will become **_“<rootDir>/src/components/Button”_**. You can use any regular expression to match the shortcut or alias, and use **“$1”**, **“$2”**, etc. to refer to the captured groups. You can also map different shortcuts or aliases to **different file paths** by using more lines.
 
@@ -227,9 +247,11 @@ This means that **Jest will replace any import** that **starts with “component
 
 The option **_“transformIgnorePatterns”_** is used to tell Jest which files it should not change before testing them. Sometimes, Jest needs to change some files, for example, if they use a different language or syntax than JavaScript. **By default, Jest will not change any files in the “node_modules” directory**, because they are usually already written in JavaScript. But sometimes, you may need to change some of them, for example, if they use **TypeScript** or **ES6 syntax**. To do that, you can use a special code to match the files that you want to change, and use a **“!”** sign to exclude the ones that you don’t. For example:
 
+```json
     "transformIgnorePatterns": [
       "/node_modules/ (?! (react-native|react-native-cookies)/)"
     ]
+```
 
 This means that **Jest will change** **any file in the “node_modules”** directory that **does not start** with **“react-native”** or **“react-native-cookies”**. You can add more exceptions by using the **“|”** sign. You can also use other codes to match different parts of the file name, such as the file type or the folder name.
 
@@ -237,10 +259,12 @@ This means that **Jest will change** **any file in the “node_modules”** dire
 
 Jest will **not actually change the original files** in the “node_modules” directory. It will only **change them temporarily in memory** when it runs the tests. This is called **“transformation”** and it is done by using some tools called **“transformers”**. Jest has some built-in transformers that can handle common file types, such as JavaScript, TypeScript, JSON, etc. You can also use **custom transformers** that you install from npm or write yourself. You can specify which transformer to use for each file type by using the option **“transform”** in your **Jest config** file. For example:
 
+```json
     "transform": {
       "\\.[jt]sx?$": "babel-jest",
       "\\.ts$": "ts-jest"
     }
+```
 
 This means that **Jest will use “babel-jest”** to transform any file that **ends with “.js”, “.jsx”, “.ts” or “.tsx”**, and **use “ts-jest” to transform any file that ends with “.ts”**. You can use any regular expression to match the file type. You can also use different transformers for different files or directories by using an array of arrays.
 
@@ -248,7 +272,9 @@ This means that **Jest will use “babel-jest”** to transform any file that **
 
 This option allows you to specify the test environment that will be used for testing. By default, Jest uses **_jsdom_**, which simulates a browser-like environment. However, for React Native projects, you may want to use **_node_** instead, which is **faster** and **more lightweight**. For example:
 
+```json
     "testEnvironment": "node"
+```
 
 This way, **Jest** will run your tests in a **Node.js** environment, which is more suitable for testing React Native components. You can also create your own custom test environment.
 
@@ -256,16 +282,20 @@ This way, **Jest** will run your tests in a **Node.js** environment, which is mo
 
 The **_“testMatch”_** option is used to specify **which files should be considered** as **test files by Jest**. It is an array of glob patterns that match the file paths of your test files. For example, if you have a folder called **“tests”** in your project root, and you want to run all the files inside it that end with **“.test.js”** or **“.spec.js”**, you can use this option:
 
+```json
     "testMatch": [
         "<rootDir>/__tests__/*.js",
         "<rootDir>/src/**/*.(test|spec).js"
     ]
+```
 
 The `<rootDir>` is a special token that Jest replaces with the path to the project root. The `**` means any subdirectories, and the `*` means any file name. The (test|spec) means either **“test”** or **“spec”**, and the .js means the file extension. You can use other glob patterns to match different file names or extensions, such as .jsx, .ts, or .tsx.
 
 You can also have **multiple patterns in the array**, and Jest will run any file that matches at least one of them. For example, if you have some test files in a folder called **“tests”** and some other test files in your **“src”** folder, you can use this option:
 
+```json
     "testMatch": ["<rootDir>/tests/**/*.(test|spec).js"]
+```
 
 This will run all the files in the “tests” folder or its subfolders that end with **“.test.js”** or **“.spec.js”**.
 
@@ -275,6 +305,7 @@ The _“coverageThreshold”_ option is used to specify the **minimum percentage
 
 The **“coverageThreshold”** option is an object that has a **“global”** property and optionally a **“per-file”** property. The “global” property is another object that has four properties: **“statements”, “branches”, “functions”, and “lines”**. Each of these properties is a number between 0 and 100 that represents the percentage of code coverage required for that aspect. For example, if you want to enforce that your tests cover at least **80%** of your statements, **70%** of your branches, **90%** of your functions, and **85%** of your lines, you can use this option:
 
+```json
     "coverageThreshold": {
           "global": {
             "statements": 80,
@@ -283,9 +314,11 @@ The **“coverageThreshold”** option is an object that has a **“global”** 
             "lines": 85
         }
     }
+```
 
 The **_“per-file”_** property is an array of objects that have a **_“path”_** property and a **_“threshold”_** property. The **“path”** property is a glob pattern that matches the file paths of your code files. The **“threshold”** property is an object that has the same four properties as the “global” object. This way, **you can specify different coverage thresholds for different files** or **groups of files**. For example, if you want to enforce that your tests cover at least **95%** of your **_components_** and **_hooks_**, and at least **75%** of everything else, you can use this option:
 
+```json
     "coverageThreshold": {
           "global": {
             "statements": 75,
@@ -314,6 +347,7 @@ The **_“per-file”_** property is an array of objects that have a **_“path�
             }
         ]
     }
+```
 
 If you use the **_“coverageThreshold”_** option, **Jest** will fail the test run if the actual code coverage is lower than the specified thresholds. This can help you ensure that your tests are comprehensive and reliable.
 
@@ -321,52 +355,66 @@ If you use the **_“coverageThreshold”_** option, **Jest** will fail the test
 
 **🍭 Statements:** A statement is a single instruction or command in your code, such as a variable declaration, an assignment, a function call, a loop, a conditional, etc. For example, in this code snippet:
 
-    let x = 10; // statement 1
-    let y = 20; // statement 2
-    if (x > y) { // statement 3
-      console.log("x is greater"); // statement 4
-    } else {
-      console.log("y is greater"); // statement 5
-    }
+```javascript
+let x = 10; // statement 1
+let y = 20; // statement 2
+if (x > y) {
+  // statement 3
+  console.log("x is greater"); // statement 4
+} else {
+  console.log("y is greater"); // statement 5
+}
+```
 
 There are five statements in total. The statement coverage is the percentage of statements that are executed by your tests. For example, if your tests only run the “else” branch of the conditional, then the **statement coverage is 60%** (3 out of 5 statements are executed).
 
 **🍭 Branches:** A branch is a possible path of execution in your code, such as an “if” or “else” block, a “case” or “default” block in a switch statement, a ternary operator, etc. For example, in this code snippet:
 
-    let x = 10;
-    let y = 20;
-    if (x > y) { // branch 1
-      console.log("x is greater");
-    } else { // branch 2
-      console.log("y is greater");
-    }
+```javascript
+let x = 10;
+let y = 20;
+if (x > y) {
+  // branch 1
+  console.log("x is greater");
+} else {
+  // branch 2
+  console.log("y is greater");
+}
+```
 
 There are **two branches** in total. The branch coverage is the percentage of branches that are executed by your tests. For example, if your tests only run the “else” branch of the conditional, then the branch coverage is 50% (1 out of 2 branches are executed).
 
 **🍭 Functions:** A function is a block of code that performs a specific task and can be invoked by other parts of your code. For example, in this code snippet:
 
-    function add(a, b) { // function 1
-      return a + b;
-    }
+```javascript
+function add(a, b) {
+  // function 1
+  return a + b;
+}
 
-    function subtract(a, b) { // function 2
-      return a - b;
-    }
+function subtract(a, b) {
+  // function 2
+  return a - b;
+}
 
-    let x = add(10, 20); // statement 3
-    let y = subtract(30, 15);
+let x = add(10, 20); // statement 3
+let y = subtract(30, 15);
+```
 
 There are two functions in total. The function coverage is the percentage of functions that are invoked by your tests. For example, if your tests only call the “add” function, then the **function coverage is 50%** (1 out of 2 functions are invoked).
 
 **🍭 Lines:** A line is a single line of code in your source file. For example, in this code snippet:
 
-    let x = 10; // line 1
-    let y = 20; // line 2
-    if (x > y) { // line 3
-      console.log("x is greater"); // line 4
-    } else {
-      console.log("y is greater"); // line 5
-    }
+```javascript
+let x = 10; // line 1
+let y = 20; // line 2
+if (x > y) {
+  // line 3
+  console.log("x is greater"); // line 4
+} else {
+  console.log("y is greater"); // line 5
+}
+```
 
 There are five lines in total. The line coverage is the percentage of lines that are executed by your tests. For example, if your tests only run the “else” branch of the conditional, then the line **coverage is 80%** (4 out of 5 lines are executed).
 
@@ -409,35 +457,45 @@ I already explained in the previous section why we need to add a config option *
 
 To solve this issue, add a **“transform”** config to your Jest configuration file, either in the package.json or jest.config.js file, like below:
 
+```javascript
     // For jest.config.js
     transform: {
         '^.+\\.jsx?$': 'babel-jest'
         '^.+\\.tsx?$': '<rootDir>/node_modules/ts-jest/preprocessor.js'
     }
+```
 
 For React Native versions older than **v0.61**, you will have to use the code below instead of the code above.
 
+```javascript
     transform: {
         '^.+\\.js$': '<rootDir>/node_modules/react-native/jest/preprocessor.js'
     }
+```
 
 Then add a babel.config.js file to the root of your project directory and add the code below.
 
-    // babel.config.js
-    module.exports = {
-      presets: ['module:metro-react-native-babel-preset']
-    };
+```javascript
+// babel.config.js
+module.exports = {
+  presets: ["module:metro-react-native-babel-preset"],
+};
+```
 
 If the above **“preset”** does not work for you, then add the code below.
 
-    // babel.config.js
-    module.exports = {
-      presets: ['module:metro-react-native-babel-preset', '@babel/preset-env']
-    };
+```javascript
+// babel.config.js
+module.exports = {
+  presets: ["module:metro-react-native-babel-preset", "@babel/preset-env"],
+};
+```
 
 **_NOTE:_** When you add the code, you must install the particular library via yarn/npm in your dev dependency using the command below (replace your library with the library name from the above code of configs that you need).
 
+```bash
     yarn add --dev @babel/preset-env
+```
 
 **Solution (B):** Use the jest config option **“transformIgnorePatterns”**.
 
@@ -447,6 +505,7 @@ So, why may solution (A) not have worked? This is because those files may not ha
 
 Suppose you get an “import” error for **“react-native-elements”**. In that case, add the code below to your JEST configuration file.
 
+```javascript
     // jest.config.js
     const config = {
       .....
@@ -455,6 +514,7 @@ Suppose you get an “import” error for **“react-native-elements”**. In th
       ],
       .....
     }
+```
 
 You can add more libraries like “react-native-elements” to the array by using the **“|”** symbol.
 
@@ -462,11 +522,15 @@ You can add more libraries like “react-native-elements” to the array by usin
 
 Just use this below command to run your test file in terminal.
 
-    yearn test test_file_name.test.js
+```bash
+    yarn test test_file_name.test.js
+```
 
 If you want to run all of your TEST file (File name ended with **_.test.js_**) then run this below command.
 
+```bash
     yarn test
+```
 
 **_NOTE:_** Be sure “test” command was added in “scripts” section under package.json file in.
 
@@ -528,84 +592,89 @@ Finally below is my TEST code that I wrote to test **_“DemoScreen”_** Compon
 
 Below I’m giving full code-block for **“wrapper”** argument of **render()** API to create a custom **render()** method.
 
-    // ✅ File - "authContext.js"
-    // ✅ File - "authContext.js"
+```javascript
+// ✅ File - "authContext.js"
+// ✅ File - "authContext.js"
 
-    import { createContext } from 'react'
+import { createContext } from "react";
 
-    const AuthContext = createContext(null)
+const AuthContext = createContext(null);
 
-    export default AuthContext
+export default AuthContext;
+```
 
+```javascript
+// ✅ File - "demo.screen.js"
+// ✅ File - "demo.screen.js"
 
-    // ✅ File - "demo.screen.js"
-    // ✅ File - "demo.screen.js"
+import React, { useContext } from "react";
+import { Text, ImageBackground } from "react-native";
+import AuthContext from "../util/context/authContext";
 
-    import React, { useContext } from 'react'
-    import { Text, ImageBackground } from 'react-native'
-    import AuthContext from '../util/context/authContext'
+export default function DemoScreen() {
+  const { auth, setAuth } = useContext(AuthContext);
 
-    export default function DemoScreen() {
-     const { auth, setAuth } = useContext(AuthContext)
+  return (
+    <ImageBackground source={require("../assets/homeBackdrop.png")}>
+      <Text testID="greeting">GREETING</Text>
+      <Text testID="username">{auth.username}</Text>
+    </ImageBackground>
+  );
+}
+```
 
-     return (
-      <ImageBackground source={require('../assets/homeBackdrop.png')}>
-       <Text testID="greeting">GREETING</Text>
-       <Text testID="username">{auth.username}</Text>
-      </ImageBackground>
-     )
-    }
+```javascript
+// ✅ File - "test-utils.js"
+// ✅ File - "test-utils.js"
 
+import React, { useState, useMemo } from "react";
+import { render } from "@testing-library/react-native";
+import AuthContext from "../context/authContext";
 
-    // ✅ File - "test-utils.js"
-    // ✅ File - "test-utils.js"
+const AllTheProviders = ({ children }) => {
+  const [auth, setAuth] = useState({
+    loggedIn: true,
+    username: "Anis",
+  });
 
-    import React, { useState, useMemo } from 'react'
-    import { render } from '@testing-library/react-native'
-    import AuthContext from '../context/authContext'
+  const authValue = useMemo(() => ({ auth, setAuth }), [auth, setAuth]);
 
-    const AllTheProviders = ({ children }) => {
-     const [auth, setAuth] = useState({
-      loggedIn: true,
-      username: 'Anis'
-     })
+  return (
+    <AuthContext.Provider value={authValue}>{children}</AuthContext.Provider>
+  );
+};
 
-     const authValue = useMemo(() => ({ auth, setAuth }), [auth, setAuth])
+const customRender = (component, options) =>
+  render(component, { wrapper: AllTheProviders, ...options });
 
-     return (
-      <AuthContext.Provider value={authValue}>{children}</AuthContext.Provider>
-     )
-    }
+// re-export everything
+export * from "@testing-library/react-native";
 
-    const customRender = (component, options) =>
-     render(component, { wrapper: AllTheProviders, ...options })
+// override render method
+export { customRender as render };
+```
 
-    // re-export everything
-    export * from '@testing-library/react-native'
+```javascript
+// ✅ File - "Final TEST file"
+// ✅ File - "Final TEST file"
 
-    // override render method
-    export { customRender as render }
+import React from "react";
+import { render, screen } from "../src/util/__test__/test-utils";
+import DemoScreen from "../src/screens/demo.screen";
 
+describe("DemoScreen", () => {
+  it("should render the Demo Screen", () => {
+    // Render the Demo Screen
+    render(<DemoScreen />);
 
-    // ✅ File - "Final TEST file"
-    // ✅ File - "Final TEST file"
+    // Get the element with the testID "greeting"
+    const userName = screen.getByTestId("username");
 
-    import React from 'react'
-    import { render, screen } from '../src/util/__test__/test-utils'
-    import DemoScreen from '../src/screens/demo.screen'
-
-    describe('DemoScreen', () => {
-     it('should render the Demo Screen', () => {
-      // Render the Demo Screen
-      render(<DemoScreen />)
-
-      // Get the element with the testID "greeting"
-      const userName = screen.getByTestId('username')
-
-      // Expect the element to contain the text "Anis"
-      expect(userName).toHaveTextContent('Anis')
-     })
-    })
+    // Expect the element to contain the text "Anis"
+    expect(userName).toHaveTextContent("Anis");
+  });
+});
+```
 
 ## 🐠 “queries" option — render() API
 
@@ -707,26 +776,30 @@ Now apply TEST by getByDisplayValue to catch the <TextInput> by the initial disp
 
 Returns a **Query Instance** with matching **_testID_** prop like below. testID – may be a string or a regular expression.
 
-    return (
-      <View testID="button">
-          <Text>Anis</Text>
-       </View>
-     )
+```javascript
+return (
+  <View testID="button">
+    <Text>Anis</Text>
+  </View>
+);
+```
 
 And below is how the TEST suit should be written
 
-    describe('Test using ByRole', () => {
-     it('should render the TEST Screen', async () => {
-      // Render the Screen
-      render(<TestQuery_ByTestId />)
+```javascript
+describe("Test using ByRole", () => {
+  it("should render the TEST Screen", async () => {
+    // Render the Screen
+    render(<TestQuery_ByTestId />);
 
-      // Get the BUTTON with the role/accessibilityRole as "button"
-      const button = screen.getByTestId('button')
+    // Get the BUTTON with the role/accessibilityRole as "button"
+    const button = screen.getByTestId("button");
 
-      // Expect the element to contain "Anis"
-      expect(button).toHaveTextContent('Anis')
-     })
-    })
+    // Expect the element to contain "Anis"
+    expect(button).toHaveTextContent("Anis");
+  });
+});
+```
 
 **_NOTE:_** It is recommended to use this only after the other queries don’t work for your use case. Using **testID** attributes do not resemble how your software is used and **should be avoided if possible**. However, they are particularly useful for end-to-end testing on real devices, e.g. using Detox and it's an encouraged technique to use there.
 
@@ -802,8 +875,10 @@ To use UserEvent(), at first you need to create an User Event object instance wh
 
 **Real Timer:** Real Timer is the default timer used by JavaScript. It is based on the system clock and provides accurate timing information. However, it can cause issues when testing asynchronous code because it can take a long time to complete certain operations. To apply Real Timer just use this below code.
 
-    // Setup UserEvent (with real timer)
-      const user = userEvent.setup()
+```javascript
+// Setup UserEvent (with real timer)
+const user = userEvent.setup();
+```
 
 **Fake Timer:** Fake Timer is a timer that is not based on the system clock. Instead, it is controlled by the testing framework and can be advanced manually. This allows you to test asynchronous code more easily and quickly.
 
@@ -811,18 +886,20 @@ To use UserEvent(), at first you need to create an User Event object instance wh
 
 To apply **Fake Timer** with conjunction of **Advance Timer**, just use this below code instead of above code for Real Timers.
 
-    // Activate FakeTimer
-    jest.useFakeTimers()
+```javascript
+// Activate FakeTimer
+jest.useFakeTimers();
 
-    // Now, setup UserEvent (with Advance Timer)
-    const user = userEvent.setup({
-        delay: null,
-        advanceTimers: (delay) => {
-            jest.advanceTimersByTime(5000)
-            // "5000" refers to advance the clock to 5s and show result now.
-            // "delay" refers a basic "130" milliseconds to update a STATE.
-        }
-    })
+// Now, setup UserEvent (with Advance Timer)
+const user = userEvent.setup({
+  delay: null,
+  advanceTimers: (delay) => {
+    jest.advanceTimersByTime(5000);
+    // "5000" refers to advance the clock to 5s and show result now.
+    // "delay" refers a basic "130" milliseconds to update a STATE.
+  },
+});
+```
 
 **_NOTE:_** If you don’t use **advanceTimers()** with **UserEvent()** like above then you will get an warning like below.
 
@@ -838,38 +915,40 @@ Now, let’s see the TEST suit that I created using UserEvent() instance.
 
 Let me give you the TEST suit code in editor below.
 
-    import React from 'react'
-    import { render, screen, userEvent } from '@testing-library/react-native'
-    import UserEventTest from '../src/screens/testScreens/userEventTest.screen'
+```javascript
+import React from "react";
+import { render, screen, userEvent } from "@testing-library/react-native";
+import UserEventTest from "../src/screens/testScreens/userEventTest.screen";
 
-    describe('Test using UserEvent', () => {
-     it('should render the TEST Screen', async () => {
-      // Enable fakeTimers
-      jest.useFakeTimers()
+describe("Test using UserEvent", () => {
+  it("should render the TEST Screen", async () => {
+    // Enable fakeTimers
+    jest.useFakeTimers();
 
-      // Setup UserEvent
-      const user = userEvent.setup({
-       delay: null,
-       advanceTimers: (delay) => jest.advanceTimersByTime(10000)
-      })
+    // Setup UserEvent
+    const user = userEvent.setup({
+      delay: null,
+      advanceTimers: (delay) => jest.advanceTimersByTime(10000),
+    });
 
-      // Render the Screen
-      render(<UserEventTest />)
+    // Render the Screen
+    render(<UserEventTest />);
 
-      // Get the BUTTON with the testID "button"
-      const button = screen.getByTestId('button')
+    // Get the BUTTON with the testID "button"
+    const button = screen.getByTestId("button");
 
-      // Each time you will call a "UserEvent" method like below,
-      // it will trigger this line "jest.advanceTimersByTime(10000)"
-      await user.longPress(button)
+    // Each time you will call a "UserEvent" method like below,
+    // it will trigger this line "jest.advanceTimersByTime(10000)"
+    await user.longPress(button);
 
-      // Get the TEXT with the testID "textConditional"
-      const textConditional = screen.queryByTestId('textConditional')
+    // Get the TEXT with the testID "textConditional"
+    const textConditional = screen.queryByTestId("textConditional");
 
-      // Expect the element to contain "Text Visible"
-      expect(textConditional).toHaveTextContent('Text Visible')
-     })
-    })
+    // Expect the element to contain "Text Visible"
+    expect(textConditional).toHaveTextContent("Text Visible");
+  });
+});
+```
 
 In the above example, you also got an idea with a real example of how to implement the **UserEvent()** API of RNTL for the longPress event. Like the longPress event, there are other events that UserEvent can support. These are listed below. Use them as like as I gave example above for longPress() method.
 
@@ -891,44 +970,41 @@ Let me give you an example of **_fireEvent_** with fakeTimers and advanceTimersB
 
 Below is the code in editor for you.
 
-    import React from 'react'
-    import {
-      render,
-      screen,
-      fireEvent,
-      act }
-    from '@testing-library/react-native'
-    import FireEventTest from '../src/screens/testScreens/fireEventTest.screen'
+```javascript
+import React from "react";
+import { render, screen, fireEvent, act } from "@testing-library/react-native";
+import FireEventTest from "../src/screens/testScreens/fireEventTest.screen";
 
-    describe('Test using UserEvent', () => {
-     it('should render the TEST Screen', async () => {
-      // Enable fakeTimers
-      jest.useFakeTimers()
+describe("Test using UserEvent", () => {
+  it("should render the TEST Screen", async () => {
+    // Enable fakeTimers
+    jest.useFakeTimers();
 
-      // Render the Screen
-      render(<FireEventTest />)
+    // Render the Screen
+    render(<FireEventTest />);
 
-      // Get the BUTTON with the testID "button"
-      const button = screen.getByTestId('button')
+    // Get the BUTTON with the testID "button"
+    const button = screen.getByTestId("button");
 
-      // Fire an event "Press" by mouse
-      fireEvent.press(button)
+    // Fire an event "Press" by mouse
+    fireEvent.press(button);
 
-      // Apply a side-effect by act() function
-      // We advanced the time 10s by this side-effect function
-      act(() => {
-       jest.advanceTimersByTime(10000)
-      })
+    // Apply a side-effect by act() function
+    // We advanced the time 10s by this side-effect function
+    act(() => {
+      jest.advanceTimersByTime(10000);
+    });
 
-      // Get the TEXT with the testID "textConditional"
-      const textConditional = screen.queryByTestId('textConditional')
+    // Get the TEXT with the testID "textConditional"
+    const textConditional = screen.queryByTestId("textConditional");
 
-      // Expect the element to contain "Text Visible"
-      expect(textConditional).toHaveTextContent('Text Visible')
+    // Expect the element to contain "Text Visible"
+    expect(textConditional).toHaveTextContent("Text Visible");
 
-      jest.useRealTimers()
-     })
-    })
+    jest.useRealTimers();
+  });
+});
+```
 
 If you place **_jest.advanceTimersByTime(10000)_** before **_fireEvent.press(button)_**, you will see an error because screen.queryByTestId and expect(textConditional) depend on a setTimeout state update with a delay of 5 seconds after the button press inside the component below.
 
@@ -970,38 +1046,40 @@ Again, the component is as same as before on which I applied the **waitFor()** t
 
 Below is the final code of WaitFor() in editor.
 
-    import React from 'react'
-    import {
-        render,
-        screen,
-        fireEvent,
-        waitFor
-      } from '@testing-library/react-native'
-    import FireEventTest from '../src/screens/testScreens/fireEventTest.screen'
+```javascript
+import React from "react";
+import {
+  render,
+  screen,
+  fireEvent,
+  waitFor,
+} from "@testing-library/react-native";
+import FireEventTest from "../src/screens/testScreens/fireEventTest.screen";
 
-    describe('Test using WaitFor', () => {
-     it('should render the TEST Screen', async () => {
-      // Render the Screen
-      render(<FireEventTest />)
+describe("Test using WaitFor", () => {
+  it("should render the TEST Screen", async () => {
+    // Render the Screen
+    render(<FireEventTest />);
 
-      // Get the BUTTON with the testID "button"
-      const button = screen.getByTestId('button')
+    // Get the BUTTON with the testID "button"
+    const button = screen.getByTestId("button");
 
-      // Fire an event "Press" by mouse
-      fireEvent.press(button)
+    // Fire an event "Press" by mouse
+    fireEvent.press(button);
 
-      await waitFor(
-       () => {
+    await waitFor(
+      () => {
         // Get the TEXT with the testID "textConditional"
-        const textConditional = screen.queryByTestId('textConditional')
+        const textConditional = screen.queryByTestId("textConditional");
 
         // Expect the element to contain "Text Visible"
-        expect(textConditional).toHaveTextContent('Text Visible')
-       },
-       { timeout: 6000, interval: 500 }
-      )
-     }, 10000)
-    })
+        expect(textConditional).toHaveTextContent("Text Visible");
+      },
+      { timeout: 6000, interval: 500 }
+    );
+  }, 10000);
+});
+```
 
 **_NOTE:_** If you are using any API (network call) inside **“waitFor”** operation then you may have encounter this below issue of “fetch”.
 
@@ -1009,7 +1087,9 @@ Below is the final code of WaitFor() in editor.
 
 **SOLUTION:** You have to install **_“cross-fetch”_** in your react native app by this below command.
 
+```bash
     yarn add --dev cross-fetch
+```
 
 Then just import the **“cross-fetch”** at the top of the file from where your TEST suit is fetching the Network Data by a Network Call. For my case it was Apollo GraphQL & I just only imported the “cross-fetch” & it worked.
 
@@ -1055,22 +1135,26 @@ To mock a native module, you can use **_jest.mock(moduleName, factory)_** functi
 
 For example, if you want to mock AsyncStorage, you can write something like this in your setup file:
 
-    jest.mock('@react-native-community/async-storage', () => ({
-      getItem: jest.fn(() => Promise.resolve('some value')),
-      setItem: jest.fn(() => Promise.resolve()),
-    }));
+```javascript
+jest.mock("@react-native-community/async-storage", () => ({
+  getItem: jest.fn(() => Promise.resolve("some value")),
+  setItem: jest.fn(() => Promise.resolve()),
+}));
+```
 
 This will create a mock version of AsyncStorage with two methods: **getItem** and **setItem**. The getItem method will always return a promise that resolves to ‘some value’, and the setItem method will always return a promise that resolves to nothing. You can use these methods in your tests as if they were the real AsyncStorage methods.
 
 Similarly, if you want to **mock PermissionsAndroid**, you can write something like this in your setup file:
 
-    jest.mock('react-native', () => ({
-      ...jest.requireActual('react-native'),
-      PermissionsAndroid: {
-        request: jest.fn(() => Promise.resolve('granted')),
-        check: jest.fn(() => Promise.resolve(true)),
-      },
-    }));
+```javascript
+jest.mock("react-native", () => ({
+  ...jest.requireActual("react-native"),
+  PermissionsAndroid: {
+    request: jest.fn(() => Promise.resolve("granted")),
+    check: jest.fn(() => Promise.resolve(true)),
+  },
+}));
+```
 
 This will create a mock version of PermissionsAndroid with two methods: **_request_** and **_check_**. The request method will always return a promise that resolves to ‘granted’, and the check method will always return a promise that resolves to true. You can use these methods in your tests as if they were the real PermissionsAndroid methods.
 

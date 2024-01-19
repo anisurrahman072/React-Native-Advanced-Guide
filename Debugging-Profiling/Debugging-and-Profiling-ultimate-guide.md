@@ -287,11 +287,13 @@ Every React Native UI update happens on this thread. Therefore, if you’re mani
 
 This thread’s primary role is to **_keep the interface smooth and responsive_**. An example is animating a member using the Animated API.
 
-    Animated.timing(this.state.fadeAnim, {
-      // this executes on the UI thread
-      toValue: 1,
-      duration: 2000,
-    }).start();
+```javascript
+Animated.timing(this.state.fadeAnim, {
+  // this executes on the UI thread
+  toValue: 1,
+  duration: 2000,
+}).start();
+```
 
 In the above code snippet, **`Animated.timing`** updates the component’s opacity over two seconds. This animation occurs on the Main Thread to ensure smooth UI updates.
 

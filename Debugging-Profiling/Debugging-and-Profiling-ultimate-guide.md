@@ -255,13 +255,11 @@ Similarly, you can happily scroll up and down through a **ScrollView** when the 
 - **My TouchableX view isn’t very responsive due to low FPS:** Sometimes, if you do an action in the same frame that you are adjusting the opacity or highlight of a component that is responding to a touch, **you won’t see that effect until after the onPress function has returned**. If onPress does a setState that results in a lot of work and a few frames dropped, this may occur. A solution to this is to wrap any action inside of your onPress handler in requestAnimationFrame:
 
 ```javascript
-
-  handleOnPress() {
-      requestAnimationFrame(() => {
-      this.doExpensiveAction();
-      });
-  }
-
+function handleOnPress() {
+  requestAnimationFrame(() => {
+    this.doExpensiveAction();
+  });
+}
 ```
 
 - **Slow navigator transitions due to low FPS:** As mentioned above, Navigator animations are controlled by the JavaScript thread. Imagine the "push from right" scene transition: each frame, the new scene is moved from the right to left, starting offscreen (let's say at an x-offset of 320) and ultimately settling when the scene sits at an x-offset of 0. **Each frame during this transition**, the JavaScript thread needs to send a new **x-offset** to the main thread. **If the JavaScript thread is locked up**, it cannot do this and so **no update occurs** on that frame and the animation stutters. One solution to this is to allow for JavaScript-based animations to be offloaded to the main thread. Prop **_“useNativeDriver”_** as **_true_** will solve it.

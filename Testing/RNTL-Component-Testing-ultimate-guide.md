@@ -1,6 +1,6 @@
 # React Native — UI Testing (Ultimate Guide)
 
-### A comprehensive guide to React Native Component Testing.
+### A comprehensive guide to React Native Component Testing by RNTL
 
 ![](https://cdn-images-1.medium.com/max/5760/1*v-mekN6hCmlHTruW1UruLA.png)
 

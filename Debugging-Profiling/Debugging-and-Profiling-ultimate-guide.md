@@ -303,11 +303,13 @@ React Native applications execute JavaScript code in a separate JavaScript engin
 
 This is the thread where your actual React and JavaScript code gets executed. An example would be setting the state after fetching data from an API.
 
-    fetchData = async () => {
-      const response = await fetch("https://api.example.com/data");
-      const json = await response.json();
-      this.setState({ data: json }); // this line is executed in the JS thread
-    }
+```javascript
+fetchData = async () => {
+  const response = await fetch("https://api.example.com/data");
+  const json = await response.json();
+  this.setState({ data: json }); // this line is executed in the JS thread
+};
+```
 
 This entire operation runs on the JavaScript Thread.
 
@@ -319,11 +321,13 @@ If you’re using **native code** in your React Native app, it gets executed her
 
 A simple example would be creating a Toast module in Android.
 
+```java
     // This is Java code that will run on the Native Modules Thread
     @ReactMethod
     public void show(String message, int duration) {
       Toast.makeText(getReactApplicationContext(), message, duration).show();
     }
+```
 
 In this example, the `show` method will be invoked from JavaScript but run on the Native Modules thread.
 
@@ -628,7 +632,3 @@ Don’t worry for upcoming versions of React Native. **you can still use Flipper
 Thank you for reading this article. I enjoy sharing my **5 years** of experience in **React-native**, **JavaScript**, **React** & **Node.js** with you every day. If you enjoyed reading this article, I would appreciate it if you could follow me on [**Twitter**](https://twitter.com/anis_RNCore) & [**Medium**](https://medium.com/@anisurrahmanbup).
 
 If you find any **ISSUE** in this Guide BOOK, please create a **PR** to help the community 🔥
-
-```
-
-```

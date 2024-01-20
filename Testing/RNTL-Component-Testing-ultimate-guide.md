@@ -78,7 +78,7 @@ For practical reasons, we can distinguish **React Native testing** into these **
 
 **NOTE:** Because most of your business code lives in JS, it makes sense to focus your efforts there.
 
-Below, we see how the **testing flow (pyramid)** works. Testing starts with **Static Analysis** & ends with **End-to-End** test.
+Below, we see how the **testing flow (pyramid)** works (Created by CallStack Team). Testing starts with **Static Analysis** & ends with **End-to-End** test.
 
 ![**Testing Flow To Maintain **(Starts with **Static Analysis** & ends with **E2E test**)](https://cdn-images-1.medium.com/max/3256/1*s0tBArqx38hcvCEkCNiruA.png)
 

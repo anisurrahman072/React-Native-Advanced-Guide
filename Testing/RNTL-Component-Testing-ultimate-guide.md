@@ -441,7 +441,7 @@ This will enable you to use the jest-watch-typeahead plugin in your watch mode. 
 
 You may encounter the error below while running tests on your screens.
 
-![ES6 error with Jest runner](https://cdn-images-1.medium.com/max/3228/1*bTlYkAq595TaY2AX0te_Jg.png)
+![ES6 error with Jest runner](image-3.png)
 
 The reason for this error is that Jest failed to parse a file because it encountered an unexpected token. This can happen when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax, such as ES6 syntax or TypeScript syntax.
 

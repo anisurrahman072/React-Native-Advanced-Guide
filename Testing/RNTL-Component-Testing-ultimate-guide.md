@@ -80,7 +80,7 @@ For practical reasons, we can distinguish **React Native testing** into these **
 
 Below, we see how the **testing flow (pyramid)** works (Created by CallStack Team). Testing starts with **Static Analysis** & ends with **End-to-End** test.
 
-![**Testing Flow To Maintain **(Starts with **Static Analysis** & ends with **E2E test**)](https://cdn-images-1.medium.com/max/3256/1*s0tBArqx38hcvCEkCNiruA.png)
+![**Testing Flow To Maintain **(Starts with **Static Analysis** & ends with **E2E test**)](image-2.png)
 
 **_NOTE:_** _The main focus of this article is to dive you into the second part of Pyramid (**JavaScript Testing**)._
 

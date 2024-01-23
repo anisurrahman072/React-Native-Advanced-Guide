@@ -167,7 +167,7 @@ Then add this additional **Jest matcher** to your jest tests by using setupFiles
 }
 ```
 
-My **package.json** looks like below with additional **Jest matcher** config.
+The **package.json** looks like below with additional **Jest matcher** config.
 
 ![**package.json** (only last part given here)](https://cdn-images-1.medium.com/max/2452/1*KptsLb335zj-onET-V2fkg.png)
 

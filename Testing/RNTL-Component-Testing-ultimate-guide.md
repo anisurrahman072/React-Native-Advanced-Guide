@@ -2,7 +2,7 @@
 
 ### A comprehensive guide to React Native Component Testing by RNTL
 
-![](image.png)
+![](/images/rntl/image.png)
 
 Over the course of a month, I meticulously crafted this comprehensive guide on testing for **React Native** applications. Each code snippet included in this article was initially **_executed successfully_** on my MacBook, ensuring their reliability.
 
@@ -80,7 +80,7 @@ For practical reasons, we can distinguish **React Native testing** into these **
 
 Below, we see how the **testing flow (pyramid)** works (Created by CallStack Team). Testing starts with **Static Analysis** & ends with **End-to-End** test.
 
-![**Testing Flow To Maintain **(Starts with **Static Analysis** & ends with **E2E test**)](image-2.png)
+![**Testing Flow To Maintain **(Starts with **Static Analysis** & ends with **E2E test**)](/images/rntl/image-2.png)
 
 **_NOTE:_** _The main focus of this article is to dive you into the second part of Pyramid (**JavaScript Testing**)._
 
@@ -169,7 +169,7 @@ Then add this additional **Jest matcher** to your jest tests by using setupFiles
 
 The **package.json** looks like below with additional **Jest matcher** config.
 
-![**package.json** (only last part given here)](image-1.png)
+![**package.json** (only last part given here)](/images/rntl/image-1.png)
 
 ## Setup JEST config (for RNTL)
 
@@ -441,7 +441,7 @@ This will enable you to use the jest-watch-typeahead plugin in your watch mode. 
 
 You may encounter the error below while running tests on your screens.
 
-![ES6 error with Jest runner](image-3.png)
+![ES6 error with Jest runner](/images/rntl/image-3.png)
 
 The reason for this error is that Jest failed to parse a file because it encountered an unexpected token. This can happen when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax, such as ES6 syntax or TypeScript syntax.
 
@@ -546,19 +546,19 @@ The render API is one of the methods that RNTL re-exports from **DOM Testing Lib
 
 Let’s see an example of how to use **render()** method. Below is my **_demo.screen.js_** Component on which I will apply test.
 
-![***demo.screen.js*** Component](https://cdn-images-1.medium.com/max/2200/1*rMQW09uiG6K_TVTmt-DKEw.png)
+![***demo.screen.js*** Component](/images/rntl/image-4.png)
 
 Now let’s see how to use **render()** method in a Test for the above **_demo.screen.js_** Component. (Note: Please match **red 🔴** & **green** 🟢 underlined in above **_demo.screen.js_** Component & bellow test code).
 
-![Test written with **render()** API provided by RNTL](https://cdn-images-1.medium.com/max/2016/1*3JsLtrhD9RgQg-ARvCiPFQ.png)
+![Test written with **render()** API provided by RNTL](/images/rntl/image-5.png)
 
 When we will run the command: **_yarn test Demo.test.js_** then we will see an output like below.
 
-![Test Passed ✅](https://cdn-images-1.medium.com/max/2000/1*mhw3_Nt2L7_WbK4KejqFow.png)
+![Test Passed ✅](/images/rntl/image-6.png)
 
 🤚 Wait, we missed a **STANDARD** procedure while using **render()** API. The standard procedure is like below.
 
-![Standard Procedure for **render()** API](https://cdn-images-1.medium.com/max/2232/1*gJAltPCY-Ihi4c05G2UbxQ.png)
+![Standard Procedure for **render()** API](/images/rntl/image-7.png)
 
 So basically, latest **_render_** result is kept in **_screen_** variable that was imported from @testing-library/react-native package.
 
@@ -574,21 +574,21 @@ So, let’s say you want to test a component, but in that component, you used an
 
 At first, here is my **_“AuthContext”_** provider like below in **_“authContext.js”_** file.
 
-![*File: **“authContext.js”***](https://cdn-images-1.medium.com/max/2000/0*exiYWKChfsj2ErnB)
+![*File: **“authContext.js”***](/images/rntl/image-8.png)
 
 Then a component **“DemoScreen”** which looks like below in **_“demo.screen.js”_** file. I will apply TEST on this **_“DemoScreen”_** component. You see in this component I accessed value of **_“auth.username”_** from **“AuthContext”** provider.
 
-![File: ***“demo.screen.js”***](https://cdn-images-1.medium.com/max/2192/0*khCGQsV0ILvmlwLM)
+![File: ***“demo.screen.js”***](/images/rntl/image-9.png)
 
 Now, below is how I implemented **custom _render()_** by using **_“wrapper”_** argument in **_“test-utils.js”_** file. In this code, I wrapped the **TESTING** component **{children}** by **_<AuthContext.Provider>_**.
 
 **_Note:_** The **TESTING** component **{children}** means the component on which I’m going to apply TEST run. For me, it will be **_“DemoScreen”_** Component.
 
-![File: ***“test-utils.js”***](https://cdn-images-1.medium.com/max/2704/0*KQwI1bAGJQHLctej)
+![File: ***“test-utils.js”***](/images/rntl/image-10.png)
 
 Finally below is my TEST code that I wrote to test **_“DemoScreen”_** Component. In the code, you see I imported my custom **_“render”_** method instead of **_“render”_** method from **_“RNTL”._** In the last line of code, I expected a text **_“Anis”_** in **_“DemoScreen”_** component. This text **_“Anis_** came from **_“AuthContext”._**
 
-![Final TEST file](https://cdn-images-1.medium.com/max/2036/0*qkUURj6uvy4GPQlw)
+![Final TEST file](/images/rntl/image-11.png)
 
 Below I’m giving full code-block for **“wrapper”** argument of **render()** API to create a custom **render()** method.
 
@@ -738,25 +738,25 @@ Now, let’s get the explanation of each query predicates.
 
 You need to set a role or accessibilityRole prop in your Component element like below.
 
-![Defined “role” in component to catch from TEST suit](https://cdn-images-1.medium.com/max/2408/1*UzGz_x0hAR7g0ts4p63HmA.png)
+![Defined “role” in component to catch from TEST suit](/images/rntl/image-12.png)
 
 Now the test suit is like below to access the button by role.
 
-![Access an element “button” by role](https://cdn-images-1.medium.com/max/2832/1*5Z12y26J9YhM0d_6F7JoGw.png)
+![Access an element “button” by role](/images/rntl/image-13.png)
 
 **_NOTE:_** You need to set **_accessible_** prop to true in **_<View>_** host elements while using *ByRole as *ByRole needs to be considered an accessibility element.
 
-![TEST with getByRole in <View>](https://cdn-images-1.medium.com/max/2404/1*DWGr_VYv5LSKDKLLgIu3og.png)
+![TEST with getByRole in <View>](/images/rntl/image-14.png)
 
 You can pass many other useful filters to methods like getByRole. Let’s see those filter options below. You can find details of each method by inspecting the method in VSCode.
 
-![Filter options of getByRole Query](https://cdn-images-1.medium.com/max/2596/1*XuA2TEX1vdcDNrCHeH_VKg.png)
+![Filter options of getByRole Query](/images/rntl/image-15.png)
 
 **⛰️ …ByText:** Supported methods are getByText, getAllByText, queryByText, queryAllByText, findByText, findAllByText
 
 This method will join <Text> siblings to find matches. This will allow for querying for strings that will be visually rendered together, but may be semantically separate React components.
 
-![Sibling Text Component](https://cdn-images-1.medium.com/max/2000/1*5EH_LTYhE39UlUzF2u1UeA.png)
+![Sibling Text Component](/images/rntl/image-16.png)
 
 **⛰️ …ByPlaceholderText:** Supported methods are getByPlaceholderText, getAllByPlaceholderText, queryByPlaceholderText, queryAllByPlaceholderText, findByPlaceholderText, findAllByPlaceholderText
 
@@ -766,11 +766,11 @@ Returns a **Query Instance** for a TextInput with a matching placeholder – may
 
 Returns a **Query Instance** for a TextInput with a matching display value – may be a string or regular expression. In below component I have a **<TextInput>** with initial value “Anis”.
 
-![Component with a <TextInput> that has initial value “Anis”](https://cdn-images-1.medium.com/max/2480/1*wasF6ecl8nLW8QCY4uX6VQ.png)
+![Component with a <TextInput> that has initial value “Anis”](/images/rntl/image-17.png)
 
 Now apply TEST by getByDisplayValue to catch the <TextInput> by the initial display value “Anis”.
 
-![TEST by initial Display value “Anis”](https://cdn-images-1.medium.com/max/3356/1*Pa_8ovRSYWlRCt2e5JKe8w.png)
+![TEST by initial Display value “Anis”](/images/rntl/image-18.png)
 
 **⛰️ …ByTestId:** Supported methods are getByTestId, getAllByTestId, queryByTestId, queryAllByTestId, findByTestId, findAllByTestId
 
@@ -825,17 +825,17 @@ This update() simulates a React update at the root. If the new element has the *
 
 Let’s see an example. We have a component like below with a **useEffect** **clean-up** function to TEST the component **Un-Mounting** stuff.
 
-![Component to TEST render() & update() mounting & un-mounting](https://cdn-images-1.medium.com/max/3196/1*hEmDVJW6qbKYmZ3dQFVjOA.png)
+![Component to TEST render() & update() mounting & un-mounting](/images/rntl/image-19.png)
 
 Now, I wrote a TEST suit below to test the above component.
 
-![TEST written by “RNTL” library](https://cdn-images-1.medium.com/max/4104/1*IKc-LIGTn3JR9aWHz9pucg.png)
+![TEST written by “RNTL” library](/images/rntl/image-20.png)
 
 In the TEST suit, you may see that at first I used **render()**. Then I used **_update()_** two times. In the second **update()** I used a new key as **“totallyNew”**.
 
 Now, when I ran the TEST file by JEST test runner with RNTL in environment, then I see below output in console.
 
-![Output of TEST file](https://cdn-images-1.medium.com/max/3220/1*wH40zfzaNPEHoywb-4uIAg.png)
+![Output of TEST file](/images/rntl/image-21.png)
 
 In the output we see, the **clean-up** function was called 2 times. The first one was called when I called the **render()** API. The second one called when I called the **update()** API for **second time** with new **key “totallyNew”**. So, in the **first** call of **update() without key,** din’t invoke the **clean-up** function.
 
@@ -847,11 +847,11 @@ This test ensures that our component responds correctly to dynamic prop changes,
 
 Pretty prints deeply rendered component passed to render. Below is the code of debug.
 
-![Implemented debug()](https://cdn-images-1.medium.com/max/2572/1*HvVaLPosEaR9yUjI2lkzeQ.png)
+![Implemented debug()](/images/rntl/image-22.png)
 
 It logged the rendered component pretty deeply like below in the console.
 
-![Logged the **rendered component** in the console (Ignore my output font size as I fit it into a small space.)](https://cdn-images-1.medium.com/max/3904/1*elmU0ymYg-3gAw291oBzyA.png)
+![Logged the **rendered component** in the console (Ignore my output font size as I fit it into a small space.)](/images/rntl/image-23.png)
 
 ## 🪵 RNTL API — userEvent()
 
@@ -903,15 +903,15 @@ const user = userEvent.setup({
 
 **_NOTE:_** If you don’t use **advanceTimers()** with **UserEvent()** like above then you will get an warning like below.
 
-![False positive warning (unnecessary warning) in console](https://cdn-images-1.medium.com/max/3060/1*7iK6_9s38uJhhLu8vcr1GA.png)
+![False positive warning (unnecessary warning) in console](/images/rntl/image-24.png)
 
 Now, let’s see a complete example below. At first I’m giving you an example of component on which I will apply the UserEvent().
 
-![Component to Test](https://cdn-images-1.medium.com/max/3776/1*LBuhEsnJuIN-UikpVCtKxg.png)
+![Component to Test](/images/rntl/image-25.png)
 
 Now, let’s see the TEST suit that I created using UserEvent() instance.
 
-![TEST suit to test userEvent() longPress method](https://cdn-images-1.medium.com/max/4856/1*oChurMRQQUXrDaPW2fViQA.png)
+![TEST suit to test userEvent() longPress method](/images/rntl/image-26.png)
 
 Let me give you the TEST suit code in editor below.
 
@@ -966,7 +966,7 @@ In the above example, you also got an idea with a real example of how to impleme
 
 Let me give you an example of **_fireEvent_** with fakeTimers and advanceTimersByTime(). fireEvent works exactly the same as userEvent in the case of fakeTimers and advanceTimersByTime(). However, fireEvent is a bit different from userEvent(). Below is the test suite that I wrote for the same component as above, with a press() and a setTimeout of 5000 ms in the action of the button press. Here is the test suite with fireEvent.
 
-![TEST suit written for fireEvent()](https://cdn-images-1.medium.com/max/3720/1*oyfXaVP5y-415CGY-UeRtg.png)
+![TEST suit written for fireEvent()](/images/rntl/image-27.png)
 
 Below is the code in editor for you.
 
@@ -1008,7 +1008,7 @@ describe("Test using UserEvent", () => {
 
 If you place **_jest.advanceTimersByTime(10000)_** before **_fireEvent.press(button)_**, you will see an error because screen.queryByTestId and expect(textConditional) depend on a setTimeout state update with a delay of 5 seconds after the button press inside the component below.
 
-![The component on which I applied fireEvent()](https://cdn-images-1.medium.com/max/2796/1*TPVFDVxLTK0K3j5LHErVvQ.png)
+![The component on which I applied fireEvent()](/images/rntl/image-28.png)
 
 Like above, you can use fireEvent() for these actions too
 
@@ -1032,7 +1032,7 @@ waitFor is a function provided by React Native Testing Library (RNTL) that waits
 
 Let’s implement the previous fireEvent() test suite using the waitFor() API this time.
 
-![WaitFor() API implementation](https://cdn-images-1.medium.com/max/3200/1*L37lakI4SbX_-VqL4yk5EA.png)
+![WaitFor() API implementation](/images/rntl/image-29.png)
 
 Here, the timeout option specifies the maximum amount of time to wait for the condition to be true before timing out. The default value is 4500ms.
 
@@ -1042,7 +1042,7 @@ The value **_10,000_** at the end of the above code refers to the maximum time t
 
 Again, the component is as same as before on which I applied the **waitFor()** test API. I’m providing the component again below.
 
-![The component on which I applied WaitFor()](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*TPVFDVxLTK0K3j5LHErVvQ.png)
+![The component on which I applied WaitFor()](/images/rntl/image-30.png)
 
 Below is the final code of WaitFor() in editor.
 
@@ -1083,7 +1083,7 @@ describe("Test using WaitFor", () => {
 
 **_NOTE:_** If you are using any API (network call) inside **“waitFor”** operation then you may have encounter this below issue of “fetch”.
 
-![FETCH error for Jest](https://cdn-images-1.medium.com/max/2524/1*Hh1OtTDLNj0elN5a0d5Egg.png)
+![FETCH error for Jest](/images/rntl/image-31.png)
 
 **SOLUTION:** You have to install **_“cross-fetch”_** in your react native app by this below command.
 
@@ -1093,7 +1093,7 @@ describe("Test using WaitFor", () => {
 
 Then just import the **“cross-fetch”** at the top of the file from where your TEST suit is fetching the Network Data by a Network Call. For my case it was Apollo GraphQL & I just only imported the “cross-fetch” & it worked.
 
-![Imported “cross-fetch”](https://cdn-images-1.medium.com/max/2680/1*yFTzLc3DZKzcyMyKNJiWxw.png)
+![Imported “cross-fetch”](/images/rntl/image-32.png)
 
 ## What is Mocking ?
 
@@ -1113,13 +1113,13 @@ In summary, jest.fn() is used to create mock functions that replace real functio
 
 **_jest.fn()_** is a function provided by the Jest testing framework that allows you to create mock functions that **replace real functions** in your codebase during testing. Below, I created a test suite where I created a mock function called **_‘mockFunction’_** using jest.fn().
 
-![Created Mock function by jest.fn()](https://cdn-images-1.medium.com/max/3096/1*xfxqahf21ptnI4Be4tdyNQ.png)
+![Created Mock function by jest.fn()](/images/rntl/image-33.png)
 
 Look at the test suite where I created a mock function called **_‘mockFunction’_** using jest.fn() and passed it as a prop to the <TestMock> component. Finally, I checked whether the mock function **_‘mockFunction’_** was called or not in the last line of the test suite “expect(mockFunction).toHaveBeenCalled()”.
 
 Below is the component where I applied the above test suite.
 
-![Component on where I applied MOCK function **“mockFunction"**](https://cdn-images-1.medium.com/max/2364/1*gTKZezmXllG1BL8x6sFXYA.png)
+![Component on where I applied MOCK function **“mockFunction"**](/images/rntl/image-34.png)
 
 ### 🍁 How to Mock a Native Module (by jest.mock())?
 
@@ -1162,17 +1162,17 @@ This will create a mock version of PermissionsAndroid with two methods: **_reque
 
 Let’s see another example of mocking a native module. Suppose you ran a test suite and rendered a component called **_MessageTab_**. Inside the MessageTab component, you used the react-native-orientation-locker native module. When you ran the test suite and called the MessageTab component, you got the error below.
 
-![ERROR due to not mocking Native Modules](https://cdn-images-1.medium.com/max/2876/1*GCkq_hejnqu8v5zOaiX6gw.png)
+![ERROR due to not mocking Native Modules](/images/rntl/image-35.png)
 
 The reason for the error is that you ran only a **single JS file** and not the entire app, and you did not run the app even in a device or simulator. Therefore, all **native modules** are out of scope to access. That’s why JEST can’t access the native orientation of device functions.
 
 Here’s how I used the react-native-orientation-locker native module in my **_MessageTab_** component:
 
-![**MessageTab** Component with **Native Module** in use](https://cdn-images-1.medium.com/max/2540/1*ElPJ2Mq25jxJ1ONKakDGHg.png)
+![**MessageTab** Component with **Native Module** in use](/images/rntl/image-36.png)
 
 So, I added mocking for react-native-orientation-locker inside my test suite before running the test, like the code below. This solved the error of invariant violation 🚀.
 
-![TEST suit on which I applied jest.mock() on Native Module](https://cdn-images-1.medium.com/max/2664/1*jWF52--n9LB_izviLGOrrA.png)
+![TEST suit on which I applied jest.mock() on Native Module](/images/rntl/image-37.png)
 
 ## Some Advanced Share about RNTL
 
@@ -1244,21 +1244,21 @@ That might sound a bit confusing at first, since we put React Native’s **_View
 
 The part of the tree looks as follows:
 
-![Composite & HOST view](https://cdn-images-1.medium.com/max/2000/1*bqXMvmTSIRCEFIIYOUGbSA.png)
+![Composite & HOST view](/images/rntl/image-38.png)
 
 Similar relation exists between other composite and host pairs: e.g. Text , TextInput and Image components:
 
-![Composite & HOST Text](https://cdn-images-1.medium.com/max/2000/1*_BOyABUqqKh7v1XVcIsRrw.png)
+![Composite & HOST Text](/images/rntl/image-39.png)
 
 Not all React Native components are organised this way, e.g. when you use Pressable (or TouchableOpacity) **there is no HOST _Pressable_**, but composite Pressable is rendering a **_HOST View_** with certain props being set:
 
-![**Composite** Pressable with **HOST** view](https://cdn-images-1.medium.com/max/2000/1*cuXag3B2ShdZqU1xTIMifQ.png)
+![**Composite** Pressable with **HOST** view](/images/rntl/image-40.png)
 
 ### Differentiating between host and composite elements
 
 An easy way to differentiate between **host** and **composite** elements is the **_type_** prop of given Component. Let’s have a look at below code.
 
-![Code for checking **Component** type (**Composite** or **HOST**)](https://cdn-images-1.medium.com/max/2420/0*PM4WU_ErXAtJj3Mo)
+![Code for checking **Component** type (**Composite** or **HOST**)](/images/rntl/image-41.png)
 
 In above code, the **given Component** is **_<Pressable />_**. Inside function **_isHostElement(),_** I used element **“type”** property to check if the given Component **_<Pressable />_** is a HOST component or a Composite component.
 
@@ -1266,7 +1266,7 @@ So, if **_typeof element.type_** return a **“string”** then given Component 
 
 For my case `<Pressable />` is a **“COMPOSITE”** component as it gave the below **“Function type”** instead of type **“string”**.
 
-![**Given Component** type (Found that **Given Component** is a **COMPOSITE component**)](https://cdn-images-1.medium.com/max/2680/0*ayCD8CjGpP9OChet)
+![**Given Component** type (Found that **Given Component** is a **COMPOSITE component**)](/images/rntl/image-42.png)
 
 ### Queries
 

@@ -2,7 +2,7 @@
 
 ### A comprehensive guide to React Native Component Testing by RNTL
 
-![](image.png)
+![](/images/image.png)
 
 Over the course of a month, I meticulously crafted this comprehensive guide on testing for **React Native** applications. Each code snippet included in this article was initially **_executed successfully_** on my MacBook, ensuring their reliability.
 
@@ -169,7 +169,7 @@ Then add this additional **Jest matcher** to your jest tests by using setupFiles
 
 The **package.json** looks like below with additional **Jest matcher** config.
 
-![**package.json** (only last part given here)](image-1.png)
+![**package.json** (only last part given here)](/images/image-1.png)
 
 ## Setup JEST config (for RNTL)
 

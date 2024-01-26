@@ -127,9 +127,9 @@
 
 # Endorsements
 
-### 🟣 [RNTL Guide](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md) - Endorsed by [Official Doc of RNTL](https://callstack.github.io/react-native-testing-library/docs/community-resources#recommended-content) - ( [Maciej](https://twitter.com/mdj_dev), [Callstack](https://twitter.com/callstackio) )
-
 ### 🟣 [This Book](https://github.com/anisurrahman072/React-Native-Advanced-Guide) - Featured on the Top [RN Radio Podcast](https://reactnativeradio.com/episodes/rnr-285-expo-dominates-the-app-store-and-other-news) - ( [Jamon](https://twitter.com/jamonholmgren), [Infinite Red](https://twitter.com/infinite_red) )
+
+### 🟣 [RNTL Guide](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md) - Endorsed by [Official Doc of RNTL](https://callstack.github.io/react-native-testing-library/docs/community-resources#recommended-content) - ( [Maciej](https://twitter.com/mdj_dev), [Callstack](https://twitter.com/callstackio) )
 
 # Contribution
 

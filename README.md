@@ -125,6 +125,10 @@
 
 ### [🔥 C++ & JSI Module Guides coming soon → → Stay Tune 🚀]()
 
+# Endorsement
+
+### 🎖️ 🎖️ 🎖️ [RNTL Guide](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md) is endorsed by the [Official Documentation of REACT NATIVE TESTING LIBRARY](https://callstack.github.io/react-native-testing-library/docs/community-resources#recommended-content).
+
 # Contribution
 
 - If you find any issues in the guidebook, please create a pull request (PR). Your PR will help the community 🚀

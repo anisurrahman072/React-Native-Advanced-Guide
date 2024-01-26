@@ -127,9 +127,9 @@
 
 # Endorsements
 
-### ✅ [RNTL Guide](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md) is endorsed by the [Official Doc of RNTL](https://callstack.github.io/react-native-testing-library/docs/community-resources#recommended-content) - Reviewed by [Maciej Jastrzębski](https://twitter.com/mdj_dev) from [Callstack](https://twitter.com/callstackio).
+### 🟣 [RNTL Guide](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Testing/RNTL-Component-Testing-ultimate-guide.md) - Endorsed by [Official Doc of RNTL](https://callstack.github.io/react-native-testing-library/docs/community-resources#recommended-content) - ( [Maciej](https://twitter.com/mdj_dev), [Callstack](https://twitter.com/callstackio) )
 
-### ✅ This guide book was featured on the Top [React Native Radio Podcast](https://reactnativeradio.com/episodes/rnr-285-expo-dominates-the-app-store-and-other-news), hosted by [Infinite Red](https://twitter.com/infinite_red) and presented by [Jamon](https://twitter.com/jamonholmgren), [Robin](https://twitter.com/robin_heinze) & [Mazen](https://twitter.com/mazenchami).
+### 🟣 [This Book](https://github.com/anisurrahman072/React-Native-Advanced-Guide) - Featured on the Top [RN Radio Podcast](https://reactnativeradio.com/episodes/rnr-285-expo-dominates-the-app-store-and-other-news) - ( [Jamon](https://twitter.com/jamonholmgren), [Infinite Red](https://twitter.com/infinite_red) )
 
 # Contribution
 

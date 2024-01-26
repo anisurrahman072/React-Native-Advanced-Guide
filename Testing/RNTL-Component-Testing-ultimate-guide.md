@@ -6,6 +6,8 @@
 
 Over the course of a month, I meticulously crafted this comprehensive guide on testing for **React Native** applications. Each code snippet included in this article was initially **_executed successfully_** on my MacBook, ensuring their reliability.
 
+### it’s endorsed by the [Official Documentation of REACT NATIVE TESTING LIBRARY](https://callstack.github.io/react-native-testing-library/docs/community-resources#recommended-content), so you know it’s reliable and up-to-date.
+
 This article serves as an all-encompassing resource on **TESTING**, covering a wide array of topics such as **component testing**, **mocking**, **provider** tests, **fireEvent**, and **waitFor** asynchronous operations, among others. It is designed to equip you with a thorough understanding of testing a **React Native app**, from getting started and setting up configurations, to troubleshooting potential errors.
 
 Let’s look at the topics that we will learn from this article.

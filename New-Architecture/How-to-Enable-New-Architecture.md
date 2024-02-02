@@ -78,7 +78,7 @@ Navigate to the **ios directory** and run the following:
 
 Then build and run the app as usual:
 
-    npx react-native run-android
+    npx react-native run-ios
 
 > NOTE: In future when you do a pod install command then all new architecture code will be removed from pod file.
 

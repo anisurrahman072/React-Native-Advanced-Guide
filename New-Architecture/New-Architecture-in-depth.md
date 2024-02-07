@@ -60,7 +60,7 @@ There are **2 types** of Native Module System in React Native
 
 1.  **OLD native module** **system** (aka: **“Bridge based Native Module system”** or **“Legacy native module system”** that uses **JSON data Serialization**)
 
-2.  **New native module** **system** (aka: **Turbo Module system** that uses **JSI.** JSI (JavaScript Interface) was written by C++)
+2.  **New native module** **system** (aka: **Turbo Module system** that uses **JSI.** JSI (JavaScript Interface) is written in C++)
 
 ### **Typed JavaScript code**
 
@@ -138,7 +138,7 @@ The **new Architecture** of **React Native** completes its full cycle in **2 pha
 
 ### Phase 1: App Build time
 
-When a developer turns on both **Codegen** and **Turbo Module** in their app and then gives a **build command** just before production deployment to create an **APK** for **Android** or an **IAP** for **iOS** device, the following steps are done from the new architecture flow:
+When a developer turns on both **Codegen** and **Turbo Module** in their app and then gives a **build command** just before production deployment to create an **APK** for **Android** or an **IPA** for **iOS** device, the following steps are done from the new architecture flow:
 
 - The **Build** command **compiles** the JavaScript code into **bytecode**.
 
@@ -390,9 +390,9 @@ The **React element tree** is used to render the **React shadow tree** in **C++*
       );
     };
 
-During the **Render phase**, a **shadow node** is created for **each React element**. This shadow node is created **synchronously**, only for React **host components**, and **not for composite components** such as **<View>**.
+During the **Render phase**, a **shadow node** is created for **each React element**. This shadow node is created **synchronously**, only for React **host components**, and **not for composite components** such as **\<View>**.
 
-When transformed into a Shadow Block , the **<View>** is translated into a **<ViewShadowNode>** object.
+When transformed into a Shadow Block , the **\<View>** is translated into a **\<ViewShadowNode>** object.
 
 The new **renderer** will automatically reflect the **parent-child relationships** between React element nodes. The above process shows how the React shadow tree is assembled; once it is complete, **the renderer triggers a commit** of the **element tree**.
 

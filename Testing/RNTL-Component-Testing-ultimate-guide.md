@@ -1,6 +1,6 @@
 # React Native — UI Testing (Ultimate Guide)
 
-### A comprehensive guide to React Native Component Testing by RNTL ( [Endoresed by Official Doc of RNTL ⭐️](https://callstack.github.io/react-native-testing-library/docs/community-resources#recommended-content) )
+### A comprehensive guide to React Native Component Testing by RNTL ( [Endorsed by Official Doc of RNTL ⭐️](https://callstack.github.io/react-native-testing-library/docs/community-resources#recommended-content) )
 
 ![](/images/rntl/image.png)
 

@@ -135,3 +135,8 @@
 
 - If you find any issues in the guidebook, please create a pull request (PR). Your PR will help the community 🚀
 - Also, if you want to add more advanced guides to this repository, I will add you as a core contributor here 🔥
+
+# 🎯 PUBLISHED [RN SDK RELEASES R&D GUIDE](https://github.com/anisurrahman072/React-Native-SDK-Research) 🚀
+
+- I'm doing deep R&D on different RN SDK releases & new features
+- Doing R&D on React Native Skia, React Native Screen, React Native, Expo, many more new features

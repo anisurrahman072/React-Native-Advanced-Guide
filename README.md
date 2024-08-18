@@ -3,7 +3,8 @@
 ![Alt text](<images/Screenshot 2024-01-01 at 1.32.08 AM.png>)
 
 - This **Guide Book** was written by [**Anis**](https://github.com/anisurrahman072) ([🩵 **CONNECT me in X**](https://twitter.com/anis_RNCore))
-- It consists of **12 chapters** & **70+ Advanced Topics** that were written with deep R&D and took 5 months to complete in **2023**. The guide was first published as 12 articles on ([**Medium**](https://medium.com/@anisurrahmanbup)).
+- It consists of **12 chapters** & **70+ Topics** that were written with deep R&D and took 5 months to complete in **2023**.
+- The guide was first published as 12 articles on ([**Medium**](https://medium.com/@anisurrahmanbup)).
 - All the Articles were originally based on **RN v0.71**.
 - ### 🙏 If you find this BOOK helpful, please give a STAR ⭐️
 

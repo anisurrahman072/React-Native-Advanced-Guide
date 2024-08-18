@@ -7,7 +7,7 @@
 - The guide was first published as 12 articles on ([**Medium**](https://medium.com/@anisurrahmanbup)).
 - All the Articles were originally based on **RN v0.71**.
 
-### 🙏 If you find this BOOK helpful, please give a STAR ⭐️
+### 🩵 If you find this BOOK helpful, please give a STAR 🩵
 
 # Table of Contents (70+ TOPICS)
 

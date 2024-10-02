@@ -619,7 +619,7 @@ Another way of making components very **reusable**, is by using the **render pro
 Imagine that we have a Title component. In this case, the Title component shouldn't do anything besides rendering the value that we pass. We can use a render prop for this! Let's pass the value that we want the Title component to render to the render prop.
 
 ```javascript
-<Title render={() => <h1>I am a render prop!</h1>} />
+<Title render={() => <Text>I am a render prop!</Text>} />
 ```
 
 Within the Title component, we can render this data by returning the invoked render prop!
@@ -642,14 +642,11 @@ render(
   <View className="App">
     <Title
       render={() => (
-        <h1>
-          <span role="img" aria-label="emoji">
-            ✨
-          </span>
-          I am a render prop! <span role="img" aria-label="emoji">
-            ✨
-          </span>
-        </h1>
+        <Text>
+          <View role="img" aria-label="emoji">✨</View>
+          I am a render prop!
+          <View role="img" aria-label="emoji">✨</View>
+        </Text>
       )}
     />
   </View>,
@@ -669,9 +666,9 @@ const Title = (props) => props.render();
 
 render(
   <View className="App">
-    <Title render={() => <h1>✨ First render prop! ✨</h1>} />
-    <Title render={() => <h2>🔥 Second render prop! 🔥</h2>} />
-    <Title render={() => <h3>🚀 Third render prop! 🚀</h3>} />
+    <Title render={() => <Text>✨ First render prop! ✨</Text>} />
+    <Title render={() => <Text>🔥 Second render prop! 🔥</Text>} />
+    <Title render={() => <Text>🚀 Third render prop! 🚀</Text>} />
   </View>,
   document.getElementById("root")
 );
@@ -700,9 +697,9 @@ const Title = (props) => (
 render(
   <View className="App">
     <Title
-      renderFirstComponent={() => <h1>✨ First render prop! ✨</h1>}
-      renderSecondComponent={() => <h2>🔥 Second render prop! 🔥</h2>}
-      renderThirdComponent={() => <h3>🚀 Third render prop! 🚀</h3>}
+      renderFirstComponent={() => <Text>✨ First render prop! ✨</Text>}
+      renderSecondComponent={() => <Text>🔥 Second render prop! 🔥</Text>}
+      renderThirdComponent={() => <Text>🚀 Third render prop! 🚀</Text>}
     />
   </View>,
   document.getElementById("root")
@@ -752,7 +749,7 @@ function Input() {
 export default function App() {
   return (
     <View className="App">
-      <h1>☃️ Temperature Converter 🌞</h1>
+      <Text>☃️ Temperature Converter 🌞</Text>
       <Input />
       <Kelvin />
       <Fahrenheit />
@@ -790,7 +787,7 @@ export default function App() {
 
   return (
     <View className="App">
-      <h1>☃️ Temperature Converter 🌞</h1>
+      <Text>☃️ Temperature Converter 🌞</Text>
       <Input value={value} handleChange={setValue} />
       <Kelvin value={value} />
       <Fahrenheit value={value} />
@@ -825,7 +822,7 @@ function Input(props) {
 export default function App() {
   return (
     <View className="App">
-      <h1>☃️ Temperature Converter 🌞</h1>
+      <Text>☃️ Temperature Converter 🌞</Text>
       <Input
         render={(value) => (
           <>
@@ -865,7 +862,7 @@ function Input(props) {
 export default function App() {
   return (
     <View className="App">
-      <h1>☃️ Temperature Converter 🌞</h1>
+      <Text>☃️ Temperature Converter 🌞</Text>
       <Input
         render={(value) => (
           <>
@@ -899,7 +896,7 @@ Let’s change the **Input** component. Instead of explicitly passing the render
 export default function App() {
   return (
     <View className="App">
-      <h1>☃️ Temperature Converter 🌞</h1>
+      <Text>☃️ Temperature Converter 🌞</Text>
       <Input>
         {(value) => (
           <>
@@ -959,7 +956,7 @@ function Input(props) {
 export default function App() {
   return (
     <View className="App">
-      <h1>☃️ Temperature Converter 🌞</h1>
+      <Text>☃️ Temperature Converter 🌞</Text>
       <Input>
         {(value) => (
           <>

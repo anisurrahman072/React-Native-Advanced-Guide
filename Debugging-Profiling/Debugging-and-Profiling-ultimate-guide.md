@@ -351,7 +351,7 @@ After running your app from Xcode, you will see the performance monitor from Xco
 
 ![Xcode Performance Monitor](https://cdn-images-1.medium.com/max/2744/1*CeLNRoz9kNuf9SP8vmX1EQ.png)
 
-Let’s analysis & know what each monitor means from this “Performance Monitor”
+Let’s analyse & know what each monitor means from this “Performance Monitor”
 
 - **CPU Monitor:** CPU Monitor measures the amount of work done.
 
@@ -516,7 +516,7 @@ Or you can click on **Profile** button in the toolbar.
 
 - Turn off development mode. **You must be sure that the app uses a JS bundle instead of the metro server**, which provides that bundle. Follow the below steps to make **“JS DEV MODE”** off.
 
-### Steps to make **_“JS DEV MODE”_** off 👇
+### Steps to switch **_“JS DEV MODE”_** off 👇
 
 1.  First run your app by using this **npx** command: **_npx react-native run-android_**
 

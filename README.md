@@ -9,6 +9,10 @@
 
 ### 🩵 If you find this BOOK helpful, please give a STAR 🩵
 
+# 📨 You can SUBSCRIBE to our newsletter - [React20Bulletin](https://anisrncore.substack.com/) 👇
+<img width="1439" height="680" alt="Substack Main Banner" src="https://github.com/user-attachments/assets/d36f1011-99dc-4655-8b0a-b59e01a6b348" />
+
+
 # Table of Contents (70+ TOPICS)
 
 ### [✅ 001 - Ultimate Guide on New Architecture in depth](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/New-Architecture-in-depth.md)

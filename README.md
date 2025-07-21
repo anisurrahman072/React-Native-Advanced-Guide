@@ -9,7 +9,7 @@
 
 ### 🩵 If you find this BOOK helpful, please give a STAR 🩵
 
-# 📨 You can SUBSCRIBE to our newsletter - [React20Bulletin](https://anisrncore.substack.com/) 👇
+# 📨 SUBSCRIBE to our newsletter - [React20Bulletin](https://anisrncore.substack.com/) 👇
 <img width="1439" height="680" alt="Substack Main Banner" src="https://github.com/user-attachments/assets/d36f1011-99dc-4655-8b0a-b59e01a6b348" />
 
 

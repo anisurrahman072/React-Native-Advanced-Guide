@@ -583,7 +583,7 @@ function withStyles(Component) {
   }
 }
 
-const MyButton = () = <Button title="Press me!" style={{ color: 'red' }} />
+const MyButton = () => <Button title="Press me!" style={{ color: 'red' }} />
 const StyledButton = withStyles(MyButton)
 ```
 
@@ -778,8 +778,7 @@ In this case, we have a stateful Input component. However, the sibling component
 
 ```javascript
 function Input({ value, handleChange }) {
-  return;
-  <input value={value} onChange={(e) => handleChange(e.target.value)} />;
+  return <input value={value} onChange={(e) => handleChange(e.target.value)} />;
 }
 
 export default function App() {

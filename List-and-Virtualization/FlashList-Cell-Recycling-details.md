@@ -137,7 +137,7 @@ Output of the Basic **FlashList** implementation (**IOS** + **Android**) in my A
 
 ## Important Props of FlashList
 
-Before diving deep, into the **performance improvement** of FlatList, let’s first understand some props of FlatList that will be used to improve the performance.
+Before diving deep, into the **performance improvement** of FlashList, let’s first understand some props of Flashlist that will be used to improve the performance.
 
 ### **_estimatedItemSize_**
 

@@ -129,6 +129,15 @@
         - When custom Hooks are better than HOC?
         - Custom Hooks replaced "Render props pattern"
 
+### [✅ 013 - Common and Responsive Styles for React Native](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/Styling/Common-and-Responsive-styles.md)
+
+        - Unified Normalization Function
+        - The Core of Our Styling Metrics (Normalizing Functions)
+        - Introduction to Common Styles
+        - Implementing Common Styles and Usage Examples
+        - Integrating Common Styles within Style Objects
+        - TypeScript Usage for Common Styles and Normalize Functions
+
 ### [🔥 C++ & JSI Module Guides coming soon → → Stay Tune 🚀]()
 
 # Endorsements

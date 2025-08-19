@@ -46,11 +46,11 @@ _I have found tons of articles on the internet about the **new architecture** of
 
 ## Terms of React Native (Get some basic)
 
-To understand the **New Architecture,** we need to first understand some terms of React Native. Also, we need to understand some terms from the OLD architecture. Let’s understand those first.
+To understand the **New Architecture,** we first need to understand some terms of React Native. Also, we need to understand some terms from the OLD architecture. Let’s understand those first.
 
 ### Native Modules
 
-**“Native modules”** are pieces of **Native code** that are written in a native platform language, such as **Java** for Android or **Objective-C** for iOS, and can be called from JavaScript.
+**“Native modules”** are pieces of **Native code** written in a native platform language, such as **Java** for Android or **Objective-C** for iOS, and can be called from JavaScript.
 
 ### Native Module System
 
@@ -80,7 +80,7 @@ In a nutshell, **each react native app** is composed of **two main** parts
 
 The code is executed over **three threads**:
 
-1. **The JavaScript thread:** to run JS Bundle with specific JavaScript engine
+1. **The JavaScript thread:** to run JS Bundle with a specific JavaScript engine
 
 2. **The Native/UI thread:** it runs the native code and handles any user interface operation like rendering or gesture events.
 
@@ -92,7 +92,7 @@ The **relationship** between the **JavaScript** and **Native threads** is mediat
 
 ## OLD Architecture drawbacks
 
-Although **React Native** apps are fast enough, they **still lag behind native solutions** in terms of performance. The reason lies with the architecture used.
+Although **React Native** apps are fast enough, they **still lag behind native solutions** in terms of performance. The reason lies in the architecture used.
 
 The bridge in the **old architecture works by serializing** all data that must be passed from JavaScript to native.
 
@@ -100,17 +100,17 @@ The **Bridge** have some **limitations**:
 
 - **It is asynchronous:** one layer submits data to a bridge and waits for the data to be processed by the other layer, even when it’s unnecessary.
 
-- **It is single threaded:** JavaScript used to be single-threaded, so computation that takes place has to be performed on that single thread.
+- **It is single-threaded:** JavaScript used to be single-threaded, so computation that takes place has to be performed on that single thread.
 
 - **Overhead costs:** each time one layer communicates with another, **it must serialize the data**. The other layer **must deserialize it**. JSON was chosen for its simplicity and human readability, despite being a lightweight format it has a cost associated with it.
 
 ## New Architecture of React Native (Quick overview)
 
-The **New Architecture** dropped the concept of The **Bridge** in favour of the **JavaScript Interface (JSI)**, with new components, which increased performance (the new architecture is available starting from RN 0.68).
+The **New Architecture** dropped the concept of The **Bridge** in favor of the **JavaScript Interface (JSI)**, with new components, which increased performance (the new architecture is available starting from RN 0.68).
 
-### All components of New Architecture
+### All components of the New Architecture
 
-Let’s know all the name of the components of New Architecture
+Let’s know all the names of the components of the New Architecture
 
 - **Codegen** (Native code generator)
 
@@ -124,9 +124,9 @@ Let’s know all the name of the components of New Architecture
 
 - **Fabric renderer** _(The new render pipeline creator)_
 
-- **Yoga** _(Cross platform layout engine. It was also in OLD architecture)_
+- **Yoga** _(Cross-platform layout engine. It was also in OLD architecture)_
 
-We will discuss each & every components of above later in this Article 🚀
+We will discuss each & every component above later in this Article 🚀
 
 ## New Architecture two Phases
 
@@ -156,7 +156,7 @@ When a user launches the app, the **rest of the work happens** from the new arch
 
 2.  **Fabric** component
 
-All the other **sub components** of React Native’s **new architecture** also come inside this **“Phase 2: App Run time”**. These are 👇
+All the other **sub-components** of React Native’s **new architecture** also come inside this **“Phase 2: App Run time”**. These are 👇
 
 - **Hermes engine**
 
@@ -167,7 +167,7 @@ All the other **sub components** of React Native’s **new architecture** also c
 - **Yoga**
 
 - **Fabric Renderer**
-  > Remember once again: **Codegen** already **ran** in **“Phase 1: App Build time”.** At the end of the Article, we will see the full flow of how the New Architecture works. Also, we will see the relation between each component of new architecture. For now, let’s understand each component of New Architecture closely 👇👇
+  > Remember once again: **Codegen** already **ran** in **“Phase 1: App Build time”.** At the end of the Article, we will see the full flow of how the **New Architecture** works. Also, we will see the relation between each component of the **New Architecture**. For now, let’s understand each component of the **New Architecture** closely 👇👇
 
 ## Codegen (Native Code Generator)
 
@@ -181,28 +181,28 @@ Let’s understand these 2 more clearly below.
 
 ### Static type checking
 
-- JavaScript is a **dynamically typed** (you don’t need to define the type of a variable) language, and JSI is written in C++, which is a statically typed _(you must have to define variable type)_ language. Consequently, there are some **communication issues** between the two (JS and C++).
+- JavaScript is a **dynamically typed** (you don’t need to define the type of a variable) language, and JSI is written in C++, which is a statically typed _(you must define a variable type)_ language. Consequently, there are some **communication issues** between the two (JS and C++).
 
-- That’s why the new architecture includes a **static type checker** called CodeGen. It solves the type related communication issue between JavaScript & C++.
+- That’s why the new architecture includes a **static type checker** called CodeGen. It solves the type-related communication issue between JavaScript & C++.
   > Remember that **Codegen** makes ready **Native Code** for **JSI**. **Codegen** don’t use **JSI**.
 
 ### Generate “Native code”
 
-Codegen is **responsible** to generate **Native Code** for **2 big components** of New Architecture. These are:
+Codegen is **responsible** for generating **Native Code** for **2 big components** of New Architecture. These are:
 
 1.  The **Turbo Module** component and
 
 2.  The **Fabric** component
 
-Both of these **2 big components** of New Architecture needs **Native Code** that should be generated by **Codegen**.
+Both of these **2 big components** of New Architecture are needed for **Native Code** that should be generated by **Codegen**.
 
-Let’s understand **how Codegen generate Native Code** 👇
+Let’s understand **how Codegen generates Native Code** 👇
 
 - You write **_“typed JavaScript code”_** to define the **Native** **components** or **Native** **modules** that you want to use in your app.
 
 - Codegen creates **_“native code”_** for **each platform** as **output** from your written **_“typed JavaScript code”_.**
 
-- These generated **_“native code”_** can communicate with **_“typed JavaScript code”_** directly, without using the bridge. As a result **Codegen** makes the communication between JavaScript and native code **faster** and more **reliable**, since it avoids using the bridge.
+- These generated **_“native code”_** can communicate with **_“typed JavaScript code”_** directly, without using the bridge. As a result, **Codegen** makes the communication between JavaScript and native code **faster** and more **reliable** since it avoids using the bridge.
 
 - CodeGen **generates** native code at **build time** instead of **run time.**
 
@@ -220,9 +220,9 @@ Let’s understand **how Codegen generate Native Code** 👇
 
 3.  **Fabric** _(Native **UI renderer**/ New render engine)_
 
-We will see about these in next sections. But for now let’s **understand JSI first** clearly. Then we will move to other parts of the **New Architecture**.
+We will see about these in the next sections. But for now, let’s **understand JSI first** clearly. Then we will move to other parts of the **New Architecture**.
 
-**JSI (JavaScript Interface)** was written in **C++**. It **replaced** the **bridge** from the **OLD architecture** and provide a **direct**, **native interface** to **JavaScript** objects and functions. This idea unlocks several benefits 👇
+**JSI (JavaScript Interface)** was written in **C++**. It **replaced** the **bridge** from the **OLD architecture** and provided a **direct**, **native interface** to **JavaScript** objects and functions. This idea unlocks several benefits 👇
 
 - **Concurrency**: JavaScript can invoke functions that are executed on **different threads**.
 
@@ -236,11 +236,11 @@ We will see about these in next sections. But for now let’s **understand JSI f
 
 - **Lightweight:** JSI is a lightweight **general-purpose** JavaScript interface, written in C++, that can be used by the JavaScript engine to directly invoke methods in the native realm.
 
-- **Decouple the interface from the JS Engine:** The OLD architecture uses the **JSC (JavaScriptCore) Engine**. The Bridge was only compatible with this particular JSC engine, however the **new architecture** will decouple the interface from the Engine, **enabling the use of other JavaScript Engines** like Chakra, v8 and Hermes, etc.
+- **Decouple the interface from the JS Engine:** The OLD architecture uses the **JSC (JavaScriptCore) Engine**. The Bridge was only compatible with this particular JSC engine, however, the **new architecture** will decouple the interface from the Engine, **enabling the use of other JavaScript Engines** like Chakra, v8, Hermes, etc.
 
 ## How can JavaScript call native methods with JSI?
 
-Through the JSI, **Native methods** will be exposed to JavaScript **via C++** objects. These **objects can be referenced by JavaScript code**, thus can be invoked directly. This is similar to the web, where JavaScript code can reference any DOM element, and call methods on that element.
+Through the JSI, **Native methods** will be exposed to JavaScript **via C++** objects. These **objects can be referenced by JavaScript code**, and thus can be invoked directly. This is similar to the web, where JavaScript code can reference any DOM element, and call methods on that element.
 
 For Example: when you write:
 
@@ -252,15 +252,15 @@ Here, the container is a **JavaScript variable that holds a reference to a DOM e
 
 To Sum it up, **JSI** will allow using **other JavaScript engines** and will allow for complete interoperability between the threads.
 
-> One of the **main advantages of the JSI** is that it’s written in **C++**. This means that **React Native can target a wide range of devices**, including smart TVs, watches and other devices.
+> One of the **main advantages of the JSI** is that it’s written in **C++**. This means that **React Native can target a wide range of devices**, including smart TVs, watches, and other devices.
 
-### ❝ **JSI (JavaScript Interface)** opens the door of Single Interface for All Platforms by C++ ❞
+### ❝ **JSI (JavaScript Interface)** opens the door to a Single Interface for All Platforms by C++ ❞
 
 ## How JSI synchronous made it great!
 
-You might be wondering how JSI **synchronous** made it great, since **asynchronous** is the best like JS behaviour. In **asynchronous**, we don’t need to wait for a task to complete. It means that **asynchronous is more performant** than **synchronous**. But how **synchronous** made it great **JSI**?
+You might be wondering how JSI **synchronous** made it great since **asynchronous** is the best like JS behavior. In **asynchronous**, we don’t need to wait for a task to complete. It means that **asynchronous is more performant** than **synchronous**. But how **synchronous** made it great **JSI**?
 
-Well, the answer is that JSI does not make everything **synchronous**, it just gives the option to do so when needed. Asynchronous calls are still preferred for most cases, because they don’t block the UI thread or the JS thread. However, there are some situations where synchronous calls are necessary or beneficial, such as:
+Well, the answer is that JSI does not make everything **synchronous**, it just gives the option to do so when needed. Asynchronous calls are still preferred for most cases because they don’t block the UI thread or the JS thread. However, there are some situations where synchronous calls are necessary or beneficial, such as:
 
 - **Initializing native modules:** some native modules need to be initialized before they can be used, and this can cause delays or crashes if done asynchronously. With JSI, native modules can be initialized synchronously when the app starts, avoiding these issues.
 
@@ -272,7 +272,7 @@ As you can see, JSI synchronous made it great by allowing more flexibility and p
 
 ## Hermes Engine
 
-**Hermes**, a **JavaScript engine** that runs on devices when a user launches an App in his device. Hermes has these benefits in short:
+**Hermes**, a **JavaScript engine** that runs on devices when a user launches an App on their device. Hermes has these benefits in short:
 
 1.  It improves the **app size**
 
@@ -280,7 +280,7 @@ As you can see, JSI synchronous made it great by allowing more flexibility and p
 
 3.  It improves the **start-up time** of the app.
 
-Here is the **flow of Hermes**. How **Hermes work** at the time of when a user launch the app in his device.
+Here is the **flow of how Hermes works** at the time when a user launches the app on their device.
 
 - A developer build **“bytecode”** of the React Native project **before production deployment**.
 
@@ -296,7 +296,7 @@ Here is the **flow of Hermes**. How **Hermes work** at the time of when a user l
 
 ## Is Hermes a good choice?
 
-Since the **introduction of Hermes** as an option in JavaScript compiling engine in **React Native 0.64**, the JavaScript engine has seen tremendous support from the React Native developer community, especially since it is more performant.
+Since the **introduction of Hermes** as an option in the JavaScript compiling engine in **React Native 0.64**, the JavaScript engine has seen tremendous support from the React Native developer community, especially since it is more performant.
 
 Hermes is not just good for React Native applications, but **also reduces bundle size** and load time along with a GUI to visualize the performance metrics of your app during development. This feature helps developers learn how their applications will perform after release.
 
@@ -330,21 +330,21 @@ The **OLD Native Module system** is also known as **Bridge-based native module s
 
 The **New Native module system** is also known as “**Turbo Module”** which uses **JSI** technology instead of JSON data serialization. JSI (JavaScript Interface) was written in **C++**.
 
-- **Turbo Module** is **a new way** of **implementing “Native modules”** in React Native. It implement Native Module by using **JSI** & “**Native Code”** that was generated by **Codegen**.
+- **Turbo Module** is **a new way** of **implementing “Native modules”** in React Native. It implements the Native Module by using **JSI** & “**Native Code”** that was generated by **Codegen**.
 
-- In New Architecture, **Turbo Module** introduced **Lazy Loading** for **Native Modules** (e.g. Bluetooth, Geo Location and File Storage) to load when a user **launch an app**. In OLD architecture all Native Modules used in the app **must** be initialized in the **start-up**, even if the user **does not require** one of these modules 🥴.
+- In New Architecture, **Turbo Module** introduced **Lazy Loading** for **Native Modules** (e.g. Bluetooth, Geolocation and File Storage) to load when a user **launches an app**. In OLD architecture all Native Modules used in the app **must** be initialized in the **start-up**, even if the user **does not require** one of these modules 🥴.
 
-- Turbo Modules **allow your JavaScript code** to **hold references** of these **Native modules**. As a result a particular Native Module will be loaded **only when** the Module is **required**. This improved app start-up time 💯.
+- Turbo Modules **allow your JavaScript code** to **hold references** of these **Native modules**. As a result, a particular Native Module will be loaded **only when** the Module is **required**. This improved app start-up time 💯.
 
 - By the above reasons, **Turbo Modules** are called a new version of **Native Modules** in New Architecture.
 
-- **As** in new architecture, **JavaScript** using **JSI** to communicate with **Native Modules**, so it will help you by **reducing the amount of work required for porting your app to multiple platforms**. This is because JSI was written in C++. **C++** is a language that **can run on multiple platforms**, such as Android, iOS, Windows, or macOS. It is also a language that can interact with other native languages, such as Java or Objective-C, through bindings. This means that **you can write your “Native module” logic in C++**, and then use bindings to expose it to the other native languages. This way, you can **share the same implementation across different platforms**, and only write the bindings for each platform.
+- **As** in new architecture, **JavaScript** uses **JSI** to communicate with **Native Modules**, so it will help you by **reducing the amount of work required for porting your app to multiple platforms**. This is because JSI was written in C++. **C++** is a language that **can run on multiple platforms**, such as Android, iOS, Windows, or macOS. It is also a language that can interact with other native languages, such as Java or Objective-C, through bindings. This means that **you can write your “Native module” logic in C++**, and then use bindings to expose it to the other native languages. This way, you can **share the same implementation across different platforms**, and only write the bindings for each platform.
 
-### ❝ **JSI (JavaScript Interface)** opens the door of Single Interface for All Platforms by C++ ❞
+### ❝ **JSI (JavaScript Interface)** opens the door to a Single Interface for All Platforms by C++ ❞
 
 ## Fabric (New Rendering Engine)
 
-**Fabric** is the **UIManager** that will be responsible for **rendering the UI** in devices. The difference now is that instead of communicating with JavaScript through a **bridge**, **Fabric** exposes its **functions** via **JavaScript** so the **JS side** and **Native side** (vice-versa) can communicate directly through **ref functions**. passing data between sides will be **performant**.
+**Fabric** is the **UIManager** that will be responsible for **rendering the UI** in devices. The difference now is that instead of communicating with JavaScript through a **bridge**, **Fabric** exposes its **functions** via **JavaScript** so the **JS side** and **Native side** (vice-versa) can communicate directly through **ref functions**. Passing data between sides will be **performant**.
 
 - **Fabric** uses **JSI** to communicate with **Hermes** and **native code**, without using the bridge.
 
@@ -354,7 +354,7 @@ The **New Native module system** is also known as “**Turbo Module”** which u
 
 - A **host view** is a **tree representation** of the **UI elements** in the **host platform** (the device from which the app was launched by the user. Ex: Android or iOS).
 
-- The **C++ core** shared by **different host platforms** (Ex: Android, iOS, MacOS, TvOS, etc) **improves interoperability between** React Native and the **host** and **enables React Native to render surfaces synchronously**. In the **OLD (legacy)** architecture, the **layout was asynchronous**, causing a [layout “jump” issue](https://github.com/react-navigation/stack/issues/366) when embedding a React Native rendered view.
+- The **C++ core** shared by **different host platforms** (E.g. Android, iOS, MacOS, TvOS, etc) **improves interoperability between** React Native and the **host** and **enables React Native to render surfaces synchronously**. In the **OLD (legacy)** architecture, the **layout was asynchronous**, causing a [layout “jump” issue](https://github.com/react-navigation/stack/issues/366) when embedding a React Native rendered view.
 
 ### Improvements in data fetching
 
@@ -362,7 +362,7 @@ The **New Native module system** is also known as “**Turbo Module”** which u
 
 ## The Fabric render pipeline (three phases)
 
-The **Fabric Renderer** is React Native’s **new rendering system**. It is a conceptual evolution of the legacy (old) render system and is **designed to unify more render logic in C++**, improve interoperability with host platforms (Ex: Android or iOS), and **unlock new capabilities** for React Native.
+The **Fabric Renderer** is React Native’s **new rendering system**. It is a conceptual evolution of the legacy (old) render system and is **designed to unify more render logic in C++**, improve interoperability with host platforms (E.g. Android or iOS), and **unlock new capabilities** for React Native.
 
 The Fabric render pipeline occurs in three phases:
 
@@ -372,7 +372,7 @@ The Fabric render pipeline occurs in three phases:
 
 3.  The **Mount** phase
 
-I have created a Flow chart of **how the Fabric Render Pipeline works**. Look a bit into it 👇. Don’t be too much into it now as we are going to discuss in details about these 3 phase below 🚀
+I have created a Flow chart of **how the Fabric Render Pipeline works**. Look a bit into it 👇. Don’t be too much into it now as we are going to discuss in detail these 3 phases below 🚀
 
 ![](https://cdn-images-1.medium.com/max/2000/1*EcNF1tILs1MGT54YhrW7UQ.png)
 
@@ -392,7 +392,7 @@ The **React element tree** is used to render the **React shadow tree** in **C++*
 
 During the **Render phase**, a **shadow node** is created for **each React element**. This shadow node is created **synchronously**, only for React **host components**, and **not for composite components** such as **\<View>**.
 
-When transformed into a Shadow Block , the **\<View>** is translated into a **\<ViewShadowNode>** object.
+When transformed into a Shadow Block, the **\<View>** is translated into a **\<ViewShadowNode>** object.
 
 The new **renderer** will automatically reflect the **parent-child relationships** between React element nodes. The above process shows how the React shadow tree is assembled; once it is complete, **the renderer triggers a commit** of the **element tree**.
 
@@ -442,7 +442,7 @@ Here is the **full flow of React Native new architecture**👇
 
 - Then, the **JavaScript code** of the app defines user interface elements using **React components**, which are pieces of code that describe how a part of the app should look and behave. **React components** are **translated** into **native code** using a feature called **Fabric**, which is **a new rendering system** for React Native. **Fabric** also **uses JSI** to communicate with JavaScript and native code, without using the bridge. **Fabric improves the speed and responsiveness** of user interface updates, as well as integrates better with native features.
 
-- Then, **Fabric** uses a library called **Yoga** to **calculate the layout of user interface** elements, such as their **position**, **size**, **alignment**, etc. **Yoga is a cross-platform layout engine** that implements Flex box, a CSS standard for web development. Yoga ensures that user interface elements are consistent across different devices and platforms.
+- Then, **Fabric** uses a library called **Yoga** to **calculate the layout of user interface** elements, such as their **position**, **size**, **alignment**, etc. **Yoga is a cross-platform layout engine** that implements Flexbox, a CSS standard for web development. Yoga ensures that user interface elements are consistent across different devices and platforms.
 
 - Finally, **Fabric uses** a component called **Fabric Renderer** to **draw user interface elements on the screen**, using native graphics APIs such as Core Animation on iOS or SurfaceView on Android. **Fabric Renderer handles** **animations**, **gestures**, **accessibility**, and **other features** that make user interface elements interactive and engaging.
 
@@ -466,7 +466,7 @@ If you want to **become an expert in performance optimization**, you need to lea
 
 - **Article Link:** [How to enable **Hermes** in your Old React native app](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/Hermes-and-Static-Hermes-in-depth.md)
 
-- **Article Link:** [How to enable **New Architecture** in your React native App](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/How-to-Enable-New-Architecture.md)
+- **Article Link:** [How to enable **New Architecture** in your React Native App](https://github.com/anisurrahman072/React-Native-Advanced-Guide/blob/master/New-Architecture/How-to-Enable-New-Architecture.md)
 
 ### [🙏 If you find it helpful, please give a STAR (click here) ⭐️⭐️](https://github.com/anisurrahman072/React-Native-Advanced-Guide)
 
